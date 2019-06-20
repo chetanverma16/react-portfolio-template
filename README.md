@@ -9,7 +9,7 @@ Demo - https://react-portfolio-template.netlify.com/
 
 
 
-# The Data can be customise in the src/yourdata.js
+# The Data can be customised in the src/yourdata.js
 
 
 
