@@ -32,5 +32,17 @@ This repo contains an easy-to-customize personal portfolio template that was cre
 ![portfolio](https://user-images.githubusercontent.com/16558205/59826731-7d494300-9354-11e9-92dd-46f7057b6ead.png)
 
 
+License
+Completely free (MIT)!
+
+Follow Me - 
+[Portfolio](http://chetanverma.com/)
+[Behance](https://www.behance.net/chetanverma)
+[Dribbble](https://dribbble.com/chetanverma)
+[Instagram](https://www.instagram.com/cv.uidesign/)
+
+
+
+
 
 
