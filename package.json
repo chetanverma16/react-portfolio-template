@@ -5,7 +5,9 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-reveal": "^1.2.2",
+    "react-scripts": "3.0.1",
+    "react-scroll": "^1.7.12"
   },
   "scripts": {
     "start": "react-scripts start",
