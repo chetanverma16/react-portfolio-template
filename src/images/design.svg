@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#303C42;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<title>Pencil with Ruler</title>
+<g id="Pencil_with_Ruler">
+	<g id="_Group_">
+		<path id="_Path_" class="st0" d="M3.5,15.5L16.9,1.9c0.6-0.6,1.5-0.6,2.1,0l3,3c0.6,0.6,0.6,1.5,0,2.1L8.5,20.5l-7,2L3.5,15.5z" style="fill: none; stroke: #303C42; stroke-linecap: round; stroke-linejoin: round;"/>
+		<line id="_Path_2" class="st0" x1="19.5" y1="9.6" x2="14.4" y2="4.5" style="fill: none; stroke: #303C42; stroke-linecap: round; stroke-linejoin: round;"/>
+		<polyline id="_Path_3" class="st0" points="8.5,20.5 8.5,18.5 6.5,17.5 5.5,15.5 3.5,15.5   " style="fill: none; stroke: #303C42; stroke-linecap: round; stroke-linejoin: round;"/>
+		<line id="_Path_4" class="st0" x1="5.5" y1="21.4" x2="2.6" y2="18.5" style="fill: none; stroke: #303C42; stroke-linecap: round; stroke-linejoin: round;"/>
+		<line id="_Path_5" class="st0" x1="17" y1="7" x2="6.5" y2="17.5" style="fill: none; stroke: #303C42; stroke-linecap: round; stroke-linejoin: round;"/>
+		<g id="_Group_2">
+			<polyline id="_Path_6" class="st0" points="7,12 1.5,6.5 6.5,1.5 12,7    " style="fill: none; stroke: #303C42; stroke-linecap: round; stroke-linejoin: round;"/>
+			<polyline id="_Path_7" class="st0" points="17,12 22.5,17.5 17.5,22.5 12,17    " style="fill: none; stroke: #303C42; stroke-linecap: round; stroke-linejoin: round;"/>
+		</g>
+		<line id="_Path_8" class="st0" x1="15.5" y1="20.5" x2="17.5" y2="18.5" style="fill: none; stroke: #303C42; stroke-linecap: round; stroke-linejoin: round;"/>
+		<line id="_Path_9" class="st0" x1="13.5" y1="18.5" x2="15.5" y2="16.5" style="fill: none; stroke: #303C42; stroke-linecap: round; stroke-linejoin: round;"/>
+		<line id="_Path_10" class="st0" x1="5.5" y1="10.5" x2="7.5" y2="8.5" style="fill: none; stroke: #303C42; stroke-linecap: round; stroke-linejoin: round;"/>
+		<line id="_Path_11" class="st0" x1="3.5" y1="8.5" x2="5.5" y2="6.5" style="fill: none; stroke: #303C42; stroke-linecap: round; stroke-linejoin: round;"/>
+	</g>
+</g>
+
+	<metadata>
+		<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+			<rdf:Description about="https://iconscout.com/legal#licenses" dc:title="design; pencil; ruler; grid; guide" dc:description="design; pencil; ruler; grid; guide" dc:publisher="Iconscout" dc:date="2017-02-16" dc:format="image/svg+xml" dc:language="en">
+				<dc:creator>
+					<rdf:Bag>
+						<rdf:li>Alpár - Etele Méder</rdf:li>
+					</rdf:Bag>
+				</dc:creator>
+			</rdf:Description>
+		</rdf:RDF>
+    </metadata></svg>

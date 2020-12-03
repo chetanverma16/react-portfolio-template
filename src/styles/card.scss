@@ -1,0 +1,41 @@
+.card {
+  width: 100%;
+  height: 250px;
+  overflow: hidden !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  .content {
+    font-family: "Open Sans";
+    text-align: center;
+    padding: 10px;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+    transform: translate(0, 20px);
+    cursor: pointer;
+    h1 {
+      font-size: 14px;
+      color: white;
+    }
+    p {
+      font-size: 10px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: black;
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+    }
+    &:hover {
+      opacity: 1;
+      transform: translate(0, 0px);
+    }
+  }
+}

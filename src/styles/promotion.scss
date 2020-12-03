@@ -1,0 +1,12 @@
+.promotion-container {
+  width: 80vw;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  h1 {
+    font-size: 3rem;
+    line-height: 20px;
+  }
+}
