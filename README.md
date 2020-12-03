@@ -49,7 +49,7 @@ $ gatsby develop
 
 ```javascript
 /* Change this file to get your Personal Porfolio */
-Edit Values of these variables
+ // Edit Values of these variables
 
 name:"chetan",
 headerTagline:[
