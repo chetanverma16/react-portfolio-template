@@ -39,3 +39,13 @@
     }
   }
 }
+.dark-theme {
+  .card {
+    .content {
+      a {
+        background-color: white;
+        color: rgb(0, 2, 32);
+      }
+    }
+  }
+}

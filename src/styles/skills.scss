@@ -30,10 +30,17 @@
       text-align: center;
       img {
         height: 3rem;
+        padding: 7px;
       }
       p {
         font-size: 14px;
       }
     }
+  }
+}
+.dark-theme {
+  .skillIcons {
+    background-color: white;
+    border-radius: 10px;
   }
 }

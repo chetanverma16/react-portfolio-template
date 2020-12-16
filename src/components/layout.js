@@ -5,18 +5,31 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Navbar from "./Navbar"
 import "../styles/mains.scss"
 
 const Layout = ({ children }) => {
-  const darkTheme = localStorage.getItem("dark")
-  // React.useEffect(() => {
-  //   localStorage.getItem("dark")
-  // }, [darkTheme])
+  const [darkTheme, setDarkTheme] = useState(false)
+  localStorage.setItem("dark", darkTheme)
+
+  useEffect(() => {
+    localStorage.getItem("dark", darkTheme)
+  }, [darkTheme])
+
   return (
-    <div className={darkTheme === "true" ? "dark-theme" : "light-theme"}>
+    <div className={darkTheme ? "dark-theme" : "light-theme"}>
       <Navbar></Navbar>
+      <label class="switch">
+        <input type="checkbox" />
+        <span
+          onClick={() => {
+            setDarkTheme(!darkTheme)
+            localStorage.setItem("dark", darkTheme)
+          }}
+          class="slider round"
+        ></span>
+      </label>
       <main>{children}</main>
     </div>
   )
