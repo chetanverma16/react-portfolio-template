@@ -8,7 +8,6 @@
 import React, { useEffect, useState } from "react"
 import Navbar from "./Navbar"
 import "../styles/mains.scss"
-import parallaxImage from "../images/5.png"
 
 const Layout = ({ children }) => {
   const [darkTheme, setDarkTheme] = useState(false)
