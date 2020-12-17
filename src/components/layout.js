@@ -18,7 +18,8 @@ const Layout = ({ children }) => {
     window.localStorage.getItem("dark", darkTheme)
   }, [darkTheme])
 
-  document.addEventListener("mousemove", parallaxEffect)
+  typeof window !== "undefined" &&
+    document.addEventListener("mousemove", parallaxEffect)
   function parallaxEffect(e) {
     this.querySelectorAll(".layer").forEach(layer => {
       const speed = layer.getAttribute("data-speed")
