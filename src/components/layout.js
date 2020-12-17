@@ -11,10 +11,11 @@ import "../styles/mains.scss"
 
 const Layout = ({ children }) => {
   const [darkTheme, setDarkTheme] = useState(false)
-  localStorage.setItem("dark", darkTheme)
+  typeof window !== "undefined" &&
+    window.localStorage.setItem("dark", darkTheme)
 
   useEffect(() => {
-    localStorage.getItem("dark", darkTheme)
+    window.localStorage.getItem("dark", darkTheme)
   }, [darkTheme])
 
   document.addEventListener("mousemove", parallaxEffect)
@@ -37,7 +38,7 @@ const Layout = ({ children }) => {
         <span
           onClick={() => {
             setDarkTheme(!darkTheme)
-            localStorage.setItem("dark", darkTheme)
+            window.localStorage.setItem("dark", darkTheme)
           }}
           class="slider round"
         ></span>
