@@ -4,7 +4,7 @@ import data from "../yourdata"
 
 const Header = () => {
   return (
-    <div className="section" id="home">
+    <div className="section layer" data-speed="1" id="home">
       <div className="container">
         <div className="header-wrapper">
           <Fade bottom>

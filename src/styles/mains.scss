@@ -56,7 +56,7 @@ body {
 .switch {
   position: relative;
   float: right;
-  top: -26px;
+  top: -25px;
   left: -4%;
   width: 33px;
   height: 16px;
@@ -106,6 +106,42 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+.fa {
+  font-size: 80px;
+}
+.parallaxImage {
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  @include media("<tablet") {
+    display: none;
+  }
+}
+.Icon-1 {
+  position: absolute;
+  top: 30vh;
+  left: 75%;
+}
+.Icon-2 {
+  position: absolute;
+  top: 30vh;
+  left: 5%;
+}
+.Icon-3 {
+  position: absolute;
+  top: 65vh;
+  left: 90%;
+}
+.Icon-4 {
+  position: absolute;
+  top: 80vh;
+  left: 20%;
+}
+.Icon-5 {
+  position: absolute;
+  top: 80vh;
+  left: 73%;
 }
 .dark-theme {
   transition: 0.4s;
