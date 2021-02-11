@@ -15,8 +15,9 @@ const Footer = () => {
             {data.contactEmail}
           </a>
           <div className="social-icons">
-            {data.social.map(socialLink => (
+            {data.social.map((socialLink, index) => (
               <a
+                key={index}
                 href={socialLink.url}
                 target="_blank"
                 rel="noopener noreferrer"
