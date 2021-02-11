@@ -8,8 +8,8 @@ const Skills = () => {
         <div className="skills-container">
           <h1>Skills</h1>
           <div className="skills-grid">
-            {data.skills.map(skill => (
-              <div className="skill" key={skill.id}>
+            {data.skills.map((skill, index) => (
+              <div className="skill" key={index}>
                 <img src={skill.img} alt="css"></img>
                 <p>{skill.para}</p>
               </div>
