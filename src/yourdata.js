@@ -38,7 +38,6 @@ export default {
   // Work Section ------------------------
   projects: [
     {
-      id: 1, //DO NOT CHANGE THIS (Please)😅
       title: "Project One", //Project Title - Add Your Project Title Here
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
@@ -49,7 +48,6 @@ export default {
       url: "http://chetanverma.com/",
     },
     {
-      id: 2, //DO NOT CHANGE THIS (Please)😅
       title: "Project Two", //Project Title - Add Your Project Title Here
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
@@ -60,7 +58,6 @@ export default {
       url: "http://chetanverma.com/",
     },
     {
-      id: 3, //DO NOT CHANGE THIS (Please)😅
       title: "Project Three", //Project Title - Add Your Project Title Here
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
@@ -71,7 +68,6 @@ export default {
       url: "http://chetanverma.com/",
     },
     {
-      id: 4, //DO NOT CHANGE THIS (Please)😅
       title: "Project Four", //Project Title - Add Your Project Title Here
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
@@ -82,7 +78,6 @@ export default {
       url: "http://chetanverma.com/",
     },
     {
-      id: 5, //DO NOT CHANGE THIS (Please)😅
       title: "Project Five", //Project Title - Add Your Project Title Here
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
@@ -93,7 +88,6 @@ export default {
       url: "http://chetanverma.com/",
     },
     {
-      id: 6, //DO NOT CHANGE THIS (Please)😅
       title: "Project Six", //Project Title - Add Your Project Title Here
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
@@ -105,9 +99,8 @@ export default {
     },
 
     /*
-    If You Want To Add More Project just Copy and Paste This At The End (Update the id Respectively)
+    If You Want To Add More Project just Copy and Paste This At The End
     ,{
-        id: 5,
         title: 'Project Five',
         para: 'Something Amazing',
         imageSrc: "",
@@ -136,37 +129,31 @@ export default {
 
   skills: [
     {
-      id: 1,
       img: htmlIcon,
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
     },
     {
-      id: 2,
       img: cssIcon,
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
     },
     {
-      id: 3,
       img: jsIcon,
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
     },
     {
-      id: 4,
       img: reactIcon,
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
     },
     {
-      id: 5,
       img: designIcon,
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
     },
     {
-      id: 6,
       img: codeIcon,
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
