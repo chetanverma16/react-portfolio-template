@@ -1,7 +1,6 @@
+### Looking for an awesome theme for your startup checkout this new circle theme for free - **[click here](https://github.com/chetanverma16/circle-theme)**
 
 # A clean, beautiful, minimal and responsive portfolio template for Developers!
-
-### Looking for an awesome theme for your startup - **[click here](https://github.com/chetanverma16/circle-theme)**
 
 ![Web 1920 – 1](https://user-images.githubusercontent.com/16558205/101065060-b44bfc80-35ba-11eb-8ab4-1e6f140c1ec9.png)
 
