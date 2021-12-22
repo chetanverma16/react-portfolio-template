@@ -8,6 +8,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  
 
   .content {
     font-family: "Open Sans";
@@ -17,25 +18,30 @@
     transition: all 500ms ease-in-out;
     transform: translate(0, 20px);
     cursor: pointer;
+    
+   
     h1 {
+      margin-top: 60px;
       font-size: 16px;
       color: white;
     }
     p {
       font-size: 14px;
       color: white;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
-
     .btn {
       background-color: black;
       color: white;
       padding: 10px;
       text-decoration: none;
+      margin-bottom: 30px;
     }
+
     &:hover {
       opacity: 1;
       transform: translate(0, 0px);
+      background-color:rgba(0,0,0,0.4);
     }
   }
 

@@ -1,4 +1,5 @@
-import React from "react"
+import React, {Component} from "react";
+
 
 const Card = ({ heading, paragraph, imgUrl, projectLink }) => {
   return (
@@ -14,6 +15,7 @@ const Card = ({ heading, paragraph, imgUrl, projectLink }) => {
       <div className="content">
         <h1 className="header">{heading}</h1>
         <p className="text">{paragraph}</p>
+
         <a
           href={projectLink ? projectLink : "#"}
           target="_blank"
@@ -22,6 +24,7 @@ const Card = ({ heading, paragraph, imgUrl, projectLink }) => {
         >
           Explore
         </a>
+
       </div>
     </div>
   )

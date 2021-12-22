@@ -13,12 +13,12 @@ import dribbbleIcon from "./images/dribbble.svg"
 import instagramIcon from "./images/instagram.svg"
 
 // Company icon
-import TeslaIcon from "./images/Tesla.png"
-import NVIDIAIcon from "./images/NVIDIA.jpg"
-import EcobeeIcon from "./images/ecobee.png"
-import UwaterlooIcon from "./images/Uwaterloo.png"
-import KhazanahIcon from "./images/Khazanah.png"
-import FordIcon from "./images/Ford.jpg"
+import TeslaIcon from "./images/Company/Tesla.png"
+import NVIDIAIcon from "./images/Company/NVIDIA.jpg"
+import EcobeeIcon from "./images/Company/ecobee.png"
+import UwaterlooIcon from "./images/Company/Uwaterloo.png"
+import KhazanahIcon from "./images/Company/Khazanah.png"
+import FordIcon from "./images/Company/Ford.jpg"
 
 //import 
 
@@ -68,7 +68,7 @@ export default {
     {
       title: "Ecobee", //Project Title - Add Your Project Title Here
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
+        "Ecobee is a Canadian Smart Thermostat Company, I joined Ecobee as an embedded developer, worked on fixtures that supports thermostats productions and developed computer vision and machine learning algorithms for testing displays", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
       imageSrc:
         EcobeeIcon  ,    
@@ -76,9 +76,9 @@ export default {
       url: "http://chetanverma.com/",
     },
     {
-      title: "University of Waterloo, Faculty of Engineering", //Project Title - Add Your Project Title Here
+      title: "University of Waterloo, Faculty of Electrical and Computer Engineering", //Project Title - Add Your Project Title Here
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
+        "I joined the Teaching Team for an introductory C++ programming course as a TA, hosted tutorials, graded assessments, created exam questions, and supported the automated testing server using Python.", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
       imageSrc:
         UwaterlooIcon,
@@ -88,7 +88,7 @@ export default {
     {
       title: "Khazanah National Americas", //Project Title - Add Your Project Title Here
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
+        "Khazanah is a National Wealth Fund that primarily invest in Silicon Valley startups, and as an innovation intern, I worked on different projects in the fields of drone, computer vision, AR/VR to better understand and explain the technologies to the investors", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
       imageSrc:
         KhazanahIcon,
@@ -98,7 +98,7 @@ export default {
     {
       title: "Ford", //Project Title - Add Your Project Title Here
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
+        "At Ford Motor Company, I worked on supporting the various chipsets used in the F150 as a member of the manufacturing software team, using tools such as jenkins, NI Teststand, C++, and Python.", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
       imageSrc:
         FordIcon,
@@ -106,15 +106,7 @@ export default {
       url: "http://chetanverma.com/",
     },
 
-    /*
-    If You Want To Add More Project just Copy and Paste This At The End
-    ,{
-        title: 'Project Five',
-        para: 'Something Amazing',
-        imageSrc: "",
-        url: ''
-    }
-    */
+
   ],
 
   // End Work Section -----------------------
