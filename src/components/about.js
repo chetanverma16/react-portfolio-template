@@ -1,6 +1,7 @@
 import React from "react"
 import Fade from "react-reveal/Fade"
 import data from "../yourdata"
+import selfImage from "./../images/SelfPhoto.jpg"
 
 const About = () => {
   return (
@@ -22,7 +23,7 @@ const About = () => {
             </p>
           </div>
           <div className="image-wrapper">
-            <img src={data.aboutImage} alt="about"></img>
+            <img src={selfImage} alt="about"></img>
           </div>
         </div>
       </div>

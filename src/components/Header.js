@@ -1,6 +1,7 @@
 import React from "react"
 import Fade from "react-reveal/Fade"
 import data from "../yourdata"
+import { Typewriter } from "react-simple-typewriter"
 
 const Header = () => {
   return (
@@ -9,39 +10,43 @@ const Header = () => {
         <div className="header-wrapper">
           <Fade bottom>
             <h2>
-              Hey, I am {data.name}{" "}
-              <span role="img" aria-label="Emoji">
-                😀
-              </span>
+              Hi, My name is {data.name}{" "}
+
             </h2>
           </Fade>
-          
+
           <Fade bottom cascade>
             <div className="heading-wrapper">
-              <h1>
-                {data.headerTagline[0]
-                  ? data.headerTagline[0]
-                  : "Aspired Robotics Engineer"}
+              <h1
+                style={{
+                  paddingTop: "3rem",
+                  margin: "auto 0",
+                  fontWeight: "normal",
+                }}
+              >
+                I am a {" "}
+                <span style={{ color: "red", fontWeight: "bold" }}>
+                  {/* Style will be inherited from the parent element */}
+                  <Typewriter
+                    loop
+                    cursor
+                    cursorStyle="_"
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={1200}
+                    words={["Robotics Engineer", "Pilot", "Code Monkey", "Embedded Developer", "Simulation Developer", "Path Planner", "Firmware Developer"]}
+
+                  />
+                </span>
               </h1>
-              <h1>
-                {" "}
-                {data.headerTagline[1]
-                  ? data.headerTagline[1]
-                  : "Embedded Software Developer"}
-              </h1>
-              <h1>
-                {" "}
-                {data.headerTagline[2]
-                  ? data.headerTagline[2]
-                  : "Pilot"}
-              </h1>
+
             </div>
           </Fade>
-
 
           <Fade bottom>
             <p>{data.headerParagraph}</p>
           </Fade>
+
           <Fade bottom>
             <a
               href={`https://www.linkedin.com/in/stevenfeng7/`}

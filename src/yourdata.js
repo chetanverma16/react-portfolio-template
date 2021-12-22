@@ -12,15 +12,21 @@ import codepenIcon from "./images/codepen.svg"
 import dribbbleIcon from "./images/dribbble.svg"
 import instagramIcon from "./images/instagram.svg"
 
-// Compnay icon
-import TeslaIcon from "./images/Tesla.svg"
+// Company icon
+import TeslaIcon from "./images/Tesla.png"
 import NVIDIAIcon from "./images/NVIDIA.jpg"
+import EcobeeIcon from "./images/ecobee.png"
+import UwaterlooIcon from "./images/Uwaterloo.png"
+import KhazanahIcon from "./images/Khazanah.png"
+import FordIcon from "./images/Ford.jpg"
+
+//import 
 
 
 export default {
 
   //   Header Details ---------------------
-  name: "Steven",
+  name: "Steven Feng",
   headerTagline: [
     "Aspired Robotics Engineer",
 
@@ -30,7 +36,7 @@ export default {
   ],
   //   Header Paragraph
   headerParagraph:
-    "My name Steven, I'm a driven Mechatronics (Artificial Intelligence Option) Engineering Student from UWaterloo with skills and passion in software engineering, prototyping, and design; with interests and experience in robotics, autonomous vehicle, IoT, and aviation!",
+    "I'm a driven Mechatronics Engineering Student with AI specialization from UWaterloo with passion in software engineering, prototyping, and mechanical design; and experience in robotics, autonomous vehicle, and IoT.",
 
   //Contact Email
   contactEmail: "jy5feng@uwaterloo.ca",
@@ -60,42 +66,42 @@ export default {
       url: "https://developer.nvidia.com/isaac-sim",
     },
     {
-      title: "Project Three", //Project Title - Add Your Project Title Here
+      title: "Ecobee", //Project Title - Add Your Project Title Here
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
       imageSrc:
-        "https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+        EcobeeIcon  ,    
       //Project URL - Add Your Project Url Here
       url: "http://chetanverma.com/",
     },
     {
-      title: "Project Four", //Project Title - Add Your Project Title Here
+      title: "University of Waterloo, Faculty of Engineering", //Project Title - Add Your Project Title Here
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
       imageSrc:
-        "https://images.unsplash.com/photo-1492171983775-a51717616c0d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjB8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+        UwaterlooIcon,
       //Project URL - Add Your Project Url Here
       url: "http://chetanverma.com/",
     },
     {
-      title: "Project Five", //Project Title - Add Your Project Title Here
+      title: "Khazanah National Americas", //Project Title - Add Your Project Title Here
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
       imageSrc:
-        "https://images.unsplash.com/photo-1534239143101-1b1c627395c5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+        KhazanahIcon,
       //Project URL - Add Your Project Url Here
       url: "http://chetanverma.com/",
     },
     {
-      title: "Project Six", //Project Title - Add Your Project Title Here
+      title: "Ford", //Project Title - Add Your Project Title Here
       para:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
       imageSrc:
-        "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxwYXN0ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=400&q=60",
+        FordIcon,
       //Project URL - Add Your Project Url Here
       url: "http://chetanverma.com/",
     },
@@ -121,7 +127,7 @@ export default {
   aboutParaThree:
     "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
   aboutImage:
-    "https://images.unsplash.com/photo-1519713958759-6254243c4a53?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+    "images/SelfPhoto.jpg",
 
   //   End About Section ---------------------
 
@@ -173,7 +179,7 @@ export default {
 
   //   Contact Section --------------
 
-  contactSubHeading: "Let's create your next experience together",
+  contactSubHeading: "Let's talk about robots!",
   social: [
     // Add Or Remove The Link Accordingly
     { img: githubIcon, url: "https://github.com/chetanverma16" },

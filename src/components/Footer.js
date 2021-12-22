@@ -28,7 +28,7 @@ const Footer = () => {
           </div>
           <span>
             Connect with me on 
-            <a href="https://www.linkedin.com/in/stevenfeng7/">Linkedin</a>
+            <a href="https://www.linkedin.com/in/stevenfeng7/"> Linkedin</a>
           </span>
         </div>
       </div>
