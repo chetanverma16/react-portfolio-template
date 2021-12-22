@@ -6,21 +6,21 @@
   align-items: center;
 
   h2 {
-    font-size: 1rem;
+    font-size: 4rem;
     text-align: center;
     @include media(">=phone", "<lgphone") {
-      font-size: 14px;
+      font-size: 28px;
     }
     @include media(">=lgphone", "<tablet") {
-      font-size: 16px;
+      font-size: 32px;
     }
     @include media(">=tablet", "<desktop") {
-      font-size: 16px;
+      font-size: 36px;
     }
   }
   .heading-wrapper {
     h1 {
-      font-size: 4rem;
+      font-size: 2rem;
       text-align: center;
       line-height: 20px;
       @include media(">=phone", "<lgphone") {

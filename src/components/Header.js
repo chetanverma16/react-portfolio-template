@@ -9,44 +9,45 @@ const Header = () => {
         <div className="header-wrapper">
           <Fade bottom>
             <h2>
-              Hi, I'm {data.name}{" "}
+              Hey, I am {data.name}{" "}
               <span role="img" aria-label="Emoji">
-                👋
+                😀
               </span>
             </h2>
           </Fade>
+          
           <Fade bottom cascade>
             <div className="heading-wrapper">
               <h1>
                 {data.headerTagline[0]
                   ? data.headerTagline[0]
-                  : "Building digital"}
+                  : "Aspired Robotics Engineer"}
               </h1>
               <h1>
                 {" "}
                 {data.headerTagline[1]
                   ? data.headerTagline[1]
-                  : "products, brands"}
+                  : "Embedded Software Developer"}
               </h1>
               <h1>
                 {" "}
                 {data.headerTagline[2]
                   ? data.headerTagline[2]
-                  : "and experience"}
+                  : "Pilot"}
               </h1>
             </div>
           </Fade>
+
+
           <Fade bottom>
             <p>{data.headerParagraph}</p>
           </Fade>
           <Fade bottom>
             <a
-              href={`mailto:${
-                data.contactEmail ? data.contactEmail : "hello@chetanverma.com"
-              }`}
+              href={`https://www.linkedin.com/in/stevenfeng7/`}
               className="primary-btn"
             >
-              CONNECT WITH ME
+              CONNECT WITH ME!
             </a>
           </Fade>
         </div>

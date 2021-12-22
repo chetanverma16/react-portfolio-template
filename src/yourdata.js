@@ -12,50 +12,52 @@ import codepenIcon from "./images/codepen.svg"
 import dribbbleIcon from "./images/dribbble.svg"
 import instagramIcon from "./images/instagram.svg"
 
+// Compnay icon
+import TeslaIcon from "./images/Tesla.svg"
+import NVIDIAIcon from "./images/NVIDIA.jpg"
+
+
 export default {
-  //(Please Do Not Remove The comma(,) after every variable)
-  //Change The Website Template
 
   //   Header Details ---------------------
-  name: "chetan",
+  name: "Steven",
   headerTagline: [
-    //Line 1 For Header
-    "Building digital",
-    //Line 2 For Header
-    "products, brands,",
-    //Line 3 For Header
-    "and experience",
+    "Aspired Robotics Engineer",
+
+    "Embedded Software Developer",
+
+    "Pilot",
   ],
   //   Header Paragraph
   headerParagraph:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+    "My name Steven, I'm a driven Mechatronics (Artificial Intelligence Option) Engineering Student from UWaterloo with skills and passion in software engineering, prototyping, and design; with interests and experience in robotics, autonomous vehicle, IoT, and aviation!",
 
   //Contact Email
-  contactEmail: "hello@chetanverma.com",
+  contactEmail: "jy5feng@uwaterloo.ca",
 
   // End Header Details -----------------------
 
   // Work Section ------------------------
   projects: [
     {
-      title: "Project One", //Project Title - Add Your Project Title Here
+      title: "Tesla", //Project Title - Add Your Project Title Here
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
+        "I will be joining Tesla's in Summer 2022, on the body firmware control team, which develops software that control all the cabin internals inside the Teslas", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
       imageSrc:
-        "https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+        TeslaIcon,
       //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+      url: "https://www.tesla.com/",
     },
     {
-      title: "Project Two", //Project Title - Add Your Project Title Here
+      title: "NVIDIA AI", //Project Title - Add Your Project Title Here
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", // Add Your Service Type Here
+        "I will be joining NVIDIA AI ISSAC Robotics Sim team, which is a scalable robotics simulation and synthetic data generation tool that powers photorealistic, and physically accurate metaverse for training advance robots.", // Add Your Service Type Here
       //Project Image - Add Your Project Image Here
       imageSrc:
-        "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNTY3ODl8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=60",
+        NVIDIAIcon,
       //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+      url: "https://developer.nvidia.com/isaac-sim",
     },
     {
       title: "Project Three", //Project Title - Add Your Project Title Here
