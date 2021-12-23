@@ -2,12 +2,19 @@ import React from "react"
 import Fade from "react-reveal/Fade"
 import data from "../yourdata"
 import { Typewriter } from "react-simple-typewriter"
-
+import imgUrl from "../images/headerphoto.jpg"
 const Header = () => {
   return (
     <div className="section" id="home">
       <div className="container">
-        <div className="header-wrapper">
+        <div className="header-wrapper"
+              style={{
+        backgroundImage:
+          "linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(0, 0, 0, 0.2)),url(" +
+          imgUrl +
+          ")",
+      }}
+      >
           <Fade bottom>
             <h2>
               Hi, My name is {data.name}{" "}
@@ -17,13 +24,7 @@ const Header = () => {
 
           <Fade bottom cascade>
             <div className="heading-wrapper">
-              <h1
-                style={{
-                  paddingTop: "3rem",
-                  margin: "auto 0",
-                  fontWeight: "normal",
-                }}
-              >
+              <h1              >
                 I am a {" "}
                 <span style={{ color: "red", fontWeight: "bold" }}>
                   {/* Style will be inherited from the parent element */}

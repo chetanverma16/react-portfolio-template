@@ -3,12 +3,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
   h2 {
-    margin-top: 10vh;
+    margin-top: 70vh;
     line-height: 70px;
     font-size: 70px;
     text-align: center;
+    font-weight: bold;
+    color: white;
     @include media(">=phone", "<lgphone") {
       font-size: 36px;
       line-height: 36px;
@@ -24,10 +29,12 @@
   }
   .heading-wrapper {
     h1 {
-      margin-bottom: 4vh;
+      margin-top: 2vh;
+      margin-bottom: 2vh;
       font-size: 40px;
       text-align: center;
       line-height: 40px;
+      color: white;
       @include media(">=phone", "<lgphone") {
         font-size: 20px;
         line-height: 20px;
@@ -44,25 +51,27 @@
   }
 
   p {
-    width: 60%;
+    width: 40%;
     text-align: center;
     overflow: visible;
-    line-height: 20px;
-    font-size: 20px;
-    margin-top: 3vh;
+    line-height: 30px;
+    font-size: 30px;
+    margin-top: 2vh;
+    color: white;
     @include media(">=phone", "<lgphone") {
-      font-size: 12px;
+      font-size: 16px;
       line-height: 16px;
       width: 100%;
     }
     @include media(">=lgphone", "<tablet") {
-      font-size: 14px;
-      line-height: 16px;
+      font-size: 20px;
+      line-height: 20px;
       width: 100%;
     }
     @include media(">=tablet", "<desktop") {
-      font-size: 16px;
+      font-size: 24px;
       width: 100%;
     }
+    
   }
 }
