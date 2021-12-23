@@ -1,5 +1,4 @@
-import React, {Component} from "react";
-
+import React from "react";
 
 const Card = ({ heading, paragraph, imgUrl, projectLink }) => {
   return (
