@@ -1,11 +1,18 @@
 
 figcaption{
     position:absolute;
-    bottom: 2rem;
+    bottom: 3rem;
     color: white;
-    margin: 0 2 rem;
-    background-color: rgba(0,0,0,0.4);
+    margin: 1 2 rem;
+    margin-left: 1rem;
+    background-color: rgba(0,0,0,0.6);
     font-size: 1,5rem;
+    text-align: left;
+}
+
+.img-fluid{
+    width: 100%;
+    z-index: 0;
 }
 
 @media screen and (max-width: 768px){
@@ -15,5 +22,6 @@ figcaption{
         margin: 0.25rem 0px;
         font-size: inherit;
         position: inherit;
+        text-align: left;
     }
 }

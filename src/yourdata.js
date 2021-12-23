@@ -53,7 +53,7 @@ export default {
       imageSrc:
         TeslaIcon,
       //Project URL - Add Your Project Url Here
-      url: "https://www.tesla.com/",
+      url: document.location.host.concat("/work/tesla/"),
     },
     {
       title: "NVIDIA AI", //Project Title - Add Your Project Title Here
@@ -63,7 +63,7 @@ export default {
       imageSrc:
         NVIDIAIcon,
       //Project URL - Add Your Project Url Here
-      url: "https://developer.nvidia.com/isaac-sim",
+      url: document.location.host.concat("/work/nvidia/"),
     },
     {
       title: "Ecobee", //Project Title - Add Your Project Title Here
@@ -73,7 +73,7 @@ export default {
       imageSrc:
         EcobeeIcon  ,    
       //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+      url: document.location.host.concat("/work/ecobee/"),
     },
     {
       title: "University of Waterloo, Faculty of Electrical and Computer Engineering", //Project Title - Add Your Project Title Here
@@ -83,7 +83,7 @@ export default {
       imageSrc:
         UwaterlooIcon,
       //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+      url: document.location.host.concat("/work/uwaterloota/"),
     },
     {
       title: "Khazanah National Americas", //Project Title - Add Your Project Title Here
@@ -93,7 +93,7 @@ export default {
       imageSrc:
         KhazanahIcon,
       //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+      url: document.location.host.concat("/work/khazanah/"),
     },
     {
       title: "Ford", //Project Title - Add Your Project Title Here
@@ -103,7 +103,7 @@ export default {
       imageSrc:
         FordIcon,
       //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+      url: document.location.host.concat("/work/ford/"),
     },
 
 

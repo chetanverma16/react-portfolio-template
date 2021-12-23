@@ -11,12 +11,13 @@ const Navbar = () => {
             className="name"
             tabIndex={0}
           >
-            
+          
           </div>
           <div className="links-wrapper">
-            <button onClick={() => scrollTo("#work")}>Work</button>
-            <button onClick={() => scrollTo("#about")}>About</button>
-            <button onClick={() => scrollTo("#contact")}>Contact</button>
+            <button onClick= {event =>  window.location.href='/#home'} type="button">Home</button>
+            <button onClick= {event =>  window.location.href='/#work'} type="button">Work</button>
+            <button onClick= {event =>  window.location.href='/#about'} type="button">About</button>
+            <button onClick= {event =>  window.location.href='/#contact'} type="button">Contact</button>
           </div>
         </div>
       </div>
