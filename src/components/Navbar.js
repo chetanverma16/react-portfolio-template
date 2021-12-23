@@ -1,18 +1,15 @@
 import React from "react"
-import scrollTo from "gatsby-plugin-smoothscroll"
+
 const Navbar = () => {
+  let resumelink = window.location.origin + "/resume/";
   return (
     <div className="section">
       <div className="container">
         <div className="navbar-wrapper">
-          <div
-            role="button"
-            onClick={() => scrollTo("#home")}
-            className="name"
-            tabIndex={0}
-          >
-          Resume
-          </div>
+        <button 
+          onClick= {event =>  window.location.href=resumelink } 
+          type="button" className="btn"> Resume
+        </button>
           <div className="links-wrapper">
             <button onClick= {event =>  window.location.href='/#home'} type="button">Home</button>
             <button onClick= {event =>  window.location.href='/#work'} type="button">Work</button>

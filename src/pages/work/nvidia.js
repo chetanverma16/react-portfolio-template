@@ -11,7 +11,7 @@ export default function NvidiaTab() {
   return (
     <div>
       <Layout>
-        <SEO title="TA University of Waterloo" />
+        <SEO title="Robotics Simulation Intern" />
         <Container>
           <figure className="position-relative">
             <img src={nvidiaLogo} alt="nvidialogo" className="img-fluid" />
