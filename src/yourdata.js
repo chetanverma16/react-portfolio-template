@@ -1,16 +1,16 @@
 // Skills Icons
-import htmlIcon from "./images/html.svg"
-import cssIcon from "./images/css.svg"
-import reactIcon from "./images/react.svg"
-import jsIcon from "./images/javascript.svg"
-import designIcon from "./images/design.svg"
-import codeIcon from "./images/code.svg"
+import clangIcon from "./images/skillsIcon/C_lang.png"
+import rosIcon from "./images/skillsIcon/ROS.jpg"
+import openCVIcon from "./images/skillsIcon/OpenCV.png"
+import RPIIcon from "./images/skillsIcon/CPU.jpg"
+import SolidworksIcon from "./images/skillsIcon/CAD.svg"
+import codeIcon from "./images/skillsIcon/code.svg"
 
 // Social Icon
-import githubIcon from "./images/github.svg"
-import codepenIcon from "./images/codepen.svg"
-import dribbbleIcon from "./images/dribbble.svg"
-import instagramIcon from "./images/instagram.svg"
+import githubIcon from "./images/contactIcon/github.svg"
+import linkedinIcon from "./images/contactIcon/linkedin.png"
+import devpostIcon from "./images/contactIcon/devpost.png"
+
 
 // Company icon
 import TeslaIcon from "./images/Company/Tesla.png"
@@ -27,13 +27,6 @@ export default {
 
   //   Header Details ---------------------
   name: "Steven Feng",
-  headerTagline: [
-    "Aspired Robotics Engineer",
-
-    "Embedded Software Developer",
-
-    "Pilot",
-  ],
   //   Header Paragraph
   headerParagraph:
     "I'm a driven Mechatronics Engineering Student with AI specialization from UWaterloo with passion in software engineering, prototyping, and mechanical design; and experience in robotics, autonomous vehicle, and IoT.",
@@ -113,11 +106,11 @@ export default {
 
   // About Secton --------------
   aboutParaOne:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "I am a incoming 4th year mechatronics engineering student from the University of Waterloo. I have 6 planned coops in various sectors such as robotics, automotive, IoT, and education; and gained valuable experiences with C++, Python, and tools such as .NET, Unity and more.",
   aboutParaTwo:
-    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "Outside of school, I am a part of WATonomous, the Waterloo's self driving car team where I gained insights in autonomous vehicles and experiences with ROS. In addition, I compete in hackathons and built 10 unique projects which won numerous awards and learned tools such as Tensorflow and OpenCV.",
   aboutParaThree:
-    "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "In my free time, I play the accordion and clarinet. I am also a fully licensed pilot, and I miss flying!",
   aboutImage:
     "images/SelfPhoto.jpg",
 
@@ -129,64 +122,54 @@ export default {
 
   skills: [
     {
-      img: htmlIcon,
+      img: clangIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    },
-    {
-      img: cssIcon,
-      para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    },
-    {
-      img: jsIcon,
-      para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    },
-    {
-      img: reactIcon,
-      para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    },
-    {
-      img: designIcon,
-      para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "C, C++, C#",
     },
     {
       img: codeIcon,
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
+        "Python, MATLAB",
+    },
+    {
+      img: RPIIcon,
+      para:
+        "Arduino, Raspberry Pi, ESP8266",
+    },
+    {
+      img: openCVIcon,
+      para:
+        "OpenCV and learning Tensorflow for CNNs",
+    },
+    {
+      img: SolidworksIcon,
+      para:
+        "Solidworks, AutoCAD, Blender",
+    },
+    {
+      img: rosIcon,
+      para:
+        "ROS, RVIZ, and learning ISSAC Sim",
     },
   ],
 
   // End Skills Section --------------------------
-
-  //   Promotion Section --------------------------
-
-  promotionHeading: "Heading",
-  promotionPara:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  // End Promotion Section -----------------
 
   //   Contact Section --------------
 
   contactSubHeading: "Let's talk about robots!",
   social: [
     // Add Or Remove The Link Accordingly
-    { img: githubIcon, url: "https://github.com/chetanverma16" },
+    { img: githubIcon, url: "https://github.com/stevenf7" },
     {
-      img: codepenIcon,
-      url: "https://www.codepen.com/",
+      img: devpostIcon,
+      url: "https://devpost.com/TheRealStevenFeng",
     },
     {
-      img: dribbbleIcon,
-      url: "https://dribbble.com/chetanverma",
+      img: linkedinIcon,
+      url: "https://www.linkedin.com/in/stevenfeng7/",
     },
-    {
-      img: instagramIcon,
-      url: "https://www.instagram.com/",
-    },
+
   ],
 
   // End Contact Section ---------------

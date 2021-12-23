@@ -27,8 +27,9 @@ const Footer = () => {
             ))}
           </div>
           <span>
-            Connect with me on 
-            <a href="https://www.linkedin.com/in/stevenfeng7/"> Linkedin</a>
+            Made by 
+            <a href="https://www.linkedin.com/in/stevenfeng7/"> Steven Feng</a>
+            in 2021
           </span>
         </div>
       </div>

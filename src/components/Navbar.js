@@ -11,7 +11,7 @@ const Navbar = () => {
             className="name"
             tabIndex={0}
           >
-          
+          Resume
           </div>
           <div className="links-wrapper">
             <button onClick= {event =>  window.location.href='/#home'} type="button">Home</button>

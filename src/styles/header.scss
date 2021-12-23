@@ -31,7 +31,7 @@
     h1 {
       margin-top: 2vh;
       margin-bottom: 2vh;
-      font-size: 40px;
+      font-size: 50px;
       text-align: center;
       line-height: 40px;
       color: white;
@@ -40,12 +40,12 @@
         line-height: 20px;
       }
       @include media(">=lgphone", "<tablet") {
-        font-size: 24px;
-        line-height: 24px;
-      }
-      @include media(">=tablet", "<desktop") {
         font-size: 30px;
         line-height: 30px;
+      }
+      @include media(">=tablet", "<desktop") {
+        font-size: 40px;
+        line-height: 40px;
       }
     }
   }
