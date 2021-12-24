@@ -2,7 +2,7 @@ import React from "react"
 import Fade from "react-reveal/Fade"
 import data from "../yourdata"
 import { Typewriter } from "react-simple-typewriter"
-import imgUrl from "../images/headerphoto.jpg"
+import imgUrl from "../images/headerphoto.png"
 const Header = () => {
   return (
     <div className="section" id="home">
