@@ -30,8 +30,17 @@
   
       p {
         margin-top: 1vh;
+        font-size: 1.5rem;
+        @include media(">=phone", "<lgphone") {
+          font-size: 0.8rem;
+          text-align: center;     
+        }
+        @include media(">=lgphone", "<tablet") {
+          font-size: 1rem;
+          text-align: center;
+        }
         @include media(">=tablet", "<desktop") {
-          font-size: 1.5rem;
+          font-size: 1.2rem;
           text-align: center;
         }
       }

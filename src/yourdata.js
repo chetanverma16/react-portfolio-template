@@ -110,7 +110,7 @@ export default {
   aboutParaTwo:
     "Outside of school, I am a part of WATonomous, the Waterloo's self driving car team where I gained insights in autonomous vehicles and experiences with ROS. In addition, I compete in hackathons and built 10 unique projects which won numerous awards and learned tools such as Tensorflow and OpenCV.",
   aboutParaThree:
-    "In my free time, I play the accordion and clarinet. I am also a fully licensed pilot, and I miss flying!",
+    "In my free time, I play the accordion and clarinet. I am also a fully licensed pilot, and I miss flying! I have also been playing a few strategy games lately, namely Total War and Civilization, add me on steam if you enjoy those games too.",
   aboutImage:
     "images/SelfPhoto.jpg",
 
