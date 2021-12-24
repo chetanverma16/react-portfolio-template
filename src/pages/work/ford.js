@@ -18,12 +18,12 @@ export default function FordTab() {
             <figcaption>
               <Fade bottom>
                 <h1>Software Developer - Ford Motor Company of Canada</h1>
-                <h2>05/2019 - 08/2019</h2>
+                <h2>05/2019 - 08/2019  </h2>
                 <p>
-                -	Developed automation pipeline to flash and systematically test devices routinely on the Jenkins platform for over 100 daily tests 
+                  -	Developed automation pipeline to flash and systematically test devices routinely on the Jenkins platform for over 100 daily tests 
                 <br></br>
                 <br></br>
-                -	Prototyped utility to flash multiple chips simultaneously on TestStand using C#, increasing efficiency by over 2 times
+                  -	Prototyped utility to flash multiple chips simultaneously on TestStand using C#, increasing efficiency by over 2 times
                 </p>
               </Fade>
             </figcaption>

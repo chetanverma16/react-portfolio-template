@@ -13,7 +13,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 50px;
-    grid-gap: 20px;
+    grid-gap: 30px;
     @include media(">=phone", "<lgphone") {
       grid-template-columns: 1fr;
     }
@@ -29,10 +29,10 @@
       align-items: center;
       text-align: center;
       img {
-        height: 3rem;
+        height: 4rem;
       }
       p {
-        font-size: 14px;
+        font-size: 20px;
       }
     }
   }

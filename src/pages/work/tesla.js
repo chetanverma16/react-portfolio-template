@@ -18,10 +18,10 @@ export default function TeslaTab() {
             <figcaption>
               <Fade bottom>
                 <h1>Body Firmware Control Developer - Tesla</h1>
-                <h2>05/2022 - 08/2022</h2>
+                <h2>05/2022 - 08/2022  </h2>
                 <p>
-                  I will be joining the body firmware controls team in Summer 2022,
-                  stay tuned.
+                    I will be joining the body firmware controls team in Summer 2022,
+                    stay tuned.
                 </p>
               </Fade>
             </figcaption>

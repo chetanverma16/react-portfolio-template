@@ -18,15 +18,15 @@ export default function KhazanahTab() {
             <figcaption>
               <Fade bottom>
                 <h1>Innovation - Khazanah</h1>
-                <h2>01/2022 - 04/2022</h2>
+                <h2>01/2022 - 04/2022  </h2>
                 <p>
-                -Created a VR game based on Atari’s Asteroids for Oculus Go platform, designed game logic, collision physics, and cloud leaderboard using C#, Unity, and Oculus developer toolkit, created asteroid models with blender 
+                  -Created a VR game based on Atari’s Asteroids for Oculus Go platform, designed game logic, collision physics, and cloud leaderboard using C#, Unity, and Oculus developer toolkit, created asteroid models with blender 
                 <br></br>
                 <br></br>
-                - Developed novel computer vision-based control for drones using Python OpenCV library, capable of tracking and following an Aruco marker in different lighting conditions up to 10 meters away, and autonomous take-off and land.
+                  - Developed novel computer vision-based control for drones using Python OpenCV library, capable of tracking and following an Aruco marker in different lighting conditions up to 10 meters away, and autonomous take-off and land.
                 <br></br>
                 <br></br>
-                - Design open-sourced smart germicidal device with UV-C bulbs to sterilize personal devices; won Editor’s Choice Award on Instructable
+                  - Design open-sourced smart germicidal device with UV-C bulbs to sterilize personal devices; won Editor’s Choice Award on Instructable
                 </p>
               </Fade>
             </figcaption>

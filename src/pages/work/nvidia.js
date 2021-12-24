@@ -18,10 +18,10 @@ export default function NvidiaTab() {
             <figcaption>
               <Fade bottom>
                 <h1>Robotics Simulation Intern - NVIDIA</h1>
-                <h2>01/2022 - 04/2022</h2>
+                <h2>01/2022 - 04/2022  </h2>
                 <p>
-                  I will be joining the Issac Simulation team in winter 2022,
-                  stay tuned.
+                    - I will be joining the Issac Simulation team in winter 2022,
+                    stay tuned.
                 </p>
               </Fade>
             </figcaption>

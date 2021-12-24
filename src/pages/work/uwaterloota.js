@@ -18,12 +18,12 @@ export default function UwaterlooTATab() {
             <figcaption>
               <Fade bottom>
                 <h1>Teaching Assistant - University of Waterloo (ECE 150)</h1>
-                <h2>09/2020 - 12/2020</h2>
+                <h2>09/2020 - 12/2020  </h2>
                 <p>
-                - Designed questions on quizzes, midterm, and final and created automated testing using C++ and python to grade 300+ submissions per assessment and provide instantaneous feedback using Python expect library and regular expression based on the SOLID design principle
+                  - Designed questions on quizzes, midterm, and final and created automated testing using C++ and python to grade 300+ submissions per assessment and provide instantaneous feedback using Python expect library and regular expression based on the SOLID design principle
                 <br></br>
                 <br></br>
-                - Lead lab and help sessions for 300+ students assisted with teaching concepts in C++, such as dynamic memory allocation, Object-Oriented Programming, pointers, and linked lists, leads to a significant increase in student grades
+                  - Lead lab and help sessions for 300+ students assisted with teaching concepts in C++, such as dynamic memory allocation, Object-Oriented Programming, pointers, and linked lists, leads to a significant increase in student grades
                 </p>
               </Fade>
             </figcaption>
