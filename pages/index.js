@@ -46,8 +46,9 @@ export default function Home() {
       <div className="mt-40" ref={workRef}>
         <h1 className="text-2xl text-bold">Work.</h1>
         <div className="mt-10 grid grid-cols-2 gap-4">
-          {data.projects.map((project) => (
+          {data.projects.map((project, index) => (
             <WorkCard
+              key={index}
               img={project.imageSrc}
               name={project.title}
               description={project.description}
@@ -58,8 +59,9 @@ export default function Home() {
       <div className="mt-40">
         <h1 className="text-2xl text-bold w-">Services.</h1>
         <div className="mt-10 grid grid-cols-2 gap-6">
-          {data.services.map((service) => (
+          {data.services.map((service, index) => (
             <ServiceCard
+              key={index}
               name={service.title}
               description={service.description}
             />
