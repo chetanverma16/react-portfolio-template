@@ -40,7 +40,19 @@ https://user-images.githubusercontent.com/16558205/167652035-8aa2b6b2-52cf-4a43-
 - after selecting netlify will automatially deploy your website.
 
 Quickes way to deploy this repo - 
+
 [![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chetanverma16/react-portfolio-template)
+
+
+### How To Contribute - 
+
+- I would be very happy to review your PRs and all the awesome things that you can improve on this portfolio.
+- Some of the things that we can work on are - `Responsive Layout`, `Dark Mode`, `Adding Git Based CMS`.
+
+
+### Tech Stack Used - 
+- Next.js
+- TailwindCSS
 
 
 
