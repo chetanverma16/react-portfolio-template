@@ -7,8 +7,10 @@ import yourData from "../../yourData";
 const Socials = ({ className }) => {
   return (
     <div className={`${className} flex`}>
-      {yourData.socials.map((social) => (
-        <Button onClick={() => window.open(social.link)}>{social.title}</Button>
+      {yourData.socials.map((social, index) => (
+        <Button key={index} onClick={() => window.open(social.link)}>
+          {social.title}
+        </Button>
       ))}
     </div>
   );
