@@ -40,9 +40,8 @@ https://user-images.githubusercontent.com/16558205/167652035-8aa2b6b2-52cf-4a43-
 - after selecting netlify will automatially deploy your website.
 
 Quickes way to deploy this repo - 
+[![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chetanverma16/react-portfolio-template)
 
-![button](https://user-images.githubusercontent.com/16558205/167653451-d2ae5172-7486-4f3b-bd23-210afac8600b.svg)[https://app.netlify.com/start/deploy?repository=https://github.com/chetanverma16/react-portfolio-template/
-]
 
 
 
