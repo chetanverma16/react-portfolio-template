@@ -1,8 +1,10 @@
 import React from "react";
 
-const WorkCard = ({ img, name, description }) => {
+const WorkCard = ({ img, name, description, onClick }) => {
   return (
-    <div className="overflow-hidden cursor-pointer rounded-lg p-4 first:ml-0">
+    <div
+      className="overflow-hidden cursor-pointer rounded-lg p-4 first:ml-0"
+      onClick={onClick}>
       <div
         className="overflow-hidden rounded-lg transition-all ease-out duration-300 hover:scale-95"
         style={{ height: "600px" }}>
