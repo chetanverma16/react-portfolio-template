@@ -3,17 +3,17 @@ export default {
   //Change The Website Template
 
   //   Header Details ---------------------
-  name: "chetan",
+  name: "Yamiao",
   headerTaglineOne: "Hello 👋",
   headerTaglineTwo:
-    "I'm Chetan Verma - curious designer and devloper based in New Delhi, India. ",
+    "I'm Yamiao Liu - a web developer and designer based in Ottawa, Canada.",
 
   socials: [
-    { title: "Github", link: "https://github.com/chetanverma16" },
-    { title: "LinkedIn", link: "https://www.linkedin.com/in/chetanverma7/" },
-    { title: "Twitter", link: "https://twitter.com/realchetanverma" },
-    { title: "Blog", link: "https://blog.chetanverma.com/" },
-    { title: "Email", link: "mailto:hello@chetanverma.com" },
+    { title: "Resume", link: "https://drive.google.com/file/d/1gNAnvKLumhkARx3aSjIJZR1iXWIWZilY/view" },
+    { title: "Github", link: "https://github.com/ymliu978" },
+    { title: "LinkedIn", link: "https://www.linkedin.com/in/yamiaoliu/" },
+    { title: "Instagram", link: "https://www.instagram.com/ymliu978/" },
+    { title: "Email", link: "mailto:liu00561@algonquinlive.com" },
   ],
 
   // End Header Details -----------------------
@@ -21,60 +21,33 @@ export default {
   // Work Section ------------------------
   projects: [
     {
-      title: "Project One", //Project Title - Add Your Project Title Here
-      description: "Web Design",
+      title: "Peter Logan's Steak House", //Project Title - Add Your Project Title Here
+      description: "CSS Flexbox and Grid, JavaScript, Adobe XD, Netlify",
+      info:"Dec 2021",
+      //Project Image - Add Your Project Image Here
+      imageSrc:"https://i.ibb.co/NsZXTPX/peter-logan-landing-4x6.jpg",
+      //Project URL - Add Your Project Url Here
+      url: "https://peter-logans-steakhouse.netlify.app/",
+    },
+    {
+      title: "React Travel Journal", //Project Title - Add Your Project Title Here
+      description: "ReactJS, React Props, React Compinents, Figma, Vercel",
+      info:"Apr 2022",
       //Project Image - Add Your Project Image Here
       imageSrc:
-        "https://images.unsplash.com/photo-1487837647815-bbc1f30cd0d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njl8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
+        "https://i.ibb.co/VLSZ94J/desktop-view.png",
       //Project URL - Add Your Project Url Here
       url: "http://chetanverma.com/",
     },
     {
-      title: "Project Two", //Project Title - Add Your Project Title Here
-      description: "Web Development",
+      title: "The Invisible Guardian", //Project Title - Add Your Project Title Here
+      description: "Tencent Games",
+      info:"Oct 2018 - Sep 2019, as a game designer",
       //Project Image - Add Your Project Image Here
-      imageSrc:
-        "https://images.unsplash.com/photo-1605153864431-a2795a1b2f95?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXwyNTY3ODl8fGVufDB8fHw%3D&auto=format&fit=crop&w=400&q=60",
+      imageSrc:"https://i.ibb.co/qmmrQML/Screenshot-2022-05-22-192813.png",
       //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+      url: "https://store.steampowered.com/app/998940/_The_Invisible_Guardian/?cc=cn",
     },
-    {
-      title: "Project Three", //Project Title - Add Your Project Title Here
-      description: "Design",
-      //Project Image - Add Your Project Image Here
-      imageSrc:
-        "https://images.unsplash.com/photo-1504083898675-c896ecdae86e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjJ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
-    },
-    {
-      title: "Project Four", //Project Title - Add Your Project Title Here
-      description: "Marketing",
-      //Project Image - Add Your Project Image Here
-      imageSrc:
-        "https://images.unsplash.com/photo-1492171983775-a51717616c0d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjB8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
-    },
-    {
-      title: "Project Five", //Project Title - Add Your Project Title Here
-      description: "Development",
-      //Project Image - Add Your Project Image Here
-      imageSrc:
-        "https://images.unsplash.com/photo-1534239143101-1b1c627395c5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
-    },
-    {
-      title: "Project Six", //Project Title - Add Your Project Title Here
-      description: "Design & Development",
-      //Project Image - Add Your Project Image Here
-      imageSrc:
-        "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAyfHxwYXN0ZWx8ZW58MHx8MHw%3D&auto=format&fit=crop&w=400&q=60",
-      //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
-    },
-
     /*
     If You Want To Add More Project just Copy and Paste This At The End
     ,{
@@ -87,6 +60,61 @@ export default {
   ],
 
   // End Work Section -----------------------
+
+ // Game Section ------------------------
+ projects2: [
+  {
+    title: "The Master", //Project Title - Add Your Project Title Here
+    description: "Unity, Physics Game",
+    //Project Image - Add Your Project Image Here
+    imageSrc:"https://img.itch.zone/aW1hZ2UvNjQ0ODAzLzM0NTI3NjYuZ2lm/original/7M2J%2Bj.gif",
+    //Project URL - Add Your Project Url Here
+    url: "https://houkanshan.itch.io/the-master",
+  },
+  {
+    title: "Cat Walking Sim", //Project Title - Add Your Project Title Here
+    description: "Unity, Puzzle Game",
+    //Project Image - Add Your Project Image Here
+    imageSrc:"https://img.itch.zone/aW1hZ2UvNTM2NzcwLzI3OTI2OTguZ2lm/original/ecoGk5.gif",
+    //Project URL - Add Your Project Url Here
+    url: "https://houkanshan.itch.io/cat-walker-simulator",
+  },
+  {
+    title: "Unmanned Station", //Project Title - Add Your Project Title Here
+    description: "Unity, Sim Game",
+    //Project Image - Add Your Project Image Here
+    imageSrc:"https://i.ibb.co/88wy5D5/Unmanned-Station169.gif",
+    //Project URL - Add Your Project Url Here
+    url: "https://ymliu.itch.io/unmanedstation",
+  },
+  {
+    title: "I love you, but", //Project Title - Add Your Project Title Here
+    description: "Board Game",
+    //Project Image - Add Your Project Image Here
+    imageSrc:"https://i.ibb.co/hgXHNM6/ILove-You-But169.gif",
+    //Project URL - Add Your Project Url Here
+    url: "https://iloveyoubut.cargo.site/About",
+  },
+  // {
+  //   title: "Even I Can Hear", //Project Title - Add Your Project Title Here
+  //   description: "Blender, 3D Modelling",
+  //   //Project Image - Add Your Project Image Here
+  //   imageSrc:"https://i.ibb.co/Kb0BqgH/Even-ICan-Hear.gif",
+  //   //Project URL - Add Your Project Url Here
+  //   url: "https://iloveyoubut.cargo.site/About",
+  // },
+  {
+    title: "A Donut", //Project Title - Add Your Project Title Here
+    description: "Blender, 3D Modelling",
+    //Project Image - Add Your Project Image Here
+    imageSrc:"https://i.ibb.co/bgm8vx4/Donut-The-Best-copy.png",
+    //Project URL - Add Your Project Url Here
+    url: "https://ibb.co/SXy9m2k",
+  },
+ 
+],
+
+// End Game Section -----------------------
 
   // Services Section ---------------
 
@@ -116,8 +144,10 @@ export default {
   // End Services Section --------------------------
 
   // About Secton --------------
-  aboutpara:
-    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+  aboutparaone:
+    "I am a web creator that specializes in designing and developing interactive digital experiences. I love bridging the gap between art and programming.",
+  aboutparatwo:
+    "Seriously, they make each other better.",
   //   End About Section ---------------------
 };
 
