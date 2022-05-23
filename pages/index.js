@@ -120,7 +120,7 @@ export default function Home() {
       <h1 className="text-xs text-thin mt-10 mob:mt-2 laptop:mt-10 mob:p-2 laptop:p-0">
       Modified by Yamiao Liu under MIT License. Kudos to {" "}
         <Link href="http://www.chetanverma.com">
-          <a className="underline underline-offset-1">Chetan Verma</a>
+          <a className="no-underline">Chetan Verma</a>
         </Link>.
       </h1>
     </div>
