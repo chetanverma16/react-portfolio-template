@@ -24,7 +24,8 @@ export default {
       title: "Peter Logan's Steak House", //Project Title - Add Your Project Title Here
       description: "CSS Flexbox and Grid, JavaScript, Adobe XD, Netlify",
       //Project Image - Add Your Project Image Here
-      imageSrc:"https://i.ibb.co/NsZXTPX/peter-logan-landing-4x6.jpg",
+      // imageSrc:"https://i.ibb.co/56BdKyd/peter-logan-landing-4x6.jpg",
+      imageSrc:"images/peter-logan-landing-4x6.jpg",
       //Project URL - Add Your Project Url Here
       url: "https://peter-logans-steakhouse.netlify.app/",
     },
@@ -33,7 +34,7 @@ export default {
       description: "ReactJS, React Props, React Compinents, Figma, Vercel",
       //Project Image - Add Your Project Image Here
       imageSrc:
-        "https://i.ibb.co/VLSZ94J/desktop-view.png",
+        "images/desktop-view.png",
       //Project URL - Add Your Project Url Here
       url: "https://travel-journal-react-zeta.vercel.app/",
     },
@@ -41,7 +42,7 @@ export default {
       title: "The Invisible Guardian", //Project Title - Add Your Project Title Here
       description: "As a game designer, Tencent",
       //Project Image - Add Your Project Image Here
-      imageSrc:"https://i.ibb.co/qmmrQML/Screenshot-2022-05-22-192813.png",
+      imageSrc:"images/Invisible-Guardian-min.png",
       //Project URL - Add Your Project Url Here
       url: "https://store.steampowered.com/app/998940/_The_Invisible_Guardian/?cc=cn",
     },
@@ -88,7 +89,7 @@ export default {
     title: "I love you, but", //Project Title - Add Your Project Title Here
     description: "Board Game",
     //Project Image - Add Your Project Image Here
-    imageSrc:"https://i.ibb.co/hgXHNM6/ILove-You-But169.gif",
+    imageSrc:"images/ILoveYouBut169.gif",
     //Project URL - Add Your Project Url Here
     url: "https://iloveyoubut.cargo.site/About",
   },
@@ -104,7 +105,7 @@ export default {
     title: "A Donut", //Project Title - Add Your Project Title Here
     description: "Blender, 3D Modelling",
     //Project Image - Add Your Project Image Here
-    imageSrc:"https://i.ibb.co/bgm8vx4/Donut-The-Best-copy.png",
+    imageSrc:"images/DonutTheBest-min.png",
     //Project URL - Add Your Project Url Here
     url: "https://ibb.co/SXy9m2k",
   },
