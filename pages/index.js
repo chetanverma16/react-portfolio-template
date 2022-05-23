@@ -75,7 +75,7 @@ export default function Home() {
         className="mt-10 mob:mt-0 laptop:mt-10 mob:p-2 laptop:p-0"
         >
         {/* <h1 className="text-2xl text-bold">Work.</h1> */}
-        <div className="mt-10 mob:mt-0 laptop:mt-10 grid grid-cols-2 mob:grid-cols-1 laptop:grid-cols-3 gap-4">
+        <div className="mt-10 mob:mt-0 laptop:mt-10 grid grid-cols-2 mob:grid-cols-1 laptop:grid-cols-2 gap-4">
           {data.projects2.map((project, index) => (
             <GameCard
               key={index}
@@ -105,21 +105,23 @@ export default function Home() {
         <h1 className="text-2xl text-bold">About.</h1>
         <p className="m-5 mob:m-0 laptop:m-5 mob:mt-2 laptop:ml-0 ml-0 text-3xl mob:text-xl laptop:text-3xl w-3/5 mob:w-full laptop:w-3/5">
           {data.aboutparaone}
-          <br/>
+          <br />
+          <br />
           {data.aboutparatwo}
         </p>
       </div>
+
       <div className="mt-40 mob:mt-5 laptop:mt-40 mob:p-2 laptop:p-0">
         <h1 className="text-2xl text-bold">Contact.</h1>
         <div className="mt-5">
           <Socials />
         </div>
       </div>
-      <h1 className="text-sm text-bold mt-10 mob:mt-2 laptop:mt-10 mob:p-2 laptop:p-0">
-        Made With ❤ by{" "}
+      <h1 className="text-xs text-thin mt-10 mob:mt-2 laptop:mt-10 mob:p-2 laptop:p-0">
+      Modified by Yamiao Liu under MIT License. Kudos to {" "}
         <Link href="http://www.chetanverma.com">
           <a className="underline underline-offset-1">Chetan Verma</a>
-        </Link>
+        </Link>.
       </h1>
     </div>
   );

@@ -13,7 +13,7 @@ const GameCard = ({ img, name, description, onClick }) => {
       <h1 className="mt-5 text-3xl font-medium">
         {name ? name : "Project Name"}
       </h1>
-      <h2 className="text-xl opacity-50">
+      <h2 className="text-xl opacity-70">
         {description ? description : "Description"}
       </h2>
     </div>

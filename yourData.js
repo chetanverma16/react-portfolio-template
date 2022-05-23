@@ -23,7 +23,6 @@ export default {
     {
       title: "Peter Logan's Steak House", //Project Title - Add Your Project Title Here
       description: "CSS Flexbox and Grid, JavaScript, Adobe XD, Netlify",
-      info:"Dec 2021",
       //Project Image - Add Your Project Image Here
       imageSrc:"https://i.ibb.co/NsZXTPX/peter-logan-landing-4x6.jpg",
       //Project URL - Add Your Project Url Here
@@ -32,17 +31,15 @@ export default {
     {
       title: "React Travel Journal", //Project Title - Add Your Project Title Here
       description: "ReactJS, React Props, React Compinents, Figma, Vercel",
-      info:"Apr 2022",
       //Project Image - Add Your Project Image Here
       imageSrc:
         "https://i.ibb.co/VLSZ94J/desktop-view.png",
       //Project URL - Add Your Project Url Here
-      url: "http://chetanverma.com/",
+      url: "https://travel-journal-react-zeta.vercel.app/",
     },
     {
       title: "The Invisible Guardian", //Project Title - Add Your Project Title Here
-      description: "Tencent Games",
-      info:"Oct 2018 - Sep 2019, as a game designer",
+      description: "As a game designer, Tencent",
       //Project Image - Add Your Project Image Here
       imageSrc:"https://i.ibb.co/qmmrQML/Screenshot-2022-05-22-192813.png",
       //Project URL - Add Your Project Url Here
@@ -79,14 +76,14 @@ export default {
     //Project URL - Add Your Project Url Here
     url: "https://houkanshan.itch.io/cat-walker-simulator",
   },
-  {
-    title: "Unmanned Station", //Project Title - Add Your Project Title Here
-    description: "Unity, Sim Game",
-    //Project Image - Add Your Project Image Here
-    imageSrc:"https://i.ibb.co/88wy5D5/Unmanned-Station169.gif",
-    //Project URL - Add Your Project Url Here
-    url: "https://ymliu.itch.io/unmanedstation",
-  },
+  // {
+  //   title: "Unmanned Station", //Project Title - Add Your Project Title Here
+  //   description: "Unity, Sim Game",
+  //   //Project Image - Add Your Project Image Here
+  //   imageSrc:"https://i.ibb.co/88wy5D5/Unmanned-Station169.gif",
+  //   //Project URL - Add Your Project Url Here
+  //   url: "https://ymliu.itch.io/unmanedstation",
+  // },
   {
     title: "I love you, but", //Project Title - Add Your Project Title Here
     description: "Board Game",
@@ -120,24 +117,24 @@ export default {
 
   services: [
     {
-      title: "Art Direction",
+      title: "Web Design and Development",
       description:
-        "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance.",
+        "I have a keen eye for aesthetics and the ability to design websites from scratch, then translate the visual design into adaptable code.",
     },
     {
-      title: "Branding",
+      title: "Communication and Problem-solving",
       description:
-        "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors.",
+        "I know how to effectively communicate with clients via email and phone to bring their vision to life. I am self-directed and adopt new processes quickly.",
     },
     {
-      title: "Web Design",
+      title: "Technologies",
       description:
-        "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel.",
+        "HTML5, CSS3, Bootstrap, JavaScript, ReactJS, jQuery, C#, ASP.Net, SQL, Python, PHP, and more...",
     },
     {
-      title: "3D Design",
+      title: "Tools",
       description:
-        "We combine creative design and technical skills to build striking 3D visualisations that bring your project to life.",
+        "Visual Studio, Git, MySQL Workbench, Unity Engine, Blender, Adobe InDesign, Adobe XD, Adobe Premiere Pro, and more...",
     },
   ],
 

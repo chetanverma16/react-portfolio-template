@@ -1,6 +1,6 @@
 import React from "react";
 
-const WorkCard = ({ img, name, description, info, onClick }) => {
+const WorkCard = ({ img, name, description, readme, onClick }) => {
   return (
     <div
       className="overflow-hidden cursor-pointer rounded-lg p-4 mob:p-2 laptop:p-4 first:ml-0"
@@ -17,9 +17,9 @@ const WorkCard = ({ img, name, description, info, onClick }) => {
       <h2 className="text-xl opacity-70">
         {description ? description : "Description"}
       </h2>
-      <p className="opacity-70">
+      {/* <p className="opacity-70">
         {info ? info : "Info"}
-      </p>
+      </p> */}
     </div>
   );
 };
