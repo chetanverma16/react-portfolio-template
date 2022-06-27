@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import ServiceCard from "../components/ServiceCard";
 import Socials from "../components/Socials";
 import WorkCard from "../components/WorkCard";
+import { useIsomorphicLayoutEffect } from "../utils";
+import { stagger } from "../animations";
 
 // Local Data
 import data from "../yourData";
@@ -12,6 +14,10 @@ export default function Home() {
   // Ref
   const workRef = useRef();
   const aboutRef = useRef();
+  const textOne = useRef();
+  const textTwo = useRef();
+  const textThree = useRef();
+  const textFour = useRef();
 
   // Handling Scroll
   const handleWorkScroll = () => {
@@ -30,6 +36,14 @@ export default function Home() {
     });
   };
 
+  useIsomorphicLayoutEffect(() => {
+    stagger(
+      [textOne.current, textTwo.current, textThree.current, textFour.current],
+      { y: 30 },
+      { y: 0 }
+    );
+  }, []);
+
   return (
     <div className="container mx-auto mb-10">
       <Header
@@ -37,10 +51,29 @@ export default function Home() {
         handleAboutScroll={handleAboutScroll}
       />
       <div className="laptop:mt-20 mob:mt-10">
-        <h1 className="mt-5 text-8xl mob:text-3xl laptop:text-8xl mob:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5">
-          {data.headerTaglineOne} <br />
-          {data.headerTaglineTwo}
-        </h1>
+        <div className="mt-5">
+          <h1
+            ref={textOne}
+            className="text-8xl mob:text-3xl laptop:text-8xl mob:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5">
+            {data.headerTaglineOne}
+          </h1>
+          <h1
+            ref={textTwo}
+            className="text-8xl mob:text-3xl laptop:text-8xl mob:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5">
+            {data.headerTaglineTwo}
+          </h1>
+          <h1
+            ref={textThree}
+            className="text-8xl mob:text-3xl laptop:text-8xl mob:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5">
+            {data.headerTaglineThree}
+          </h1>
+          <h1
+            ref={textFour}
+            className="text-8xl mob:text-3xl laptop:text-8xl mob:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5">
+            {data.headerTaglineFour}
+          </h1>
+        </div>
+
         <Socials className="mt-5 mob:mt-2 laptop:mt-5" />
       </div>
       <div
