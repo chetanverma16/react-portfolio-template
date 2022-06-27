@@ -5,8 +5,9 @@ export default {
   //   Header Details ---------------------
   name: "chetan",
   headerTaglineOne: "Hello 👋",
-  headerTaglineTwo:
-    "I'm Chetan Verma - curious designer and devloper based in New Delhi, India. ",
+  headerTaglineTwo: "I'm Chetan Verma - curious",
+  headerTaglineThree: "designer and devloper",
+  headerTaglineFour: " based in New Delhi, India.",
 
   socials: [
     { title: "Github", link: "https://github.com/chetanverma16" },
