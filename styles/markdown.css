@@ -1,0 +1,88 @@
+/* Markdown Styling */
+
+/* Markdown Container */
+
+.markdown-class {
+  @apply mt-5 p-5 text-black;
+}
+
+/* Headings */
+
+.markdown-class h1 {
+  @apply mt-5 text-3xl;
+}
+.markdown-class h2 {
+  @apply mt-5 text-2xl;
+}
+.markdown-class h3 {
+  @apply mt-5 text-xl;
+}
+.markdown-class h4 {
+  @apply mt-5 text-lg;
+}
+.markdown-class h5 {
+  @apply mt-5 text-base;
+}
+.markdown-class h6 {
+  @apply mt-5 text-sm;
+}
+
+.markdown-class a {
+  @apply opacity-80 font-bold text-base underline transition-all duration-200 ease-out hover:opacity-100;
+}
+
+.markdown-class p {
+  @apply mt-2 opacity-80 leading-7 font-normal text-base;
+}
+
+.markdown-class strong {
+  @apply font-extrabold;
+}
+
+.markdown-class hr {
+  @apply my-5;
+}
+
+/* BlockQuote */
+
+.markdown-class blockquote {
+  @apply bg-black p-5 border-l-8 rounded-lg shadow-lg text-white text-sm;
+}
+
+.markdown-class blockquote p {
+  @apply text-white text-sm;
+}
+
+/* Markdown Lists */
+
+.markdown-class ol {
+  @apply mt-5 ml-5;
+}
+
+.markdown-class ol li {
+  @apply text-base opacity-80 list-decimal;
+}
+
+.markdown-class ul {
+  @apply mt-5 ml-5;
+}
+
+.markdown-class ul li {
+  @apply text-base opacity-80 list-disc;
+}
+
+/* Code */
+
+.markdown-class code {
+  @apply bg-black p-2 rounded-lg shadow-lg text-sm text-white;
+}
+
+.markdown-class pre {
+  @apply bg-black max-h-96 my-5 p-2 rounded-lg overflow-auto;
+}
+
+/* Image */
+
+.markdown-class img {
+  @apply max-h-96 w-full my-5 object-cover rounded-lg shadow-lg;
+}
