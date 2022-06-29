@@ -8,7 +8,7 @@ preview: >-
   when an unknown printer took a galley of type and scrambled it to make a type
   specimen book.
 image: >-
-  https://images.pexels.com/photos/12319913/pexels-photo-12319913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1
+  https://images.unsplash.com/photo-1656188505561-19f1a1b6cda8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80
 keywords: "Keyword One, Keyword Two"
 author:
   authorname: Author One
