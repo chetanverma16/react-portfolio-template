@@ -1,9 +1,9 @@
 import { getAllPosts } from "../../utils/api";
 import { ISOToDate } from "../../utils";
 import Header from "../../components/Header";
+import Router, { useRouter } from "next/router";
 
 const Blog = ({ posts }) => {
-  console.log(posts);
   return (
     <div className="container mx-auto mb-10">
       <Header isBlog={true}></Header>
@@ -14,7 +14,10 @@ const Blog = ({ posts }) => {
         <div className="mt-10 grid grid-cols-3 gap-10">
           {posts &&
             posts.map((post, index) => (
-              <div className="w-96 cursor-pointer" key={index}>
+              <div
+                className="w-96 cursor-pointer"
+                key={index}
+                onClick={() => Router.push(`/blog/${post.slug}`)}>
                 <img
                   className="w-full h-60 rounded-lg shadow-lg"
                   src="https://images.unsplash.com/photo-1656188505561-19f1a1b6cda8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80"></img>
