@@ -60,6 +60,9 @@ Quickes way to deploy this repo -
 
 If you liked this portfolio template, don't forget to give it a ⭐.
 
+## Awesome Contributors
+[@Aryan3212](https://github.com/Aryan3212)
+
 
 
 
