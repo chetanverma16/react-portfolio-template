@@ -37,11 +37,59 @@ const Edit = () => {
 
         <div className="mt-10">
           <div className="flex items-center">
-            <label className="text-lg opacity-50">Name</label>
+            <label className="w-1/5 text-lg opacity-50">Name</label>
             <input
               value={data.name}
               onChange={(e) => setData({ ...data, name: e.target.value })}
-              className="ml-10 p-2 rounded-md shadow-lg border-2"
+              className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+              type="text"></input>
+          </div>
+          <div className="mt-5 flex items-center">
+            <label className="w-1/5 text-sx opacity-50">
+              Header Tagline One
+            </label>
+            <input
+              value={data.headerTaglineOne}
+              onChange={(e) =>
+                setData({ ...data, headerTaglineOne: e.target.value })
+              }
+              className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+              type="text"></input>
+          </div>
+          <div className="mt-5 flex items-center">
+            <label className="w-1/5 text-lg opacity-50">
+              Header Tagline Two
+            </label>
+            <input
+              value={data.headerTaglineTwo}
+              onChange={(e) =>
+                setData({ ...data, headerTaglineTwo: e.target.value })
+              }
+              className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+              type="text"></input>
+          </div>
+          <div className="mt-5 flex items-center">
+            <label className="w-1/5 text-lg opacity-50">
+              Header Tagline Three
+            </label>
+            <input
+              value={data.headerTaglineThree}
+              onChange={(e) =>
+                setData({ ...data, headerTaglineThree: e.target.value })
+              }
+              className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+              type="text"></input>
+          </div>
+          <div className="mt-5 flex items-center">
+            <label className="w-1/5 text-lg opacity-50">
+              Header Tagline Four
+            </label>
+            <input
+              value={data.headerTaglineFour}
+              onChange={(e) =>
+                setData({ ...data, headerTaglineFour: e.target.value })
+              }
+              className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
               type="text"></input>
           </div>
         </div>
