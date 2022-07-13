@@ -9,7 +9,7 @@ import Footer from "../components/Footer";
 import Head from "next/head";
 
 // Local Data
-import data from "../yourData";
+import data from "../data/portfolio.json";
 
 export default function Home() {
   // Ref
