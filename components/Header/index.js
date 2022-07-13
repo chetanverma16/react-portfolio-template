@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../Button";
 import { useRouter } from "next/router";
 // Local Data
-import data from "../../yourData";
+import data from "../../data/portfolio.json";
 
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
