@@ -6,6 +6,7 @@ import yourData from "../data/portfolio.json";
 const Edit = () => {
   // states
   const [data, setData] = useState(yourData);
+  const [currentTabs, setCurrentTabs] = useState("HEADER");
 
   const saveData = () => {
     if (process.env.NODE_ENV === "development") {
@@ -33,6 +34,34 @@ const Edit = () => {
               Save
             </Button>
           </div>
+        </div>
+
+        <div className="flex items-center">
+          <Button
+            onClick={() => setCurrentTabs("HEADER")}
+            type={currentTabs === "HEADER" && "primary"}>
+            Header
+          </Button>
+          <Button
+            onClick={() => setCurrentTabs("PROJECTS")}
+            type={currentTabs === "PROJECTS" && "primary"}>
+            Projects
+          </Button>
+          <Button
+            onClick={() => setCurrentTabs("SERVICES")}
+            type={currentTabs === "SERVICES" && "primary"}>
+            Services
+          </Button>
+          <Button
+            onClick={() => setCurrentTabs("ABOUT")}
+            type={currentTabs === "ABOUT" && "primary"}>
+            About
+          </Button>
+          <Button
+            onClick={() => setCurrentTabs("SOCIAL")}
+            type={currentTabs === "SOCIAL" && "primary"}>
+            Social
+          </Button>
         </div>
 
         <div className="mt-10">
