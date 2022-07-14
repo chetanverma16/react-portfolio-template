@@ -1,6 +1,6 @@
+import { useRouter } from "next/router";
 import React from "react";
 import Button from "../Button";
-import { useRouter } from "next/router";
 // Local Data
 import data from "../../data/portfolio.json";
 
@@ -17,7 +17,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         <div className="flex">
           <Button onClick={handleWorkScroll}>Work</Button>
           <Button onClick={handleAboutScroll}>About</Button>
-          <Button onClick={() => router.push("/blog")}>Blog</Button>
+          {data.showBlog && (
+            <Button onClick={() => router.push("/blog")}>Blog</Button>
+          )}
           <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
             Contact
           </Button>
@@ -25,7 +27,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
       ) : (
         <div className="flex">
           <Button onClick={() => router.push("/")}>Home</Button>
-          <Button onClick={() => router.push("/blog")}>Blog</Button>
+          {data.showBlog && (
+            <Button onClick={() => router.push("/blog")}>Blog</Button>
+          )}
           <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
             Contact
           </Button>
