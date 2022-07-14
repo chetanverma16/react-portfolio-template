@@ -85,6 +85,34 @@ const Edit = () => {
     setData({ ...data, services: copyServices });
   };
 
+  // Socials Handler
+
+  const editSocials = (socialIndex, editSocial) => {
+    let copySocials = data.socials;
+    copySocials[socialIndex] = { ...editSocial };
+    setData({ ...data, socials: copySocials });
+  };
+
+  const addSocials = () => {
+    setData({
+      ...data,
+      socials: [
+        ...data.socials,
+        {
+          id: uuidv4(),
+          title: "New Link",
+          link: "www.chetanverma.com",
+        },
+      ],
+    });
+  };
+
+  const deleteSocials = (id) => {
+    const copySocials = data.socials;
+    copySocials = copySocials.filter((social) => social.id !== id);
+    setData({ ...data, socials: copySocials });
+  };
+
   return (
     <div className="container mx-auto">
       <Header></Header>
@@ -333,6 +361,57 @@ const Edit = () => {
               onChange={(e) =>
                 setData({ ...data, aboutpara: e.target.value })
               }></textarea>
+          </div>
+        )}
+        {currentTabs === "SOCIAL" && (
+          <div className="mt-10">
+            {data.socials.map((social, index) => (
+              <>
+                <div key={social.id}>
+                  <div className="flex items-center justify-between">
+                    <h1 className="text-2xl">{social.title}</h1>
+                    <Button
+                      onClick={() => deleteSocials(social.id)}
+                      type="primary">
+                      Delete
+                    </Button>
+                  </div>
+                  <div className="flex items-center mt-5">
+                    <label className="w-1/5 text-lg opacity-50">Title</label>
+                    <input
+                      value={social.title}
+                      onChange={(e) =>
+                        editSocials(index, {
+                          ...social,
+                          title: e.target.value,
+                        })
+                      }
+                      className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+                      type="text"></input>
+                  </div>
+                  <div className="flex items-center mt-5">
+                    <label className="w-1/5 text-lg opacity-50">Link</label>
+                    <input
+                      value={social.link}
+                      onChange={(e) =>
+                        editSocials(index, {
+                          ...service,
+                          link: e.target.value,
+                        })
+                      }
+                      className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+                      type="text"
+                    />
+                  </div>
+                  <hr className="my-10"></hr>
+                </div>
+              </>
+            ))}
+            <div className="my-10">
+              <Button onClick={addSocials} type="primary">
+                Add Social +
+              </Button>
+            </div>
           </div>
         )}
       </div>
