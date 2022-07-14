@@ -7,9 +7,11 @@ import { useIsomorphicLayoutEffect } from "../utils";
 import { stagger } from "../animations";
 import Footer from "../components/Footer";
 import Head from "next/head";
+import Button from "../components/Button";
+import Link from "next/link";
 
 // Local Data
-import data from "../yourData";
+import data from "../data/portfolio.json";
 
 export default function Home() {
   // Ref
@@ -50,6 +52,15 @@ export default function Home() {
       <Head>
         <title>{data.name}</title>
       </Head>
+      {/* This button should not go into production */}
+      {process.env.NODE_ENV === "development" && (
+        <div className="fixed bottom-5 right-5">
+          <Link href="/edit">
+            <Button type="primary">Edit Data</Button>
+          </Link>
+        </div>
+      )}
+
       <div className="container mx-auto mb-10">
         <Header
           handleWorkScroll={handleWorkScroll}
@@ -86,9 +97,9 @@ export default function Home() {
           ref={workRef}>
           <h1 className="text-2xl text-bold">Work.</h1>
           <div className="mt-10 mob:mt-5 laptop:mt-10 grid grid-cols-2 mob:grid-cols-1 laptop:grid-cols-2 gap-4">
-            {data.projects.map((project, index) => (
+            {data.projects.map((project) => (
               <WorkCard
-                key={index}
+                key={project.id}
                 img={project.imageSrc}
                 name={project.title}
                 description={project.description}
