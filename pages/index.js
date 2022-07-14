@@ -86,9 +86,9 @@ export default function Home() {
           ref={workRef}>
           <h1 className="text-2xl text-bold">Work.</h1>
           <div className="mt-10 mob:mt-5 laptop:mt-10 grid grid-cols-2 mob:grid-cols-1 laptop:grid-cols-2 gap-4">
-            {data.projects.map((project, index) => (
+            {data.projects.map((project) => (
               <WorkCard
-                key={index}
+                key={project.id}
                 img={project.imageSrc}
                 name={project.title}
                 description={project.description}
