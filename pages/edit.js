@@ -214,6 +214,23 @@ const Edit = () => {
                 className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
                 type="text"></input>
             </div>
+            <div className="mt-5 flex items-center">
+              <label className="w-1/5 text-lg opacity-50">Blog</label>
+              <div className="w-4/5 ml-10 flex items-center">
+                <Button
+                  onClick={() => setData({ ...data, showBlog: true })}
+                  type={data.showBlog && "primary"}>
+                  Yes
+                </Button>
+                <Button
+                  onClick={() => setData({ ...data, showBlog: false })}
+                  classes={
+                    !data.showBlog && "bg-red-500 text-white hover:bg-red-600"
+                  }>
+                  No
+                </Button>
+              </div>
+            </div>
           </div>
         )}
         {/* PROJECTS */}
