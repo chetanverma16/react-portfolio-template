@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.6",
     "autoprefixer": "^10.4.7",
     "gray-matter": "^4.0.3",
     "gsap": "^3.10.4",
