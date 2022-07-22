@@ -71,15 +71,16 @@
   @apply text-base opacity-80 list-disc;
 }
 
-/* Code */
-
-.markdown-class code {
-  @apply bg-black p-2 rounded-lg shadow-lg text-sm text-white;
+.markdown-class blockquote {
+  @apply bg-slate-200 text-black;
 }
 
-.markdown-class pre {
-  @apply bg-black max-h-96 my-5 p-2 rounded-lg overflow-auto;
+.markdown-class blockquote p{
+  @apply text-black
 }
+
+
+
 
 /* Image */
 

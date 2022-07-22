@@ -27,15 +27,18 @@ const BlogPost = ({ post }) => {
         <div className="mt-10 flex flex-col">
           <img
             className="w-full h-96 rounded-lg shadow-lg object-cover"
-            src={post.image}></img>
+            src={post.image}
+          ></img>
           <h1
             ref={textOne}
-            className="mt-10 text-4xl mob:text-2xl laptop:text-6xl text-bold">
+            className="mt-10 text-4xl mob:text-2xl laptop:text-6xl text-bold"
+          >
             {post.title}
           </h1>
           <h2
             ref={textTwo}
-            className="mt-2 text-xl max-w-4xl text-darkgray opacity-50">
+            className="mt-2 text-xl max-w-4xl text-darkgray opacity-50"
+          >
             {post.tagline}
           </h2>
         </div>
@@ -60,13 +63,11 @@ export async function getStaticProps({ params }) {
     "readingtime",
     "content",
   ]);
-  const content = await markdownToHtml(post.content || "");
 
   return {
     props: {
       post: {
         ...post,
-        content,
       },
     },
   };
