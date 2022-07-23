@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { getPostBySlug, getAllPosts } from "../../utils/api";
-import markdownToHtml from "../../utils/markdownToHtml";
 import Header from "../../components/Header";
 import ContentSection from "../../components/ContentSection";
 import Footer from "../../components/Footer";
@@ -10,6 +9,8 @@ import { stagger } from "../../animations";
 import Button from "../../components/Button";
 
 const BlogPost = ({ post }) => {
+  const [showEditor, setShowEditor] = useState(false);
+  const [blogContent, setBlogContent] = useState(post.content);
   const textOne = useRef();
   const textTwo = useRef();
 
@@ -45,10 +46,27 @@ const BlogPost = ({ post }) => {
         </div>
         <ContentSection content={post.content}></ContentSection>
         <Footer />
-        <div className="fixed bottom-6 right-6">
-          <Button type={"primary"}>Edit this blog</Button>
-        </div>
       </div>
+      {process.env.NODE_ENV === "development" && (
+        <div className="fixed bottom-6 right-6">
+          <Button onClick={() => setShowEditor(true)} type={"primary"}>
+            Edit this blog
+          </Button>
+        </div>
+      )}
+
+      {showEditor && (
+        <div className="fixed z-10 w-screen h-screen top-0 flex flex-col items-center justify-center bg-slate-200">
+          <textarea
+            className="w-11/12 h-5/6 p-2 rounded-xl shadow-md"
+            value={blogContent}
+          ></textarea>
+          <div className="mt-5 flex">
+            <Button type="primary">Save</Button>
+            <Button onClick={() => setShowEditor(false)}>cancel</Button>
+          </div>
+        </div>
+      )}
     </>
   );
 };
