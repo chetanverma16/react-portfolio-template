@@ -23,15 +23,15 @@ const Blog = ({ posts }) => {
                 <div className="mt-10">
                     <h1
                         ref={text}
-                        className="mx-auto mob:p-2 text-bold text-6xl laptop:text-8xl w-full laptop:w-4/5"
+                        className="mx-auto mob:p-2 text-bold text-6xl laptop:text-8xl w-full"
                     >
                         Blog.
                     </h1>
-                    <div className="mt-10 p-1 flex flex-nowrap flex-col justify-center tablet:flex-row tablet:flex-wrap gap-10">
+                    <div className="mt-10 grid grid-cols-1 mob:grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 justify-between gap-10">
                         {posts &&
                             posts.map((post, index) => (
                                 <div
-                                    className="basis-full grow-0 shrink-1 tablet:basis-1/3 laptop:basis-1/4  cursor-pointer"
+                                    className="cursor-pointer"
                                     key={index}
                                     onClick={() =>
                                         Router.push(`/blog/${post.slug}`)
