@@ -6,13 +6,19 @@
 
 https://user-images.githubusercontent.com/16558205/167652035-8aa2b6b2-52cf-4a43-b07a-e4afee94b918.mov
 
+### Tutorials
+
+Youtube - https://www.youtube.com/watch?v=8cmJ2kR4SpM
+
+Blog - https://blog.chetanverma.com/how-to-build-a-portfolio-website-using-nextjs-and-tailwindcss
+
 
 ### Features - 
 
 - Modern Stack
 - Minimal Design
-- Easy To Customize
 - Easy To Browse
+- Easy To Customize With GUI
 
 
 ### Sections
@@ -22,7 +28,7 @@ https://user-images.githubusercontent.com/16558205/167652035-8aa2b6b2-52cf-4a43-
 - Services
 - About
 - Contact
-- Blog
+- Markdown Blog
 
 
 ### How To Use
@@ -47,8 +53,7 @@ Quickes way to deploy this repo -
 
 ### How To Contribute - 
 
-- I would be very happy to review your PRs and all the awesome things that you can improve on this portfolio.
-- Some of the things that we can work on are - `Responsive Layout`, `Dark Mode`, `Adding Git Based CMS`.
+I would be very happy to review your PRs and all the awesome things that you can improve on this portfolio.
 
 
 ### Tech Stack Used - 
