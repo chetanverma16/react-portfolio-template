@@ -32,9 +32,9 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
 #### This is Heading Four With Code Block
 
 ```jsx
-<SyntaxHighlighter language={language} showLineNumbers wrapLongLines>
-  {value}
-</SyntaxHighlighter>
+<code className={className} {...props}>
+  {children}
+</code>
 ```
 
 ## BLockquote

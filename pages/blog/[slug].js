@@ -7,6 +7,7 @@ import Footer from "../../components/Footer";
 import Head from "next/head";
 import { useIsomorphicLayoutEffect } from "../../utils";
 import { stagger } from "../../animations";
+import Button from "../../components/Button";
 
 const BlogPost = ({ post }) => {
   const textOne = useRef();
@@ -44,6 +45,9 @@ const BlogPost = ({ post }) => {
         </div>
         <ContentSection content={post.content}></ContentSection>
         <Footer />
+        <div className="fixed bottom-6 right-6">
+          <Button type={"primary"}>Edit this blog</Button>
+        </div>
       </div>
     </>
   );
