@@ -7,10 +7,10 @@ import Head from "next/head";
 import { useIsomorphicLayoutEffect } from "../../utils";
 import { stagger } from "../../animations";
 import Button from "../../components/Button";
+import BlogEditor from "../../components/BlogEditor";
 
 const BlogPost = ({ post }) => {
-  const [showEditor, setShowEditor] = useState(false);
-  const [blogContent, setBlogContent] = useState(post.content);
+  const [showEditor, setShowEditor] = useState(true);
   const textOne = useRef();
   const textTwo = useRef();
 
@@ -55,24 +55,14 @@ const BlogPost = ({ post }) => {
         </div>
       )}
 
-      {showEditor && (
-        <div className="fixed z-10 w-screen h-screen top-0 flex flex-col items-center justify-center bg-slate-200">
-          <textarea
-            className="w-11/12 h-5/6 p-2 rounded-xl shadow-md"
-            value={blogContent}
-          ></textarea>
-          <div className="mt-5 flex">
-            <Button type="primary">Save</Button>
-            <Button onClick={() => setShowEditor(false)}>cancel</Button>
-          </div>
-        </div>
-      )}
+      {showEditor && <BlogEditor post={post} />}
     </>
   );
 };
 
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
+    "id",
     "date",
     "slug",
     "preview",
@@ -80,9 +70,6 @@ export async function getStaticProps({ params }) {
     "tagline",
     "preview",
     "image",
-    "keywords",
-    "author",
-    "readingtime",
     "content",
   ]);
 
