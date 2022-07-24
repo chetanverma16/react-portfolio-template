@@ -72,31 +72,6 @@ const BlogEditor = ({ post, close, refresh }) => {
         {currentTabs === "BLOGDETAILS" && (
           <div className="mt-10">
             <div className="mt-5 flex flex-col items-center">
-              <label className="w-full text-sx opacity-50">Title</label>
-              <input
-                value={blogVariables.title}
-                onChange={(e) =>
-                  setBlogVariables({ ...blogVariables, title: e.target.value })
-                }
-                className="w-full mt-2 p-4 border hover:border-blue-400 rounded-md shadow-lg border-2"
-                type="text"
-              ></input>
-            </div>
-            <div className="mt-5 flex flex-col items-center">
-              <label className="w-full text-sx opacity-50">Title</label>
-              <input
-                value={blogVariables.tagline}
-                onChange={(e) =>
-                  setBlogVariables({
-                    ...blogVariables,
-                    tagline: e.target.value,
-                  })
-                }
-                className="w-full mt-2 p-4 border hover:border-blue-400 rounded-md shadow-lg border-2"
-                type="text"
-              ></input>
-            </div>
-            <div className="mt-5 flex flex-col items-center">
               <label className="w-full text-sx opacity-50">Date</label>
               <DatePicker
                 selected={new Date(blogVariables.date)}
@@ -109,6 +84,18 @@ const BlogEditor = ({ post, close, refresh }) => {
                 }}
               />
             </div>
+            <div className="mt-5 flex flex-col items-center">
+              <label className="w-full text-sx opacity-50">Title</label>
+              <input
+                value={blogVariables.title}
+                onChange={(e) =>
+                  setBlogVariables({ ...blogVariables, title: e.target.value })
+                }
+                className="w-full mt-2 p-4 border hover:border-blue-400 rounded-md shadow-lg border-2"
+                type="text"
+              ></input>
+            </div>
+
             <div className="mt-5 flex flex-col items-center">
               <label className="w-full text-sx opacity-50">Tagline</label>
               <input
