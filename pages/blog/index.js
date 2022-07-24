@@ -31,6 +31,24 @@ const Blog = ({ posts }) => {
     }
   };
 
+  const deleteBlog = (slug) => {
+    if (process.env.NODE_ENV === "development") {
+      fetch("/api/blog", {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          slug,
+        }),
+      }).then(() => {
+        router.reload(window.location.pathname);
+      });
+    } else {
+      alert("This thing only works in development mode.");
+    }
+  };
+
   return (
     <>
       <Head>
@@ -49,7 +67,7 @@ const Blog = ({ posts }) => {
             {posts &&
               posts.map((post) => (
                 <div
-                  className="cursor-pointer"
+                  className="cursor-pointer relative"
                   key={post.slug}
                   onClick={() => Router.push(`/blog/${post.slug}`)}
                 >
@@ -63,6 +81,19 @@ const Blog = ({ posts }) => {
                   <span className="text-sm mt-5 opacity-25">
                     {ISOToDate(post.date)}
                   </span>
+                  {process.env.NODE_ENV === "development" && (
+                    <div className="absolute top-0 right-0">
+                      <Button
+                        onClick={(e) => {
+                          deleteBlog(post.slug);
+                          e.stopPropagation();
+                        }}
+                        type={"primary"}
+                      >
+                        Delete
+                      </Button>
+                    </div>
+                  )}
                 </div>
               ))}
           </div>
@@ -81,7 +112,6 @@ const Blog = ({ posts }) => {
 
 export async function getStaticProps() {
   const posts = getAllPosts([
-    "id",
     "slug",
     "title",
     "image",

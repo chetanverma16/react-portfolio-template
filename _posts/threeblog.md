@@ -1,5 +1,4 @@
 ---
-id: "3"
 date: "2022-07-08T11:50:54.000Z"
 title: Three Blog
 tagline: This is a Tagline If you want to add.

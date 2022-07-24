@@ -8,11 +8,13 @@ import { useIsomorphicLayoutEffect } from "../../utils";
 import { stagger } from "../../animations";
 import Button from "../../components/Button";
 import BlogEditor from "../../components/BlogEditor";
+import { useRouter } from "next/router";
 
 const BlogPost = ({ post }) => {
-  const [showEditor, setShowEditor] = useState(true);
+  const [showEditor, setShowEditor] = useState(false);
   const textOne = useRef();
   const textTwo = useRef();
+  const router = useRouter();
 
   useIsomorphicLayoutEffect(() => {
     stagger([textOne.current, textTwo.current], { y: 30 }, { y: 0 });
@@ -56,7 +58,11 @@ const BlogPost = ({ post }) => {
       )}
 
       {showEditor && (
-        <BlogEditor post={post} close={() => setShowEditor(false)} />
+        <BlogEditor
+          post={post}
+          close={() => setShowEditor(false)}
+          refresh={() => router.reload(window.location.pathname)}
+        />
       )}
     </>
   );
@@ -64,7 +70,6 @@ const BlogPost = ({ post }) => {
 
 export async function getStaticProps({ params }) {
   const post = getPostBySlug(params.slug, [
-    "id",
     "date",
     "slug",
     "preview",

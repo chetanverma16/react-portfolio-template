@@ -1,5 +1,4 @@
 ---
-id: '1'
 date: '2022-07-15T11:50:54.000Z'
 title: Amazing Blog
 tagline: This is a Tagline If you want to add.
