@@ -5,7 +5,7 @@ import TextareaAutosize from "react-textarea-autosize";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-const BlogEditor = ({ post }) => {
+const BlogEditor = ({ post, close }) => {
   const [currentTabs, setCurrentTabs] = useState("BLOGDETAILS");
   const [blogContent, setBlogContent] = useState(post.content);
   const [blogVariables, setBlogVariables] = useState({
@@ -27,7 +27,7 @@ const BlogEditor = ({ post }) => {
         body: JSON.stringify({
           slug: post.slug,
           content: blogContent,
-          title: blogVariables.title,
+          variables: blogVariables,
         }),
       });
     } else {
@@ -43,7 +43,10 @@ const BlogEditor = ({ post }) => {
             <div className="flex items-center justify-between">
               <h1 className="text-4xl">{blogVariables.title}</h1>
               <div className="flex items-center">
-                <Button type="primary">Save</Button>
+                <Button onClick={savePost} type="primary">
+                  Save
+                </Button>
+                <Button onClick={close}>Close</Button>
               </div>
             </div>
             <div className="flex items-center">
@@ -88,9 +91,12 @@ const BlogEditor = ({ post }) => {
             <div className="mt-5 flex flex-col items-center">
               <label className="w-full text-sx opacity-50">Title</label>
               <input
-                value={blogVariables.title}
+                value={blogVariables.tagline}
                 onChange={(e) =>
-                  setBlogVariables({ ...blogVariables, title: e.target.value })
+                  setBlogVariables({
+                    ...blogVariables,
+                    tagline: e.target.value,
+                  })
                 }
                 className="w-full mt-2 p-4 border hover:border-blue-400 rounded-md shadow-lg border-2"
                 type="text"
@@ -139,7 +145,7 @@ const BlogEditor = ({ post }) => {
             </div>
             <div className="mt-5 flex flex-col items-center">
               <label className="w-full text-sx opacity-50">Image</label>
-              <textarea
+              <input
                 value={blogVariables.image}
                 onChange={(e) =>
                   setBlogVariables({
@@ -149,7 +155,7 @@ const BlogEditor = ({ post }) => {
                 }
                 className="w-full mt-2 p-4 border hover:border-blue-400 rounded-md shadow-lg border-2"
                 type="text"
-              ></textarea>
+              ></input>
             </div>
           </div>
         )}
