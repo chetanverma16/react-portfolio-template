@@ -1,7 +1,7 @@
 ---
-id: "1"
-date: "2022-07-08T11:50:54.000Z"
-title: Ok Let's See How this blog will turn out
+id: '1'
+date: '2022-07-15T11:50:54.000Z'
+title: Amazing Blog
 tagline: This is a Tagline If you want to add.
 preview: >-
   Lorem Ipsum is simply dummy text of the printing and typesetting industry.

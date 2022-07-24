@@ -55,7 +55,9 @@ const BlogPost = ({ post }) => {
         </div>
       )}
 
-      {showEditor && <BlogEditor post={post} />}
+      {showEditor && (
+        <BlogEditor post={post} close={() => setShowEditor(false)} />
+      )}
     </>
   );
 };
