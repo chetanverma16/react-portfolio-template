@@ -1,6 +1,6 @@
 ---
 id: "2"
-date: "2022-06-10T18:30:00.000Z"
+date: "2022-07-08T11:50:54.000Z"
 title: Second Blog
 tagline: This is a Tagline If you want to add.
 preview: >-
@@ -10,12 +10,6 @@ preview: >-
   specimen book.
 image: >-
   https://images.unsplash.com/photo-1656427868828-79a829b92b2b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80
-keywords: "Keyword One, Keyword Two"
-author:
-  authorname: Author One
-  authorimage: >-
-    https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80
-readingtime: 3
 ---
 
 # Heading One
