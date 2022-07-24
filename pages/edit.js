@@ -130,27 +130,32 @@ const Edit = () => {
           <div className="flex items-center">
             <Button
               onClick={() => setCurrentTabs("HEADER")}
-              type={currentTabs === "HEADER" && "primary"}>
+              type={currentTabs === "HEADER" && "primary"}
+            >
               Header
             </Button>
             <Button
               onClick={() => setCurrentTabs("PROJECTS")}
-              type={currentTabs === "PROJECTS" && "primary"}>
+              type={currentTabs === "PROJECTS" && "primary"}
+            >
               Projects
             </Button>
             <Button
               onClick={() => setCurrentTabs("SERVICES")}
-              type={currentTabs === "SERVICES" && "primary"}>
+              type={currentTabs === "SERVICES" && "primary"}
+            >
               Services
             </Button>
             <Button
               onClick={() => setCurrentTabs("ABOUT")}
-              type={currentTabs === "ABOUT" && "primary"}>
+              type={currentTabs === "ABOUT" && "primary"}
+            >
               About
             </Button>
             <Button
               onClick={() => setCurrentTabs("SOCIAL")}
-              type={currentTabs === "SOCIAL" && "primary"}>
+              type={currentTabs === "SOCIAL" && "primary"}
+            >
               Social
             </Button>
           </div>
@@ -164,7 +169,8 @@ const Edit = () => {
                 value={data.name}
                 onChange={(e) => setData({ ...data, name: e.target.value })}
                 className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
-                type="text"></input>
+                type="text"
+              ></input>
             </div>
             <div className="mt-5 flex items-center">
               <label className="w-1/5 text-sx opacity-50">
@@ -176,7 +182,8 @@ const Edit = () => {
                   setData({ ...data, headerTaglineOne: e.target.value })
                 }
                 className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
-                type="text"></input>
+                type="text"
+              ></input>
             </div>
             <div className="mt-5 flex items-center">
               <label className="w-1/5 text-lg opacity-50">
@@ -188,7 +195,8 @@ const Edit = () => {
                   setData({ ...data, headerTaglineTwo: e.target.value })
                 }
                 className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
-                type="text"></input>
+                type="text"
+              ></input>
             </div>
             <div className="mt-5 flex items-center">
               <label className="w-1/5 text-lg opacity-50">
@@ -200,7 +208,8 @@ const Edit = () => {
                   setData({ ...data, headerTaglineThree: e.target.value })
                 }
                 className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
-                type="text"></input>
+                type="text"
+              ></input>
             </div>
             <div className="mt-5 flex items-center">
               <label className="w-1/5 text-lg opacity-50">
@@ -212,21 +221,24 @@ const Edit = () => {
                   setData({ ...data, headerTaglineFour: e.target.value })
                 }
                 className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
-                type="text"></input>
+                type="text"
+              ></input>
             </div>
             <div className="mt-5 flex items-center">
               <label className="w-1/5 text-lg opacity-50">Blog</label>
               <div className="w-4/5 ml-10 flex items-center">
                 <Button
                   onClick={() => setData({ ...data, showBlog: true })}
-                  type={data.showBlog && "primary"}>
+                  type={data.showBlog && "primary"}
+                >
                   Yes
                 </Button>
                 <Button
                   onClick={() => setData({ ...data, showBlog: false })}
                   classes={
                     !data.showBlog && "bg-red-500 text-white hover:bg-red-600"
-                  }>
+                  }
+                >
                   No
                 </Button>
               </div>
@@ -243,7 +255,8 @@ const Edit = () => {
                     <h1 className="text-2xl">{project.title}</h1>
                     <Button
                       onClick={() => deleteProject(project.id)}
-                      type="primary">
+                      type="primary"
+                    >
                       Delete
                     </Button>
                   </div>
@@ -259,7 +272,8 @@ const Edit = () => {
                         })
                       }
                       className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
-                      type="text"></input>
+                      type="text"
+                    ></input>
                   </div>
                   <div className="flex items-center mt-2">
                     <label className="w-1/5 text-lg opacity-50">
@@ -274,7 +288,8 @@ const Edit = () => {
                         })
                       }
                       className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
-                      type="text"></input>
+                      type="text"
+                    ></input>
                   </div>
                   <div className="flex items-center mt-2">
                     <label className="w-1/5 text-lg opacity-50">
@@ -289,7 +304,8 @@ const Edit = () => {
                         })
                       }
                       className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
-                      type="text"></input>
+                      type="text"
+                    ></input>
                   </div>
                   <div className="flex items-center mt-2">
                     <label className="w-1/5 text-lg opacity-50">url</label>
@@ -302,7 +318,8 @@ const Edit = () => {
                         })
                       }
                       className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
-                      type="text"></input>
+                      type="text"
+                    ></input>
                   </div>
                   <hr className="my-10"></hr>
                 </div>
@@ -326,7 +343,8 @@ const Edit = () => {
                     <h1 className="text-2xl">{service.title}</h1>
                     <Button
                       onClick={() => deleteService(service.id)}
-                      type="primary">
+                      type="primary"
+                    >
                       Delete
                     </Button>
                   </div>
@@ -341,7 +359,8 @@ const Edit = () => {
                         })
                       }
                       className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
-                      type="text"></input>
+                      type="text"
+                    ></input>
                   </div>
                   <div className="flex items-center mt-5">
                     <label className="w-1/5 text-lg opacity-50">
@@ -355,7 +374,8 @@ const Edit = () => {
                           description: e.target.value,
                         })
                       }
-                      className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"></textarea>
+                      className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+                    ></textarea>
                   </div>
                   <hr className="my-10"></hr>
                 </div>
@@ -374,9 +394,8 @@ const Edit = () => {
             <textarea
               className="w-full h-96 mt-10 p-2 rounded-md shadow-md border"
               value={data.aboutpara}
-              onChange={(e) =>
-                setData({ ...data, aboutpara: e.target.value })
-              }></textarea>
+              onChange={(e) => setData({ ...data, aboutpara: e.target.value })}
+            ></textarea>
           </div>
         )}
         {currentTabs === "SOCIAL" && (
@@ -388,7 +407,8 @@ const Edit = () => {
                     <h1 className="text-2xl">{social.title}</h1>
                     <Button
                       onClick={() => deleteSocials(social.id)}
-                      type="primary">
+                      type="primary"
+                    >
                       Delete
                     </Button>
                   </div>
@@ -403,7 +423,8 @@ const Edit = () => {
                         })
                       }
                       className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
-                      type="text"></input>
+                      type="text"
+                    ></input>
                   </div>
                   <div className="flex items-center mt-5">
                     <label className="w-1/5 text-lg opacity-50">Link</label>
