@@ -1,6 +1,5 @@
 ---
-id: "2"
-date: "2022-07-08T11:50:54.000Z"
+date: '2022-07-08T11:50:54.000Z'
 title: Second Blog
 tagline: This is a Tagline If you want to add.
 preview: >-

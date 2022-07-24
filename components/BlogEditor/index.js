@@ -5,11 +5,10 @@ import TextareaAutosize from "react-textarea-autosize";
 
 import "react-datepicker/dist/react-datepicker.css";
 
-const BlogEditor = ({ post, close }) => {
+const BlogEditor = ({ post, close, refresh }) => {
   const [currentTabs, setCurrentTabs] = useState("BLOGDETAILS");
   const [blogContent, setBlogContent] = useState(post.content);
   const [blogVariables, setBlogVariables] = useState({
-    id: post.id,
     date: post.date,
     title: post.title,
     tagline: post.tagline,
@@ -17,9 +16,9 @@ const BlogEditor = ({ post, close }) => {
     image: post.image,
   });
 
-  const savePost = () => {
+  const savePost = async () => {
     if (process.env.NODE_ENV === "development") {
-      fetch("/api/blog/edit", {
+      await fetch("/api/blog/edit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -29,6 +28,11 @@ const BlogEditor = ({ post, close }) => {
           content: blogContent,
           variables: blogVariables,
         }),
+      }).then((data) => {
+        if (data.status === 200) {
+          close();
+          refresh();
+        }
       });
     } else {
       alert("This thing only works in development mode.");
@@ -67,16 +71,6 @@ const BlogEditor = ({ post, close }) => {
         </div>
         {currentTabs === "BLOGDETAILS" && (
           <div className="mt-10">
-            <div className="flex flex-col items-center">
-              <label className="w-full text-sx opacity-50">
-                Id (Not Editable)
-              </label>
-              <input
-                value={blogVariables.id}
-                className="w-full mt-2 p-4 border cursor-not-allowed rounded-md shadow-lg border-2"
-                type="text"
-              ></input>
-            </div>
             <div className="mt-5 flex flex-col items-center">
               <label className="w-full text-sx opacity-50">Title</label>
               <input
