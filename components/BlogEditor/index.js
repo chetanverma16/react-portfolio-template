@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import Button from "../../components/Button";
 import DatePicker from "react-datepicker";
 import TextareaAutosize from "react-textarea-autosize";
+import { useTheme } from "next-themes";
 
 import "react-datepicker/dist/react-datepicker.css";
 
 const BlogEditor = ({ post, close, refresh }) => {
+  const { theme } = useTheme();
   const [currentTabs, setCurrentTabs] = useState("BLOGDETAILS");
   const [blogContent, setBlogContent] = useState(post.content);
   const [blogVariables, setBlogVariables] = useState({
@@ -40,7 +42,11 @@ const BlogEditor = ({ post, close, refresh }) => {
   };
 
   return (
-    <div className="fixed z-10 w-screen h-screen overflow-auto top-0 flex flex-col items-center bg-white">
+    <div
+      className={`fixed z-10 w-screen h-screen overflow-auto top-0 flex flex-col items-center ${
+        theme === "dark" ? "bg-black" : "bg-white"
+      }`}
+    >
       <div className="container my-20">
         <div className="mt-10">
           <div className="z-10 sticky top-12">
@@ -75,7 +81,7 @@ const BlogEditor = ({ post, close, refresh }) => {
               <label className="w-full text-sx opacity-50">Date</label>
               <DatePicker
                 selected={new Date(blogVariables.date)}
-                className="w-full mt-2 p-4 border hover:border-blue-400 rounded-md shadow-lg border-2"
+                className="w-full mt-2 p-4 hover:border-blue-400 rounded-md shadow-lg border-2"
                 onChange={(date) => {
                   setBlogVariables({
                     ...blogVariables,
@@ -91,7 +97,7 @@ const BlogEditor = ({ post, close, refresh }) => {
                 onChange={(e) =>
                   setBlogVariables({ ...blogVariables, title: e.target.value })
                 }
-                className="w-full mt-2 p-4 border hover:border-blue-400 rounded-md shadow-lg border-2"
+                className="w-full mt-2 p-4 hover:border-blue-400 rounded-md shadow-lg border-2"
                 type="text"
               ></input>
             </div>
@@ -106,7 +112,7 @@ const BlogEditor = ({ post, close, refresh }) => {
                     tagline: e.target.value,
                   })
                 }
-                className="w-full mt-2 p-4 border hover:border-blue-400 rounded-md shadow-lg border-2"
+                className="w-full mt-2 p-4 hover:border-blue-400 rounded-md shadow-lg border-2"
                 type="text"
               ></input>
             </div>
@@ -120,7 +126,7 @@ const BlogEditor = ({ post, close, refresh }) => {
                     preview: e.target.value,
                   })
                 }
-                className="w-full mt-2 p-4 border hover:border-blue-400 rounded-md shadow-lg border-2"
+                className="w-full mt-2 p-4 hover:border-blue-400 rounded-md shadow-lg border-2"
                 type="text"
               ></textarea>
             </div>
@@ -134,7 +140,7 @@ const BlogEditor = ({ post, close, refresh }) => {
                     image: e.target.value,
                   })
                 }
-                className="w-full mt-2 p-4 border hover:border-blue-400 rounded-md shadow-lg border-2"
+                className="w-full mt-2 p-4 hover:border-blue-400 rounded-md shadow-lg border-2"
                 type="text"
               ></input>
             </div>

@@ -3,7 +3,7 @@
 /* Markdown Container */
 
 .markdown-class {
-  @apply mt-5 p-5 text-black;
+  @apply mt-5 p-5;
 }
 
 /* Headings */
@@ -43,15 +43,7 @@
   @apply my-5;
 }
 
-/* BlockQuote */
 
-.markdown-class blockquote {
-  @apply bg-black p-5 border-l-8 rounded-lg shadow-lg text-white text-sm;
-}
-
-.markdown-class blockquote p {
-  @apply text-white text-sm;
-}
 
 /* Markdown Lists */
 
@@ -71,14 +63,15 @@
   @apply text-base opacity-80 list-disc;
 }
 
+/* BlockQuote */
+
 .markdown-class blockquote {
-  @apply bg-slate-200 text-black;
+  @apply p-5 border-l-8 rounded-lg shadow-lg  text-sm bg-slate-200 text-black;
 }
 
-.markdown-class blockquote p{
-  @apply text-black
+.markdown-class blockquote p {
+  @apply text-black text-sm;
 }
-
 
 
 
