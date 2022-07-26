@@ -7,3 +7,8 @@
 * {
   font-family: "Hind";
 }
+
+body{
+  @apply dark:bg-black dark:text-white
+}
+
