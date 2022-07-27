@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { getAllPosts } from "../../utils/api";
 import { ISOToDate } from "../../utils";
 import Header from "../../components/Header";
@@ -11,9 +11,14 @@ import Button from "../../components/Button";
 const Blog = ({ posts }) => {
   const text = useRef();
   const router = useRouter();
+  const [mounted, setMounted] = useState(false);
 
   useIsomorphicLayoutEffect(() => {
     stagger([text.current], { y: 30 }, { y: 0 });
+  }, []);
+
+  useEffect(() => {
+    setMounted(true);
   }, []);
 
   const createBlog = () => {
@@ -81,7 +86,7 @@ const Blog = ({ posts }) => {
                   <span className="text-sm mt-5 opacity-25">
                     {ISOToDate(post.date)}
                   </span>
-                  {process.env.NODE_ENV === "development" && (
+                  {process.env.NODE_ENV === "development" && mounted && (
                     <div className="absolute top-0 right-0">
                       <Button
                         onClick={(e) => {
@@ -99,7 +104,7 @@ const Blog = ({ posts }) => {
           </div>
         </div>
       </div>
-      {process.env.NODE_ENV === "development" && (
+      {process.env.NODE_ENV === "development" && mounted && (
         <div className="fixed bottom-6 right-6">
           <Button onClick={createBlog} type={"primary"}>
             Add New Post +{" "}
