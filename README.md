@@ -17,6 +17,7 @@ Blog - https://blog.chetanverma.com/how-to-build-a-portfolio-website-using-nextj
 - Easy To Browse
 - Easy To Customize your details With GUI
 - Blog Crud (Create, Read, Update, Delete blog with easy to use UI).
+- Dark Mode
 
 
 ### Sections
