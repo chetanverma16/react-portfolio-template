@@ -438,7 +438,7 @@ const Edit = () => {
                       value={social.link}
                       onChange={(e) =>
                         editSocials(index, {
-                          ...service,
+                          ...social,
                           link: e.target.value,
                         })
                       }
