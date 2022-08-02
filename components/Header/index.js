@@ -26,15 +26,23 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               >
                 {data.name}.
               </h1>
+
               <div className="flex items-center">
-                <Button
-                  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                >
-                  <img
-                    className="h-6"
-                    src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
-                  ></img>
-                </Button>
+                {data.darkMode && (
+                  <Button
+                    onClick={() =>
+                      setTheme(theme === "dark" ? "light" : "dark")
+                    }
+                  >
+                    <img
+                      className="h-6"
+                      src={`/images/${
+                        theme === "dark" ? "moon.svg" : "sun.svg"
+                      }`}
+                    ></img>
+                  </Button>
+                )}
+
                 <Popover.Button>
                   <img
                     className="h-5"
@@ -109,7 +117,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
               Contact
             </Button>
-            {mounted && theme && (
+            {mounted && theme && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
@@ -129,7 +137,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
               Contact
             </Button>
-            {mounted && theme && (
+            {mounted && theme && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
