@@ -249,6 +249,25 @@ const Edit = () => {
                 </Button>
               </div>
             </div>
+            <div className="mt-5 flex items-center">
+              <label className="w-1/5 text-lg opacity-50">Dark Mode</label>
+              <div className="w-4/5 ml-10 flex items-center">
+                <Button
+                  onClick={() => setData({ ...data, darkMode: true })}
+                  type={data.darkMode && "primary"}
+                >
+                  Yes
+                </Button>
+                <Button
+                  onClick={() => setData({ ...data, darkMode: false })}
+                  classes={
+                    !data.darkMode && "bg-red-500 text-white hover:bg-red-600"
+                  }
+                >
+                  No
+                </Button>
+              </div>
+            </div>
           </div>
         )}
         {/* PROJECTS */}
