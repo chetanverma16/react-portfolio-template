@@ -72,7 +72,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
                   )}
                   <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
+                    onClick={() => window.open("mailto:caesaragen@gmail.com")}
                   >
                     Contact
                   </Button>
@@ -86,7 +86,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
                   )}
                   <Button
-                    onClick={() => window.open("mailto:hello@chetanverma.com")}
+                    onClick={() => window.open("mailto:caesaragen@gmail.com")}
                   >
                     Contact
                   </Button>
@@ -98,7 +98,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
       </Popover>
       <div
         className={`mt-10 hidden flex-row items-center justify-between sticky ${
-          theme === "light" && "bg-white"
+          theme === "light" && "bg-slate-50"
         } dark:text-white top-0 z-10 tablet:flex`}
       >
         <h1
@@ -114,7 +114,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {data.showBlog && (
               <Button onClick={() => router.push("/blog")}>Blog</Button>
             )}
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
+            <Button onClick={() => window.open("mailto:caesaragen@gmail.com")}>
               Contact
             </Button>
             {mounted && theme && data.darkMode && (
@@ -134,7 +134,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {data.showBlog && (
               <Button onClick={() => router.push("/blog")}>Blog</Button>
             )}
-            <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
+            <Button onClick={() => window.open("mailto:caesaragen@gmail.com")}>
               Contact
             </Button>
             {mounted && theme && data.darkMode && (
