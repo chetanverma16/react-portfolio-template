@@ -9,9 +9,29 @@ import Footer from "../components/Footer";
 import Head from "next/head";
 import Button from "../components/Button";
 import Link from "next/link";
+import { FaLaravel } from "react-icons/fa";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3 } from "react-icons/fa";
+import { FaJs } from "react-icons/fa";
+import { FaNodeJs } from "react-icons/fa";
+import { FaPhp } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
+import { SiTypescript, SiTailwindcss } from "react-icons/si";
 
 // Local Data
 import data from "../data/portfolio.json";
+
+const icons = { 
+  "Laravel": <FaLaravel/>,
+  "html": <FaHtml5/>,
+  "css": <FaCss3/>,
+  "JavaScript": <FaJs/>,
+  "Node.js": <FaNodeJs/>,
+  "PHP": <FaPhp/>,
+  "React": <FaReact/>,
+  "typescript": <SiTypescript/>,
+  "tailwind": <SiTailwindcss/>
+}
 
 export default function Home() {
   // Ref
@@ -118,6 +138,7 @@ export default function Home() {
                 key={index}
                 name={service.title}
                 description={service.description}
+                icon={icons[service.title]}
               />
             ))}
           </div>

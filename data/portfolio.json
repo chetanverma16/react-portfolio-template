@@ -18,11 +18,6 @@
             "link": "https://www.linkedin.com/in/joel-aduma/"
         },
         {
-            "id": "4",
-            "title": "Blog",
-            "link": "https://blog.chetaerma.com/"
-        },
-        {
             "id": "5",
             "title": "Email",
             "link": "mailto:caesaragen@gmail.com"
@@ -62,28 +57,28 @@
         {
             "id": "1",
             "title": "React",
-            "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
+            "description": "Wide experience in frontend development with React Js and Next.js. I have spearheaded several React projects and spearheaded a team of developers to build a React admin dashboard."
         },
         {
             "id": "2",
             "title": "JavaScript",
-            "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
+            "description": "I have in-depth knowledge of JavaScript and its frameworks."
         },
         {
             "id": "3",
             "title": "Node.js",
-            "description": "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."
+            "description": "Why stop at Frontend? I also do backend development using Node.js and Express."
         },
         {
             "id": "4",
-            "title": "React Native",
-            "description": "We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."
+            "title": "Laravel",
+            "description": "I have demonstrated severally my Laravel abilities for key projects such as AMLA and Africa Arbitration Atlas. As well as API development."
         },
         {
             "id": "05f6299a-ebed-4bc2-b5ab-584ebd8787cc",
             "title": "PHP",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+            "description": "More than 2 years using PHP as my go-to language for backend development."
         }
     ],
-    "aboutpara": "I have 2+ years building webapps with Laravel/PHP and creating custom components in React JS, React Native, Wordpress and NodeJs. I am looking for Frontend focussed opportunities in React Js, Laravel, React Native and HTML/CSS."
+    "aboutpara": "I have 2+ years building web apps with Laravel/PHP and creating custom components in React JS, React Native, Wordpress and NodeJs. I am looking for Frontend focussed opportunities in React Js, Laravel, React Native and HTML/CSS."
 }
