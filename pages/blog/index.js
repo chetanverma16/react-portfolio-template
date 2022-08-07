@@ -15,7 +15,7 @@ const Blog = ({ posts }) => {
 
   useIsomorphicLayoutEffect(() => {
     if (showBlog.current) stagger([text.current], { y: 30 }, { y: 0 });
-    else router.back();
+    else router.push("/");
   }, []);
 
   useEffect(() => {
