@@ -42,13 +42,13 @@ export default function Home() {
   useIsomorphicLayoutEffect(() => {
     stagger(
       [textOne.current, textTwo.current, textThree.current, textFour.current],
-      { y: 30 },
-      { y: 0 }
+      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
+      { y: 0, x: 0, transform: "scale(1)" }
     );
   }, []);
 
   return (
-    <>
+    <div className="relative">
       <Head>
         <title>{data.name}</title>
       </Head>
@@ -60,6 +60,8 @@ export default function Home() {
           </Link>
         </div>
       )}
+      <div className="gradient-circle"></div>
+      <div className="gradient-circle-bottom"></div>
 
       <div className="container mx-auto mb-10">
         <Header
@@ -130,6 +132,6 @@ export default function Home() {
         </div>
         <Footer />
       </div>
-    </>
+    </div>
   );
 }
