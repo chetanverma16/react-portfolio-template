@@ -3,7 +3,7 @@ import React from "react";
 const WorkCard = ({ img, name, description, onClick }) => {
   return (
     <div
-      className="overflow-hidden cursor-pointer rounded-lg p-2 laptop:p-4 first:ml-0"
+      className="overflow-hidden rounded-lg p-2 laptop:p-4 first:ml-0 link"
       onClick={onClick}
     >
       <div
