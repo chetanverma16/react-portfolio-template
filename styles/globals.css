@@ -10,6 +10,7 @@
 
 body {
   @apply dark:bg-black dark:text-white;
+  cursor: none;
 }
 
 .gradient-circle {
