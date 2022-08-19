@@ -166,6 +166,12 @@ const Edit = () => {
             >
               Social
             </Button>
+            <Button
+              onClick={() => setCurrentTabs("RESUME")}
+              type={currentTabs === "RESUME" && "primary"}
+            >
+              Resume
+            </Button>
           </div>
         </div>
         {/* HEADER */}
@@ -475,6 +481,121 @@ const Edit = () => {
               <Button onClick={addSocials} type="primary">
                 Add Social +
               </Button>
+            </div>
+          </div>
+        )}
+        {currentTabs === "RESUME" && (
+          <div className="mt-10">
+            <h1>Main</h1>
+            <div className="mt-5 flex items-center">
+              <label className="w-1/5 text-sx opacity-50">Tagline</label>
+              <input
+                value={data.resume.tagline}
+                onChange={(e) =>
+                  setData({
+                    ...data,
+                    resume: { ...data.resume, tagline: e.target.value },
+                  })
+                }
+                className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+                type="text"
+              ></input>
+            </div>
+            <div className="flex items-center mt-5">
+              <label className="w-1/5 text-lg opacity-50">Description</label>
+              <textarea
+                value={data.resume.description}
+                onChange={(e) =>
+                  setData({
+                    ...data,
+                    resume: { ...data.resume, description: e.target.value },
+                  })
+                }
+                className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+              ></textarea>
+            </div>
+            <hr className="my-10"></hr>
+            <h1>Experiences</h1>
+            <div className="mt-10">
+              {data.resume.experiences.map(
+                ({ id, dates, type, position, bullets }) => (
+                  <div className="mt-5" key={id}>
+                    <div className="flex items-center justify-between">
+                      <h1 className="text-2xl">{position}</h1>
+                      <Button
+                        // onClick={() => deleteProject(project.id)}
+                        type="primary"
+                      >
+                        Delete
+                      </Button>
+                    </div>
+
+                    <div className="flex items-center mt-5">
+                      <label className="w-1/5 text-lg opacity-50">Dates</label>
+                      <input
+                        value={dates}
+                        // onChange={(e) =>
+
+                        // }
+                        className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+                        type="text"
+                      ></input>
+                    </div>
+                    <div className="flex items-center mt-2">
+                      <label className="w-1/5 text-lg opacity-50">Type</label>
+                      <input
+                        value={type}
+                        // onChange={(e) =>
+                        //   editProjects(index, {
+                        //     ...project,
+                        //     description: e.target.value,
+                        //   })
+                        // }
+                        className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+                        type="text"
+                      ></input>
+                    </div>
+                    <div className="flex items-center mt-2">
+                      <label className="w-1/5 text-lg opacity-50">
+                        Position
+                      </label>
+                      <input
+                        value={position}
+                        // onChange={(e) =>
+                        //   editProjects(index, {
+                        //     ...project,
+                        //     imageSrc: e.target.value,
+                        //   })
+                        // }
+                        className="w-4/5 ml-10 p-2 rounded-md shadow-lg border-2"
+                        type="text"
+                      ></input>
+                    </div>
+                    <div className="mt-2 flex">
+                      <label className="w-1/5 text-lg opacity-50">
+                        Bullets
+                      </label>
+                      <div className="w-4/5 ml-10 flex flex-col">
+                        {bullets.map((bullet, index) => (
+                          <input
+                            key={index}
+                            value={bullet}
+                            // onChange={(e) =>
+                            //   editProjects(index, {
+                            //     ...project,
+                            //     imageSrc: e.target.value,
+                            //   })
+                            // }
+                            className="p-2 rounded-md shadow-lg border-2"
+                            type="text"
+                          ></input>
+                        ))}
+                      </div>
+                    </div>
+                    <hr className="my-10"></hr>
+                  </div>
+                )
+              )}
             </div>
           </div>
         )}
