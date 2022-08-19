@@ -11,7 +11,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  const { name, showBlog } = data;
+  const { name, showBlog, showResume } = data;
 
   useEffect(() => {
     setMounted(true);
@@ -74,6 +74,16 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   {showBlog && (
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
                   )}
+                  {showResume && (
+                    <Button
+                      onClick={() =>
+                        window.open("mailto:hello@chetanverma.com")
+                      }
+                    >
+                      Resume
+                    </Button>
+                  )}
+
                   <Button
                     onClick={() => window.open("mailto:hello@chetanverma.com")}
                   >
@@ -88,6 +98,15 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   {showBlog && (
                     <Button onClick={() => router.push("/blog")}>Blog</Button>
                   )}
+                  {showResume && (
+                    <Button
+                      onClick={() => router.push("/resume")}
+                      classes="first:ml-1"
+                    >
+                      Resume
+                    </Button>
+                  )}
+
                   <Button
                     onClick={() => window.open("mailto:hello@chetanverma.com")}
                   >
@@ -117,6 +136,15 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {showBlog && (
               <Button onClick={() => router.push("/blog")}>Blog</Button>
             )}
+            {showResume && (
+              <Button
+                onClick={() => router.push("/resume")}
+                classes="first:ml-1"
+              >
+                Resume
+              </Button>
+            )}
+
             <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
               Contact
             </Button>
@@ -137,9 +165,19 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             {showBlog && (
               <Button onClick={() => router.push("/blog")}>Blog</Button>
             )}
+            {showResume && (
+              <Button
+                onClick={() => router.push("/resume")}
+                classes="first:ml-1"
+              >
+                Resume
+              </Button>
+            )}
+
             <Button onClick={() => window.open("mailto:hello@chetanverma.com")}>
               Contact
             </Button>
+
             {mounted && theme && data.darkMode && (
               <Button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
