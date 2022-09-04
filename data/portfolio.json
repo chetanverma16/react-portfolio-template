@@ -28,14 +28,14 @@
             "id": "1",
             "title": "MiphTech Company Profile",
             "description": "Web Development",
-            "imageSrc": "https://ibb.co/7QMgb4V",
+            "imageSrc": "https://joeladuma.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmip.62c03ccb.png&w=1920&q=75",
             "url": "https://miphtech.netlify.app/"
         },
         {
             "id": "2",
             "title": "React Admin Dashboard",
             "description": "Web Development",
-            "imageSrc": "https://ibb.co/7ydvTcc",
+            "imageSrc": "https://joeladuma.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdsh.8153bc03.png&w=1920&q=75",
             "url": "https://company-dashboard.vercel.app/"
         },
         {
