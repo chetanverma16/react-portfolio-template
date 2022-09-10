@@ -27,7 +27,7 @@ const Cursor = () => {
           dimensions={30}
           fill={getCusomColor()}
           smoothness={{
-            movement: 0.1,
+            movement: 0.2,
             scale: 0.1,
             opacity: 0.2,
           }}
