@@ -152,7 +152,7 @@ const Edit = () => {
       <Cursor />
       <div className="mt-10">
         <div
-          className={`z-10 sticky top-12 ${
+          className={`${
             theme === "dark" ? "bg-transparent" : "bg-white"
           }`}
         >
