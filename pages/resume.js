@@ -9,6 +9,7 @@ import { useTheme } from "next-themes";
 // Data
 import { name, showResume } from "../data/portfolio.json";
 import { resume } from "../data/portfolio.json";
+import data from "../data/portfolio.json";
 
 const Resume = () => {
   const router = useRouter();
@@ -30,9 +31,12 @@ const Resume = () => {
           </Button>
         </div>
       )}
-
-      <Cursor />
-      <div className="container mx-auto cursor-none mb-10">
+      {data.showCursor && <Cursor />}
+      <div
+        className={`container mx-auto mb-10 ${
+          data.showCursor && "cursor-none"
+        }`}
+      >
         <Header isBlog />
         {mount && (
           <div className="mt-10 w-full flex flex-col items-center">
