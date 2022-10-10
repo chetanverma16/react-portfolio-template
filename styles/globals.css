@@ -8,10 +8,6 @@
   font-family: "Hind";
 }
 
-html{
-  @apply cursor-none
-}
-
 body {
   @apply dark:bg-black dark:text-white;
 }
