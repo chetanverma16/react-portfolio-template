@@ -32,6 +32,13 @@
             "url": "https://miphtech.netlify.app/"
         },
         {
+            "id": "5",
+            "title": "ZAPI.ai AI API Marketplace",
+            "description": "Frontend Development",
+            "imageSrc": null,
+            "url": "https://zapi.ai/"
+        },
+        {
             "id": "2",
             "title": "React Admin Dashboard",
             "description": "Web Development",
@@ -51,13 +58,6 @@
             "description": "Web Development",
             "imageSrc": "https://joeladuma.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcomparison.96f8ef16.png&w=1920&q=75",
             "url": "https://africanarbitrationatlas.org/atlas/"
-        },
-        {
-            "id": "5",
-            "title": "ZAPI.ai AI API Marketplace",
-            "description": "Frontend Development",
-            "imageSrc": null,
-            "url": "https://zapi.ai/"
         }
     ],
     "services": [
