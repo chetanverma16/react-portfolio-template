@@ -1,4 +1,5 @@
 import React from "react";
+import ZApi from "../../data/images/zapi.png";
 
 const WorkCard = ({ img, name, description, onClick }) => {
     return (
@@ -13,7 +14,7 @@ const WorkCard = ({ img, name, description, onClick }) => {
                 <img
                     alt={name}
                     className="h-full w-full object-contain"
-                    src={img}
+                    src={img? img : ZApi.src}
                 ></img>
             </div>
             <h1 className="mt-5 text-3xl font-medium">

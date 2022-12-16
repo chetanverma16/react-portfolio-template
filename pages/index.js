@@ -17,6 +17,10 @@ import { FaNodeJs } from "react-icons/fa";
 import { FaPhp } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import { SiTypescript, SiTailwindcss } from "react-icons/si";
+import Image from "next/image";
+import Zapi from "../data/images/zapi.png";
+
+
 
 // Local Data
 import data from "../data/portfolio.json";
@@ -67,6 +71,10 @@ export default function Home() {
     );
   }, []);
 
+  console.log(Zapi.src)
+  // use ZApi.src to get the path to the image
+
+  
   return (
     <>
       <Head>
@@ -122,7 +130,7 @@ export default function Home() {
             {data.projects.map((project) => (
               <WorkCard
                 key={project.id}
-                img={project.imageSrc}
+                img={project.imageSrc? project.imageSrc : Zapi.scr}
                 name={project.title}
                 description={project.description}
                 onClick={() => window.open(project.url)}
