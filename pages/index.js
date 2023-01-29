@@ -1,34 +1,27 @@
-import { useRef } from "react";
-import Header from "../components/Header";
-import ServiceCard from "../components/ServiceCard";
-import Socials from "../components/Socials";
-import WorkCard from "../components/WorkCard";
-import { useIsomorphicLayoutEffect } from "../utils";
-import { stagger } from "../animations";
-import Footer from "../components/Footer";
-import Head from "next/head";
-import Button from "../components/Button";
-import Link from "next/link";
-import Cursor from "../components/Cursor";
+import { useRef } from 'react';
+import Header from '../components/Header';
+import ServiceCard from '../components/ServiceCard';
+import Socials from '../components/Socials';
+import WorkCard from '../components/WorkCard';
+import Footer from '../components/Footer';
+import Head from 'next/head';
+import Button from '../components/Button';
+import Link from 'next/link';
 
 // Local Data
-import data from "../data/portfolio.json";
+import data from '../data/portfolio.json';
 
 export default function Home() {
   // Ref
   const workRef = useRef();
   const aboutRef = useRef();
-  const textOne = useRef();
-  const textTwo = useRef();
-  const textThree = useRef();
-  const textFour = useRef();
 
   // Handling Scroll
   const handleWorkScroll = () => {
     window.scrollTo({
       top: workRef.current.offsetTop,
       left: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -36,62 +29,39 @@ export default function Home() {
     window.scrollTo({
       top: aboutRef.current.offsetTop,
       left: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
-  useIsomorphicLayoutEffect(() => {
-    stagger(
-      [textOne.current, textTwo.current, textThree.current, textFour.current],
-      { y: 40, x: -10, transform: "scale(0.95) skew(10deg)" },
-      { y: 0, x: 0, transform: "scale(1)" }
-    );
-  }, []);
-
   return (
-    <div className={`relative ${data.showCursor && "cursor-none"}`}>
-      {data.showCursor && <Cursor />}
+    <div className={`container mt-10 mx-auto relative max-w-4xl`}>
       <Head>
         <title>{data.name}</title>
       </Head>
-
-      <div className="gradient-circle"></div>
-      <div className="gradient-circle-bottom"></div>
-
       <div className="container mx-auto mb-10">
         <Header
           handleWorkScroll={handleWorkScroll}
           handleAboutScroll={handleAboutScroll}
         />
-        <div className="laptop:mt-20 mt-10">
-          <div className="mt-5">
-            <h1
-              ref={textOne}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
-            >
-              {data.headerTaglineOne}
+        <div className="laptop:mt-6 mt-6">
+          <div className="flex flex-col items-start">
+            <h1 className="text-4xl mob:text-2xl tablet:text-4xl laptopl:text-6xl text-bold">
+              Chetan Verma
             </h1>
-            <h1
-              ref={textTwo}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineTwo}
-            </h1>
-            <h1
-              ref={textThree}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineThree}
-            </h1>
-            <h1
-              ref={textFour}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
-            >
-              {data.headerTaglineFour}
-            </h1>
+            <h2 className="text-gray-600 text-2xl mob:text-base tablet:text-xl laptopl:text-2xl text-bold">
+              Full Stack Developer at{' '}
+              <Link href="www.chetanverma.com">
+                <a className="text-gray-800 text-primary underline font-normal">
+                  chetanverma.com
+                </a>
+              </Link>
+            </h2>
+            <p className="mt-2 text-base text-gray-500 tablet:w-1/2">
+              Helping developers build a faster web. Teaching about web
+              development, serverless, and React / Next.js.
+            </p>
+            <Socials className="mt-2 laptop:mt-2" />
           </div>
-
-          <Socials className="mt-2 laptop:mt-5" />
         </div>
         <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
           <h1 className="text-2xl text-bold">Work.</h1>
@@ -122,7 +92,7 @@ export default function Home() {
           </div>
         </div>
         {/* This button should not go into production */}
-        {process.env.NODE_ENV === "development" && (
+        {process.env.NODE_ENV === 'development' && (
           <div className="fixed bottom-5 right-5">
             <Link href="/edit">
               <Button type="primary">Edit Data</Button>

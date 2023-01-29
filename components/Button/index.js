@@ -1,38 +1,30 @@
-import React from "react";
-import { useTheme } from "next-themes";
-import data from "../../data/portfolio.json";
+import React from 'react';
+import { motion } from 'framer-motion';
 
 const Button = ({ children, type, onClick, classes }) => {
-  const { theme } = useTheme();
-  if (type === "primary") {
+  if (type === 'primary') {
     return (
-      <button
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
         onClick={onClick}
         type="button"
-        className={`text-sm tablet:text-base p-1 laptop:p-2 m-1 laptop:m-2 rounded-lg ${
-          theme === "dark" ? "bg-white text-black" : "bg-black text-white"
-        }  transition-all duration-300 ease-out first:ml-0 hover:scale-105 active:scale-100 link ${
-          data.showCursor && "cursor-none"
-        }  ${classes}`}
+        className={`text-sm tablet:text-base p-2 laptop:p-2 laptop:m-2 rounded-lg bg-gray-800 hover:bg-gray-900 text-white transition-all duration-300 ease-out first:ml-0 ${classes}`}
       >
         {children}
-      </button>
+      </motion.button>
     );
   }
   return (
-    <button
+    <motion.button
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
       onClick={onClick}
       type="button"
-      className={`text-sm tablet:text-base p-1 laptop:p-2 m-1 laptop:m-2 rounded-lg flex items-center transition-all ease-out duration-300 ${
-        theme === "dark"
-          ? "hover:bg-slate-600 text-white"
-          : "hover:bg-slate-100"
-      } hover:scale-105 active:scale-100  tablet:first:ml-0  ${
-        data.showCursor && "cursor-none"
-      } ${classes} link`}
+      className={`text-sm tablet:text-base p-2 laptop:p-2 m-1 laptop:m-2 rounded-lg flex items-center hover:bg-gray-100 ${classes}`}
     >
       {children}
-    </button>
+    </motion.button>
   );
 };
 
