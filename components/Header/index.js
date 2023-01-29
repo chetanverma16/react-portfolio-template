@@ -9,7 +9,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
 
   return (
-    <>
+    <div className="max-w-4xl mx-auto">
       <Popover className="block tablet:hidden mt-5">
         {({ open }) => (
           <>
@@ -31,7 +31,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </div>
             </div>
             <Popover.Panel
-              className={`absolute top-14 right-10 w-5/12 z-10 p-2 bg-white shadow-md rounded-md`}
+              className={`absolute top-8 right-0 w-8/12 z-10 p-2 bg-white shadow-md rounded-md`}
             >
               <div className="grid grid-cols-1">
                 <Button classes="bg-white" onClick={() => router.push('/')}>
@@ -89,7 +89,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
           </Button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
