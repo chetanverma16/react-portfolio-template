@@ -1,29 +1,30 @@
 {
   "name": "Chetan",
-  "headerTaglineOne": "Hello 👋",
-  "headerTaglineTwo": "I'm Chetan Verma - curious",
-  "headerTaglineThree": "designer and devloper",
-  "headerTaglineFour": " based in New Delhi, India.",
+  "headerTaglineOne": "Hello there ✨",
+  "headerTaglineTwo": "I'm Mattias Nilsson",
+  "headerTaglineThree": "UX Designer & Engineer",
+  "headerTaglineFour": " based in Gothenburg",
   "showBlog": true,
   "darkMode": true,
   "socials": [
     {
       "id": "1",
-      "title": "Github",
-      "link": "https://github.com/chetanverma16"
+      "title": "Linkedin",
+      "link": "https://www.linkedin.com/in/mattiasnils/"
     },
     {
       "id": "2",
-      "title": "LinkedIn",
-      "link": "https://www.linkedin.com/in/chetanverma7/"
+      "title": "Behance",
+      "link": "https://www.behance.net/mattiasnils"
     },
     {
       "id": "3",
-      "title": "Twitter",
-      "link": "https://twitter.com/realchetanverma"
+      "title": "Scratch",
+      "link": "https://scratch.mit.edu/users/Yllie/ "
     },
-    { "id": "4", "title": "Blog", "link": "https://blog.chetanverma.com/" },
-    { "id": "5", "title": "Email", "link": "mailto:hello@chetanverma.com" }
+    { "id": "4",
+       "title": "Email", 
+       "link": "mailto:mattiasnils@outlook.com" }
   ],
   "projects": [
     {
