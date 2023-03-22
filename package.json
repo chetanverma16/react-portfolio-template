@@ -28,7 +28,9 @@
     "remark-html": "^15.0.1",
     "styled-components": "^5.3.5",
     "tailwindcss": "^3.0.24",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "vertical-timeline-component-for-react": "1.0.7",
+    "react-chrono": "^1.22.0"
   },
   "devDependencies": {
     "eslint": "8.15.0",

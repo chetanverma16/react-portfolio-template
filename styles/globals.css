@@ -75,3 +75,7 @@ body {
   background: inherit;
   border-radius: inherit;
 }
+
+.timeline-cardsubTitle {
+  font-weight: 100 !important;
+}
