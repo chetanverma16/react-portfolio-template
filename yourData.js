@@ -6,14 +6,14 @@ export default {
   name: "Yamiao",
   headerTaglineOne: "Hello 👋",
   headerTaglineTwo:
-    "I'm Yamiao Liu - a web developer and designer based in Ottawa, Canada.",
+    "I'm Yamiao Liu",
 
   socials: [
     { title: "Resume", link: "https://drive.google.com/file/d/1zLgexcaHi6KTGygd0hJnvHSmpyJT2K-C/view?usp=sharing" },
     { title: "Github", link: "https://github.com/ymliu978" },
     { title: "LinkedIn", link: "https://www.linkedin.com/in/yamiaoliu/" },
     { title: "Instagram", link: "https://www.instagram.com/ymliu978/" },
-    { title: "Email", link: "mailto:liu00561@algonquinlive.com" },
+    { title: "Email", link: "mailto:ymliu97@gmail.com" },
   ],
 
   // End Header Details -----------------------
