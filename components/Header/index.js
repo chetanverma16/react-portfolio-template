@@ -7,7 +7,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll}) => {
       <div>
         <Button onClick={handleWorkScroll}>Work</Button>
         <Button onClick={handleAboutScroll}>About</Button>
-        <Button onClick={() => window.open("mailto:liu00561@algonquinlive.com")}>
+        <Button onClick={() => window.open("mailto:ymliu97@gmail.com")}>
           Email
         </Button>
       </div>
