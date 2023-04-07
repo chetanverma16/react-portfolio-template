@@ -1,0 +1,279 @@
+[
+    {
+      "id": 1,
+      "name": "Front-end",
+      "icon": "https://cdn-icons-png.flaticon.com/512/9672/9672173.png",
+      "relatedProjects": [
+        {
+          "id": 1,
+          "name": "HTML CSS JS Project 2",
+          "link": "url link here",
+          "image": "https://cdn-icons-png.flaticon.com/512/4997/4997543.png"
+          
+        },
+        {
+          "id": 2,
+          "name": "HTML CSS JS Project 2",
+          "link": "url link here",
+          "image": "https://cdn-icons-png.flaticon.com/512/4997/4997543.png"
+          
+        },
+        
+        {
+          "id": 3,
+          "name": "React project",
+          "link": "https://google.com",
+          "image": "https://cdn-icons-png.flaticon.com/512/4997/4997543.png"
+        },
+     
+        {
+          "id": 2,
+          "name": "API project",
+          "link": "url link here",
+          "image": "https://cdn-icons-png.flaticon.com/512/4997/4997543.png"
+          
+        },
+        
+        {
+          "id": 3,
+          "name": "CRUD project",
+          "link": "https://google.com",
+          "image": "https://cdn-icons-png.flaticon.com/512/4997/4997543.png"
+        }
+     
+    
+      ]
+    },
+
+    {
+      "id": 2,
+      "name": "Salesforce",
+      "icon": "https://cdn-icons-png.flaticon.com/512/9672/9672173.png",
+      "relatedProjects": [
+        {
+          "id": 1,
+          "name": "GPT project ",
+          "link": "url link here",
+          "image": "https://cdn-icons-png.flaticon.com/512/4997/4997543.png"
+        },
+        {
+          "id": 2,
+          "name": "Admin project",
+          "link": "url link here",
+          "image": "https://cdn-icons-png.flaticon.com/512/4997/4997543.png"
+        },
+        {
+          "id": 2,
+          "name": "Automation project",
+          "link": "url link here",
+          "image": "https://cdn-icons-png.flaticon.com/512/4997/4997543.png"
+        },
+        {
+          "id": 2,
+          "name": "Flow project",
+          "link": "url link here",
+          "image": "https://cdn-icons-png.flaticon.com/512/4997/4997543.png"
+        },
+        {
+          "id": 2,
+          "name": "LWC SFDC project",
+          "link": "url link here",
+          "image": "https://cdn-icons-png.flaticon.com/512/4997/4997543.png"
+        }
+      ]
+    },
+
+
+
+    {
+      "id": 3,
+      "name": "Skills",
+      "icon": "https://cdn-icons-png.flaticon.com/512/9672/9672173.png",
+      "relatedProjects": [
+        {
+          "id": 3,
+          "name": "Web development",
+         
+          "image": "https://cdn-icons-png.flaticon.com/512/4997/4997543.png"
+        },
+        {
+          "id": 4,
+          "name": "Low-code development",
+          
+          "image": "https://cdn-icons-png.flaticon.com/512/644/644667.png"
+        },
+        {
+          "id": 4,
+          "name": "Salesforce platform",
+         
+          "image": "https://cdn-icons-png.flaticon.com/512/5968/5968914.png"
+        },
+        {
+          "id": 3,
+          "name": "Technical",
+          
+          "image": "https://cdn-icons-png.flaticon.com/512/2920/2920249.png"
+        },
+        {
+          "id": 4,
+          "name": "Leadership",
+          
+          "image": "https://cdn-icons-png.flaticon.com/512/9256/9256517.png"
+        },
+        {
+          "id": 3,
+          "name": "Project management",
+          
+          "image": "https://cdn-icons-png.flaticon.com/512/2351/2351365.png"
+        },
+        {
+          "id": 4,
+          "name": " Industry",
+         
+          "image": "https://cdn-icons-png.flaticon.com/512/3115/3115128.png"
+        },
+        {
+          "id": 4,
+          "name": "Analytics",
+          
+          "image": "https://cdn-icons-png.flaticon.com/512/5495/5495079.png"
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "name": "Technologies",
+      "icon": "https://cdn-icons-png.flaticon.com/512/9672/9672173.png",
+      "relatedProjects": [
+        {
+          "id": 3,
+          "name": "HTML CSS",
+         
+          "image": "https://cdn-icons-png.flaticon.com/512/4997/4997543.png"
+        },
+        {
+          "id": 4,
+          "name": "JavaScript",
+          
+          "image": "https://cdn-icons-png.flaticon.com/512/5968/5968292.png"
+        },
+        {
+          "id": 3,
+          "name": "Lightning web components",
+          
+          "image": "https://cdn-icons-png.flaticon.com/512/5932/5932162.png"
+        },
+        {
+          "id": 3,
+          "name": "Salesforce platform",
+         
+          "image": "https://cdn-icons-png.flaticon.com/512/873/873143.png"
+        },
+        {
+          "id": 4,
+          "name": "React.js",
+          
+          "image": "https://cdn-icons-png.flaticon.com/512/3459/3459313.png"
+        },
+        {
+          "id": 3,
+          "name": "Bootstrap Tailwind CSS",
+         
+          "image": "https://cdn-icons-png.flaticon.com/512/7425/7425907.png"
+        },
+        {
+          "id": 4,
+          "name": "NODE.JS NPM",
+          
+          "image": "https://cdn-icons-png.flaticon.com/512/5968/5968322.png"
+        },
+        {
+          "id": 4,
+          "name": "SOQL",
+          
+          "image": "https://cdn-icons-png.flaticon.com/512/4314/4314908.png"
+        },
+        {
+          "id": 4,
+          "name": "GIT",
+         
+          "image": "https://cdn-icons-png.flaticon.com/512/8293/8293571.png"
+        },
+        {
+          "id": 4,
+          "name": "AWS",
+         
+          "image": "https://cdn-icons-png.flaticon.com/512/8962/8962929.png"
+        },
+        {
+          "id": 4,
+          "name": "Version control",
+         
+          "image": "https://cdn-icons-png.flaticon.com/512/5376/5376391.png"
+        }
+     
+      ]
+    },
+
+    {
+      "id": 4,
+      "name": "About",
+      "icon": "https://cdn-icons-png.flaticon.com/512/9672/9672173.png",
+      "relatedProjects": [
+        {
+          "id": 5,
+          "name": "About",
+         
+          "image": "https://media.licdn.com/dms/image/D5603AQF9aXNHa8zTQw/profile-displayphoto-shrink_400_400/0/1678379029882?e=1684368000&v=beta&t=Q9AAgUr0Akpo8_L1LJk1Nhp92bza2vUNmvZoSSy7tZY",
+          "description": "Highly motivated and results-oriented Salesforce Administrator with X years of experience in configuring, customizing, and managing Salesforce implementations for various industries. Possessing a strong background in Salesforce administration, data management, workflow automation, reporting, and security, I am committed to delivering high-quality solutions to clients. A Salesforce Certified Administrator, I continually stay up-to-date with the latest Salesforce features, best practices, and industry trends. A collaborative team player with excellent communication skills, I excel in problem-solving and enjoy working in dynamic, fast-paced environments."
+        },
+        {
+          "id": 6,
+          "name": "Education",
+          
+          "image": "https://cdn-icons-png.flaticon.com/512/4406/4406316.png",
+          "description": "I have a Bachelor's degree in Computer Science and have completed various online courses, including CS50, MOOCs, Salesforce Trailhead, FreeCodeCamp, Udacity, and Udemy. With over 1000 hours of self-paced learning, these resources have equipped me with in-depth knowledge and skills in web development and Salesforce administration, development, and customization."
+        }
+      ]
+    },
+
+
+    
+    {
+      "id": 5,
+      "name": "Profissional Feedbacks",
+      "icon": "https://cdn-icons-png.flaticon.com/512/758/758651.png",
+      "relatedProjects": [
+        {
+          "id": 6,
+          "name": "Tanweer Majid",
+          "link": "url link here",
+          "image": "https://media.licdn.com/dms/image/C4E03AQH-FfSd0CUGvA/profile-displayphoto-shrink_100_100/0/1563662809431?e=1683763200&v=beta&t=7sMxExz0H0oj7ESi7zaea-9ffvMpRaTeybNXUheHgyk",
+          "description": "Exellent customer service, knowledge, efficiency. Extemely personable. This guy will go far."
+        },
+        {
+          "id": 7,
+          "name": "Chiranjit Ghara",
+          "link": "url link here",
+          "image": "https://media.licdn.com/dms/image/C5103AQHQGZr3etEEMQ/profile-displayphoto-shrink_100_100/0/1517340343978?e=1683763200&v=beta&t=v4cghmEVyWzpTzefFWpXMOhhLk_wYoEsbmzN-2Kkvh0",
+          "description": "Faradeen is a well-spoken and down to earth. He Help me at *** to get my porting issue resolved nicely. He went to beyond his extent to get the job done. Happy with his service."
+        },
+        {
+          "id": 7,
+          "name": "Anita Ticak",
+          "link": "url link here",
+          "image": "https://media.licdn.com/dms/image/C4E03AQEab3IUf9FxBA/profile-displayphoto-shrink_100_100/0/1516438336110?e=1683763200&v=beta&t=VcMTpXfQhcED8DZQH1iToYHgwkvCdkkYqdY5EOl3EIc",
+          "description": "Great interaction and communication! Very helpful and knowledgeable."
+        },
+        {
+          "id": 7,
+          "name": "Ryan Horine",
+          "link": "url link here",
+          "image": "https://media.licdn.com/dms/image/D5603AQE6pYY-2n5fFw/profile-displayphoto-shrink_100_100/0/1676244132177?e=1683763200&v=beta&t=Gp8tefYm_xWj9Pcqq7aLuj9DaA7QRxft62ZaoUebkkQ",
+          "description": "Faradeen was personable, well-spoken, and showed a genuine customer service orientation. He has strong subject matter knowledge and communicates this cearly at the right level to his customers."
+        }
+      
+      ]
+    }
+  ]

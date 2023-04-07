@@ -1,0 +1,92 @@
+
+
+
+ {
+    "content": [
+      {
+        "id": 1,
+        "title": "Front-end developer",
+        "description": "A front-end developer is responsible for implementing visual and interactive elements that users engage with through their web browser when using a web application. Skills required include HTML, CSS, JavaScript, and React.",
+        "icon": "https://www.flaticon.com/svg/static/icons/svg/226/226777.svg",
+        "tags": ["HTML", "CSS", "JavaScript", "React"]
+      },
+      {
+        "id": 2,
+        "title": "Salesforce admin",
+        "description": "A Salesforce admin is responsible for the day-to-day configuration, support, maintenance, and improvement of a Salesforce instance. Skills required include Salesforce administration, configuration, and customization.",
+        "icon": "https://www.flaticon.com/svg/static/icons/svg/226/226777.svg",
+        "tags": [
+          "Salesforce",
+          "Administration",
+          "Configuration",
+          "Customization",
+          "flows",
+          "objects",
+          "reports dashboards  ",
+          "omniChannel",
+          "automation",
+          "lightning web coponents LWC",
+          "API",
+          "project management",
+          "business analysis",
+          "technical",
+          "industry"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Salesforce developer",
+        "description": "A Salesforce developer is responsible for designing and implementing custom solutions on the Salesforce platform. Skills required include Apex, Visualforce, and Lightning components.",
+        "icon": "https://www.flaticon.com/svg/static/icons/svg/226/226777.svg",
+        "tags": ["Salesforce", "Apex", "Visualforce", "Lightning"]
+      },
+      {
+        "id": 4,
+        "title": "General IT skills",
+        "description": "General IT skills include basic knowledge of computer hardware and software, as well as the ability to troubleshoot common computer problems. Other skills may include networking, security, and database administration.",
+        "icon": "https://www.flaticon.com/svg/static/icons/svg/226/226777.svg",
+        "tags": [
+          "Computer hardware",
+          "Computer software",
+          "Troubleshooting",
+          "Networking",
+          "Security",
+          "Database administration"
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Tech stacks",
+        "description": "Tech stacks refer to the combination of technologies used by a company or organization to build and deploy software applications. Examples of tech stacks include the LAMP stack (Linux, Apache, MySQL, PHP), the MEAN stack (MongoDB, Express, AngularJS, Node.js), and the MERN stack (MongoDB, Express, React, Node.js).",
+        "icon": "https://www.flaticon.com/svg/static/icons/svg/226/226777.svg",
+        "tags": [
+          "HTML5",
+          "CSS3",
+          "JAVASCRIPT ES6+",
+          "REACT .JS",
+          "NODE .JS",
+          "TAILWIND CSS",
+          "BOOTSTRAP",
+          "SALESFORCE DESIGN SYSTEM",
+          "SFDX SFDC",
+          "API",
+          "MONGODB",
+          "AWS ES2"
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Soft skills",
+        "description": "Soft skills are non-technical skills that are important for success in the workplace. Examples of soft skills include communication, teamwork, time management, problem solving, and adaptability.",
+        "icon": "https://www.flaticon.com/svg/static/icons/svg/226/226777.svg",
+        "tags": [
+          "Communication",
+          "Teamwork",
+          "Time management",
+          "Problem solving",
+          "Adaptability"
+        ]
+      }
+    ]
+  }
+  

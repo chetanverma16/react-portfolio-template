@@ -1,0 +1,51 @@
+.github-contributors {
+  padding: 1rem;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contributors-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contributor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: calc(33.33% - 0.66rem); /* Display 3 cards per row on desktop */
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .contributors-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contributor-card {
+    width: 100%; /* Display 1 card per row on mobile */
+  }
+}
+
+.contributor-photo {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.contributor-info {
+  text-align: center;
+}
+
+.contributor-username {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+}

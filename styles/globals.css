@@ -4,13 +4,1067 @@
 @tailwind utilities;
 @import "./markdown.css";
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* SEARCH COMPONENT
+ */.header-box{
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+}
+/*DESKTOP: TABLET: search bar in header desktop settings */
+.search-desktop-positioning {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 38%;
+
+  
+ 
+
+}
+/*MOBILE: search bar in header mobile settings */
+.search-header-mobile{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+.list-parent{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  flex-wrap: wrap;
+  line-height: 10px;
+  padding: 10px;
+
+}
+
+
+
+
+
+/* top selected work cards style */
+/* top selected work cards style */
+/* top selected work cards style */
+/* top selected work cards style */
+/* top selected work cards style */
+/* top selected work cards style */
+
+.selected-work-container {
+  width: 100%;
+  overflow: hidden; /* make hidden for mobile */
+}
+
+
+/* use a for applying animation on it instead for the a element to move */
+.selected-work-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  opacity: 0.80;
+  gap: 10px;
+  animation: scroll 30s linear infinite;
+  opacity: 0.5;
+
+
+}
+/* 
+.a-transition-x{
+  animation: scroll 20s linear infinite;
+}
+.a-transition-x:hover{
+
+} */
+
+
+
+.a-scale:hover {
+  transform: scale(1.1);
+ border-bottom: solid 1px;
+}
+
+.a-scale:focus{
+  border: solid;
+ 
+
+}
+
+
+
+
+.selected-work-wrapper:hover {
+  animation-play-state: paused;
+  opacity: 1;
+  transition: all 0.3s;
+  
+
+}
+
+.selected-work-wrapper > * {
+  flex-shrink: 0;
+  margin-right: 1rem;
+  
+}
+
+.selected-work-wrapper > *:last-child {
+  margin-right: 0;
+}
+
+
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .selected-work-wrapper {
+    width: calc(100% + 1rem);
+  }
+
+  .a-scale:hover {
+    transform: scale(1.1);
+  }
+
+.a-transition-x{
+  animation: scroll 25s linear infinite;
+}
+
+
+
+.selected-work-wrapper{
+  animation: none;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(-500%);
+  }
+}
+
+
+
+.selected-work-container {
+  position: relative;
+  height: 50vh; 
+  top: 40px;
+
+
+}
+
+
+  
+}
+
+
+.gradient-text {
+
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif, 'Open Sans', sans-serif, 'Montserrat', sans-serif;
+}
+
+
+
+.gradient-text, .selected-work-title {
+  
+  background: linear-gradient(94.23deg,#1383e4 12.41%,#8879fd 52.55%,#69ff9e 86.95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+    filter: drop-shadow(-11px 2px 4px rgba(0, 0, 0, 0.2));
+   
+  }
+  
+  .selected-work-title{
+    opacity: 0.5;
+  }
+
+
+
+
+
+
+
+.vector-text {
+  /* Your existing styles here */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: 3s;   /* makes the selected work title delay appear  */
+
+}
+
+.vector-text.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* END */
+/* top selected work cards style */
+/* top selected work cards style */
+/* top selected work cards style */
+/* top selected work cards style */
+/* top selected work cards style */
+/* top selected work cards style */
+
+
+
+
+.projects-container{
+  margin-top: 200px;
+
+  
+ 
+}
+
+
+
+
+
+
+
+/* START */
+/* Somekills and project card under selected work section  */
+/* Somekills and project card under selected work section  */
+/* Somekills and project card under selected work section  */
+/* Somekills and project card under selected work section  */
+/* Somekills and project card under selected work section  */
+
+
+.some-skills-projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+
+
+}
+
+.cats-flex-wrap{
+  gap: 2px;
+}
+
+
+.some-skills-project-cards {
+  width: 280px;
+  height: 220px;
+  background-color: rgba(68, 67, 67, 0.114);
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.136);
+  border-radius: 20px;
+
+}
+
+
+
+
+
+.some-skills-project-cats{
+
+  background-color: #c8c4c4;
+  color: black;
+  border-radius: 20px;
+  padding: 0px 11px;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.133);
+  width: max-content;
+  height: 25px;
+ /*  text-align: center;
+  display: flex;
+  align-items: center; */
+
+}
+
+
+.svg-center{
+  position: relative;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.svg-size{
+  background-color: #ada8e166;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.285);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+
+}
+
+
+
+
+
+
+.skills-related-projects-container {/* parent container */
+  margin-top: 125px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 120px;
+  padding: 24px;
+
+}
+
+
+.skills-related-projects-div {/* some skills child container */
+  display: flex;
+  flex-direction: column;
+ 
+
+  width: 95%;
+  flex-wrap: wrap;
+
+  
+}
+
+
+.skills-li-items{
+  background-color: #ada8e166;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.233);
+
+}
+
+
+
+
+
+
+@keyframes animateBackground {
+  0% {
+    background-position: 0% 0%, 100% 0%;
+  }
+  50% {
+    background-position: 100% 0%, 0% 0%;
+  }
+  100% {
+    background-position: 0% 0%, 100% 0%;
+  }
+}
+
+
+
+
+
+
+
+/* END */
+/* Somekills and project card under selected work section  */
+/* Somekills and project card under selected work section  */
+/* Somekills and project card under selected work section  */
+/* Somekills and project card under selected work section  */
+/* Somekills and project card under selected work section  */
+
+
+
+
+
+
+
+
+
+
+/* START */
+/* Collab section  areas of work  */
+/* Collab section  areas of work  */
+/* Collab section  areas of work  */
+/* Collab section  areas of work  */
+
+.areas-of-work-container{
+
+  margin-top: 200px;
+ 
+}
+
+
+
+.collabs-container{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 95%;
+
+
+
+ 
+
+
+
+}
+
+
+
+
+
+
+
+
+.areas-of-work-cards{
+  background: linear-gradient(45deg, rgb(44, 148, 246), #f993eae7, #50fac1);
+  width: 226px;
+  height: 204px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px  rgba(0, 0, 0, 0.266);
+
+}
+
+
+ .areas-of-work-cards::after{
+  position: absolute;
+  width:222px !important;
+  height: 202px !important;
+  right: 0 !important;
+  left: 0 !important;
+  top: 1px !important;
+  content: "";
+  border-radius:10px;
+  margin: auto;
+  backdrop-filter: blur(20px) saturate(200%);
+  -webkit-backdrop-filter: blur(20px) saturate(200%);
+  background-color: rgba(13, 13, 13, 0.947);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  filter: blur(1px);
+
+  z-index: -1;
+
+}
+
+
+
+.collab-paragraph{
+  width: 40%;
+
+}
+
+
+
+
+.collab-cards-box{
+ padding: 5px;
+  gap: 30px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* START */
+/* EXPERIENCE LINE */
+/* EXPERIENCE LINE */
+/* EXPERIENCE LINE */
+
+/* .exp-line{
+  margin-top: 11px;
+  
+} */
+
+.line-span {
+  font-weight: 900;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.total-years-span{
+  background: linear-gradient(94.23deg,#2f70e9 12.41%,#79bffd 52.55%,#ff6969 89.95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+ -webkit-text-fill-color: transparent;
+ filter: drop-shadow(-11px 2px 4px rgba(0, 0, 0, 0.2));
+
+}
+
+
+.line-dot{
+  background-color: #ffffffec;
+  width: 20%;
+  
+
+}
+
+.line-width{
+  width: 98%;
+  
+  
+}
+
+
+
+.line-span::after{
+  content: '';
+  width: 81%;
+  position: absolute;
+  top: 0%;
+  bottom: 0;
+  left: 0%;
+  right: 0;
+  z-index: -1;
+  backdrop-filter: blur(22px) saturate(57%);
+  -webkit-backdrop-filter: blur(22px) saturate(57%);
+  background-color: rgba(49, 49, 77, 0.908);
+  border-radius: 12px;
+  border: 1px solid rgba(71, 69, 69, 0.125);
+  border-radius: 20px;
+}
+
+.collab-card-title{
+  color: white;
+  font-size: 2rem;
+  
+
+}
+.collab-card-p{
+  color: rgb(149, 144, 144);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
+
+
+.areas-of-work-paragraph{
+  font-size: 18px;
+}
+
+
+
+
+.areas-of-collab-title{
+  background: linear-gradient(94.23deg,#1383e4 12.41%,#8879fd 52.55%,#69ff9e 89.95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+    filter: drop-shadow(-11px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+
+
+/* END */
+/* Collab section  areas of work  */
+/* Collab section  areas of work  */
+/* Collab section  areas of work  */
+/* Collab section  areas of work  */
+
+
+
+
+
+
+
+
+
+
+
+/* START */
+/* ADD TO CALENDAR COMPONENT */
+/* ADD TO CALENDAR COMPONENT */
+/* ADD TO CALENDAR COMPONENT */
+/* ADD TO CALENDAR COMPONENT */
+
+.add-to-calendar-primary-container{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 1000px;
+}
+
+
+.add-to-cal-parent-items-center{
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  width: 95%;
+
+
+
+  
+}
+
+
+.calendar-box{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+ background-color: rgba(13, 13, 13, 0.91);
+ border-radius: 12px;
+ border: 1px solid rgba(255, 255, 255, 0.125);
+ color: rgb(71, 69, 69);
+ border-radius: 20px;
+ box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.195);
+ padding: 11px;
+ width: 450px;
+ height: 200px;
+  
+}
+.cal-video{
+  border-radius: 10px;
+
+}
+
+
+
+
+
+.calendar-box::before{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 452px;
+  height: 204px;
+  background: linear-gradient(45deg, rgb(24, 134, 238), #f786e6e7, rgb(235, 177, 187), #fade50);
+  filter: blur(px);
+  z-index: -1;
+  content: "";
+  border-radius: 20px;
+  margin: auto;
+}
+
+
+
+
+
+
+
+.gold-span{
+  background: linear-gradient(120deg, #fbb400 40%,  #ed6f6f 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+
+}
+
+.time-white{
+  font-size: 3rem;
+}
+
+.meeting-span{
+  font-size: 1rem;
+  padding: 2px;
+}
+
+
+
+.calendar-box-title-msg{
+  width: 95%;
+  color: white;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+
+
+
+
+
+
+.calendar-footer{
+  padding: 11px;
+  gap: 10px;
+  display: flex;
+}
+
+
+
+.add-to-cal-time-is-gold-box{
+  width: 41%;
+}
+
+
+
+.add-to-cal-plus{
+  font-weight: 900;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+.apple-btn:focus, .outlook-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px white;
+}
+
+
+
+.outlook-btn, .apple-btn{
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  padding:0.8rem ;
+  width: 204px;
+  height: 52px;
+  cursor: pointer;
+  border-radius: 12px;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(45deg, rgb(44, 148, 246), #5e63f2e7, #50fac1);
+
+
+}
+
+
+
+.outlook-btn::before, .apple-btn::before{
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  filter: blur(px);
+  z-index: -1;
+  width: 202px;
+  height: 50px;
+  top: 1px;
+  left: 1px;
+  content: "";
+  border-radius: 10px;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* EDN */
+/* ADD TO CALENDAR COMPONENT */
+/* ADD TO CALENDAR COMPONENT */
+/* ADD TO CALENDAR COMPONENT */
+/* ADD TO CALENDAR COMPONENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* START */
+/* FEEDBACK COMPONENT */
+/* FEEDBACK COMPONENT */
+/* FEEDBACK COMPONENT */
+/* FEEDBACK COMPONENT */
+
+.feedback-box{
+width: 82%;
+
+border-radius: 20px;
+
+
+}
+
+
+.feedback-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+
+ 
+
+}
+
+
+.feedback-linkedin{
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  width: 100vw;
+  height: 100vh;
+
+} 
+
+
+.icon{
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.264);
+  width: 35px;
+  height: 35px;
+ 
+  
+
+}
+
+
+.item-width{
+  width: 100% !important;
+}
+
+.slick-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.feedback-span-gray{
+  font-size: 1rem;
+  color: gray;
+  font-weight: normal ;
+}
+
+.feedback-item-bg{
+  border-radius: 20px;
+  width: 90%;
+  height: 300px !important;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgb(255, 255, 255);
+ 
+  
+}
+
+
+.feedback-item-bg::after {
+  background: linear-gradient(-45deg, #c072e4b9, #c27ced98, #2384bd82, #3fa9ef85, #7fb8f0);
+  filter: blur(65px);
+  z-index: -1;
+
+
+}
+
+
+
+.feedback-item-bg::before, .feedback-item-bg::after{
+  position: absolute;
+  width: 88%;
+  height: 120px;
+  content: "";
+  border-radius: 50%;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+.feedback-slide {
+  padding: 1rem 0rem;
+  height: 100%;
+  border-radius: 11px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.feedback-slide > div {
+  
+  height: 100%;
+ 
+}
+
+@keyframes feedbackScroll {
+  0% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.slick-slide {
+  border: 3px solid transparent;
+  transition: border 0.5s ease-in-out, transform 0.5s ease-in-out;
+  height: 100%;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+
+.slick-prev:before, .slick-next:before {
+  font-family: 'slick';
+  font-size: 20px;
+  line-height: 1;
+  opacity: .75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+
+  0%{
+    color: #ffffff;
+  }
+
+  100%{
+    color:  #fa41b0;
+  }
+
+}
+
+
+.slick-slide:hover,
+.slick-slide:focus {
+  transition: none;
+  animation: none;
+}
+
+/* .slick-current {
+  border-image: linear-gradient(to left, #3b82f6, #8b5cf6) 1;
+  border-image-slice: 1;
+ 
+
+} */
+
+.slick-slide:focus {
+  outline: none;
+  border: 8px solid linear-gradient(to right, #3b82f6, #8b5cf6);
+  box-shadow: 0 0 0 2px white;
+}
+
+
+.slick-dots li button::before {
+  font-size: 14px;
+  color: white;
+  opacity: 0.5;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.285);
+
+}
+
+.slick-dots li.slick-active button::before {
+  opacity: 1;
+  color: rgb(255, 255, 255) !important;
+}
+
+@media (max-width: 767px) {
+  .feedback-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .feedback-slide > div {
+    width: 100% !important;
+  }
+}
+
+
+
+
+/* END */
+/* FEEDBACK COMPONENT */
+/* FEEDBACK COMPONENT */
+/* FEEDBACK COMPONENT */
+/* FEEDBACK COMPONENT */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* START */
+/* BODY HTML FONT TAILWIND SETTINGS */
+
+
+
 * {
   font-family: "Hind";
 }
 
 body {
   @apply dark:bg-black dark:text-white;
+
 }
+
 
 .gradient-circle {
   position: absolute;
@@ -21,25 +1075,24 @@ body {
   width: 100vw;
   opacity: 0.5;
   filter: blur(40px);
-  background: radial-gradient(
-    circle,
-    rgba(248, 107, 223, 1) 0%,
-    rgba(107, 107, 248, 0.8) 100%
-  );
+  background: radial-gradient(circle,#bf53fa91 12.41%,#a64cb89b 52.55%,#c0585839 89.95%);
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+  -webkit-text-fill-color: transparent;
 }
 .gradient-circle-bottom {
   position: absolute;
   pointer-events: none;
   z-index: 100;
   bottom: -20px;
-  height: 30px;
+  height: 50px;
   width: 100vw;
   opacity: 0.5;
   filter: blur(40px);
   background: radial-gradient(
     circle,
-    rgba(248, 107, 223, 1) 0%,
-    rgba(107, 107, 248, 0.8) 100%
+    rgb(86, 233, 155) 0%,
+    rgba(127, 127, 235, 0.427) 100%
   );
 }
 
@@ -75,3 +1128,691 @@ body {
   background: inherit;
   border-radius: inherit;
 }
+
+
+
+/* END */
+/* BODY HTML FONT TAILWIND SETTINGS */
+
+
+
+
+
+
+
+
+
+/* hero image style and socials tabs with forks status */
+
+
+/* START */
+/* REPOFORK COMPONENT */ /* IF YOU WISH YOU CAN REMOVE THIS COMPONENT FROM ENTIRE CODE BASE BUT PLEASE CREDIT THE DEVELOPERS IN THE FOOTER AREA TO THEIR GITHUB PROFILE */
+
+
+.repo-fork{
+  height: 25px;
+  padding: 5px;
+  background-color: rgba(26, 226, 26, 0.342);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+ 
+}
+/* optimized-social bar added github forks status API */
+
+.all-scocial-align-center{
+  display: flex;
+  align-items: center !important;
+}
+
+
+
+.calImage{
+  border-radius: 50%;
+  position: absolute;
+
+}
+
+
+
+.cal-img-box:hover{
+  filter: drop-shadow(10px 10px 5px rgba(75, 73, 73, 0.504));
+  color:#1383e4;
+  transition: all 0.1s ease-in-out;
+  border-bottom: solid 6px white;
+
+}
+
+
+
+
+
+
+
+
+
+/* MODBILE  */
+/* MODBILE  */
+/* MODBILE  */
+/* MODBILE  */
+/* MODBILE  */
+/* MODBILE  */
+/* MODBILE  */
+
+@media only screen and (max-width: 767px) {
+  /* default iPad screens */
+  .skills-paragraph{
+    padding: 10px;
+    width: 100%;
+    height: fit-content;
+    background-color: #0066d3;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  /* for footer button styel mobile size */
+  .footer-btn{
+    width: 150px !important;
+  }
+
+
+  .calendar-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    gap: 16px;
+    
+   } 
+    
+
+  .cards-box-center{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+
+   }
+
+.areas-of-work-paragraph{
+  width: 100%;
+
+}
+
+
+
+.collab-card-title{
+  font-size: 1.7rem;
+
+}
+
+
+
+
+.line-width{
+  width:100%;
+  margin-right: 0px;
+}
+
+
+.line-dot{
+  width: 22%;
+}
+
+
+.areas-of-work-container{
+  height:  1800px;
+}
+.gold-span, .time-white{
+  font-size: 3rem;
+}
+
+
+
+
+.skills-related-projects-div{
+  width: 100%;
+
+}
+
+
+.add-to-cal-parent-items-center{
+  
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+
+
+}
+
+.add-to-calendar-box{
+  width: 100%;
+  margin-top: 200px;
+      
+
+  }
+
+ .calendar-box{
+  width: 366px;
+  height: 270px;
+ }
+  
+  
+  
+  .calendar-box::before{
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    width: 368px;
+    height: 272px;
+    content: "";
+    border-radius: 20px;
+    margin: auto;
+  }
+  
+
+  .footer-calendar::before, .footer-calendar::after{
+  
+    width: 60% !important;
+    height: 120px !important;
+   
+  }
+
+
+  .add-to-cal-time-is-gold-box{
+    width: 100%;
+  }
+  
+
+
+
+  
+
+
+  .feedback-box{
+    width: 95%;
+
+  }
+
+  .feedback-container{
+ 
+  }
+
+  .some-skills-projects-container {
+    flex-direction: column;
+  }
+  
+  
+  .some-skills-project-cards {
+    width: 100%;
+    position: relative;
+   
+  }
+
+  .collab-paragraph{
+    width: 95%;
+    border-radius: 20px;
+    padding: 20px;
+  
+  }
+  .collabs-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 99%;
+  
+  
+  }
+
+  .collab-cards-box{
+   width: 100%;
+   display: flex;/* make other cards sections like this no flex on big device  */
+   flex-wrap: wrap;
+   justify-content: center; 
+   align-items: center;
+   gap: 10px;
+  
+  }
+
+
+  
+  
+
+
+
+  .areas-of-work-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    width: 170px;
+    height: 170px;
+  }
+
+
+
+  
+   .areas-of-work-cards::after{
+ 
+    width:167px !important;
+    height: 167px !important;
+    right: 0 !important;
+    left: 0 !important;
+    top: 1px !important;
+  
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+.projects-container{
+  margin-top: 1000px !important;
+
+}
+
+
+
+.skills-related-projects-container {
+  width: 100%;
+}
+
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text-3, .text-4{
+  font-size: 1.8rem !important;
+}
+
+
+.post{
+  border:  solid;
+  width: 100px;
+  height: 200px;
+}
+
+
+
+
+
+
+
+
+
+.footer-calendar{
+  display: flex;
+  width: 100%;
+}
+
+
+.footer-calendar::after {
+  background: linear-gradient(to right, #aaf6ba, hsla(24, 88%, 47%, 0.747), #de198c93, #40a1f0d8, #81db7ce3, #5baaea);
+  filter: blur(50px);
+  z-index: -1;
+
+
+}
+
+
+
+.footer-calendar::before, .footer-calendar::after{
+  position: absolute;
+  width: 20%;
+  height: 44px;
+  content: "";
+  left: 0;
+  right: 0;
+  border-radius: 1%;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* START */
+/* FOOTER CARD, AREAS*/
+/* FOOTER CARD, AREAS*/
+/* FOOTER CARD, AREAS*/
+/* FOOTER CARD, AREAS*/
+
+
+
+.footer-bg-box {
+  background-color: #f0f2f5;
+  background-image: linear-gradient(94.23deg,#1383e4 12.41%,#8879fd 52.55%,#69ff9e 86.95%);
+  background-repeat: no-repeat;
+  background-position: top left, top right;
+  background-size: 100% 3px;
+  animation: animateBackground 22s ease-in-out infinite;
+  color: black;
+  border-radius: 20px;
+  
+}
+
+
+
+@keyframes animateBackground {
+  0% {
+    background-position: 0% 0%, 100% 0%;
+  }
+  50% {
+    background-position: 100% 0%, 0% 0%;
+  }
+  100% {
+    background-position: 0% 0%, 100% 0%;
+  }
+}
+
+
+
+.footer-elements-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+ 
+
+}
+
+
+
+.underline{
+  background-color: #529ae7;
+  border-radius: 5px;
+  color: black;
+  font-weight: 500;
+  margin: 5px;
+ 
+}
+
+
+/* gitgub contributions  */
+
+.github-contributors {
+  padding: 0.5rem;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.164);
+}
+
+.contributors-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contributor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: calc(33.33% - 0.66rem); /* Display 3 cards per row on desktop */
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.236);
+}
+
+@media (max-width: 768px) {
+  .contributors-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .contributor-card {
+    width: 50%; /* Display 2 card per row on mobile */
+
+  }
+
+  .footer-elements-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+   
+  
+  }
+}
+
+.contributor-photo {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+
+}
+
+.contributor-info {
+  text-align: center;
+ 
+}
+
+.contributor-username {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+/* github contributions end */
+
+
+
+
+
+.before-p, .after-p {
+
+  font-weight: 500;
+  background-color: #62af7ed5;
+  border-radius: 5px;
+  position: relative;
+  text-align: center;
+  
+}
+
+
+
+
+.versions-box{
+  display: flex;
+
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 10px;
+  width: 90px;
+
+}
+
+
+.react-js{
+  display: flex;
+ 
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 10px;
+ 
+
+
+
+
+}
+
+
+
+.footer-techstacks-box{
+
+  gap: 11px;
+}
+
+
+
+
+
+/* END */
+/* FOOTER CARD, AREAS*/
+/* FOOTER CARD, AREAS*/
+/* FOOTER CARD, AREAS*/
+/* FOOTER CARD, AREAS*/
+
+
+
+
+
+
+
+
+.pageV{
+  position: relative;
+  top: 120px;
+  border: solid;
+  width: 100px;
+  height: 100px;
+
+
+}
+
+
+.project-box-flex{
+
+}
+
+
+/* START  */
+/* WOEK /PROJECTS */
+/* WOEK /PROJECTS */
+/* WOEK /PROJECTS */
+/* WOEK /PROJECTS */
+
+  .project-deets{
+    position: relative;
+    top: -310px;
+    left: 0px;
+    right: 0px;
+    padding: 10px;
+    height: 300px;
+    width: 90%;
+    color: #000000;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.808);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    border-radius: 20px;
+    box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.195);
+  
+  }
+
+
+
+ 
+
+.see-project, .see-more{
+  color: #000000;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.675);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  border-radius: 20px;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.195);
+  
+
+
+}
+
+
+.see-more::after, .see-project::after{
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  content: "";
+  bottom: 0;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(-45deg, #ed969683, #e2c2f1b3, #66c3eb86, #75d4f46b, #88f7c275, #ebeff0);
+  filter: blur(5px);
+  z-index: -1;
+  margin: auto;
+  border-radius: 20px;
+}
+
+
+  .project-card-btns:hover,
+  .project-card-btns:focus{
+    color: springgreen;
+  
+  }
+
+
+
+
+  .f-p-ul{
+    border: solid;
+    display: flex;
+    justify-content: center;
+  }
+
+  .f-p-ul-box{
+    border: solid red;
+  }
+
+
+
+
+  /* END  */
+/* WOEK /PROJECTS */
+/* WOEK /PROJECTS */
+/* WOEK /PROJECTS */
+/* WOEK /PROJECTS */
+
+
+
+
+/* ENJOY! */
+/* DEVELOPERS APPREACIATE THE SUPPORT, PLEASE FORK AND SHARE THIS PROJECT TO MORE USERS */
+/* CREDIT DEVELOPERS TO THEIR PROFILE LINK PLEASE */
+
+/* CHETAN VERMA */ /* https://github.com/chetanverma16 */
+/* FJ */ /* https://github.com/faradeen-ja */
+

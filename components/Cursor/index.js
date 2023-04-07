@@ -9,9 +9,9 @@ const Cursor = () => {
 
   const getCusomColor = () => {
     if (theme.theme === "dark") {
-      return "#fff";
+      return "skyblue";
     } else if (theme.theme === "light") {
-      return "#000";
+      return "green";
     }
   };
 
@@ -24,12 +24,12 @@ const Cursor = () => {
         <CustomCursor
           targets={[".link"]}
           customClass="custom-cursor"
-          dimensions={30}
+          dimensions={35}
           fill={getCusomColor()}
           smoothness={{
-            movement: 0.2,
-            scale: 0.1,
-            opacity: 0.2,
+            movement: 0.3,
+            scale: 0.5,
+            opacity: 0.5,
           }}
           targetOpacity={0.5}
           targetScale={2}

@@ -1,79 +1,53 @@
-![thumbnail](https://user-images.githubusercontent.com/16558205/180779213-ea740975-3df1-460a-a964-0a623ee25872.png)
+<div align="center" style="pointer-events: none;">
 
-### Live - https://react-portfolio-template.netlify.app/
+  <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" alt="Reack js" width="35" height="35" style="pointer-events: none;"/>
+  <img src="https://cdn-icons-png.flaticon.com/512/556/556668.png" alt="Next js" width="40" height="40"/>
+   <img src="https://cdn-icons-png.flaticon.com/512/1053/1053324.png" alt="Tailwind CSS" width="35" height="35" />
 
-### Demo Video - https://www.youtube.com/watch?v=62_HLbx2zLQ&t=9s
+[ ᑭ𝗢ᖇ𝗧ᖴ𝗢ᒪ𝗜𝗢360 ](https://google.com) <img src="https://cdn-icons-png.flaticon.com/512/7205/7205679.png" alt="Version 4" width="25" height="25" align="center" /><img src="https://cdn-icons-png.flaticon.com/512/9080/9080211.png" alt="Version 4" width="20" height="15" align="center" /><br>
+<a href="https://github.com/faradeen-ja/portfolio360-react-next-v4/blob/main/LICENSE" target="blank">
+<img src="https://img.shields.io/github/license/faradeen-ja/portfolio360-react-next-v4?style=round" alt="portfolio360-react-next-v4 license"/>
+</a>
+<a href="https://github.com/faradeen-ja/portfolio360-react-next-v4/graphs/contributors">
+<img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/faradeen-ja/portfolio360-react-next-v4" />
+</a>
+<a href="https://github.com/faradeen-ja/portfolio360-react-next-v4/fork" target="blank">
+<img src="https://img.shields.io/github/forks/faradeen-ja/portfolio360-react-next-v4?style=round" alt="portfolio360-react-next-v4"/>
+</a>
+<a href="https://github.com/faradeen-ja/portfolio360-react-next-v4/issues">
+<img alt="Issues" src="https://img.shields.io/github/issues/faradeen-ja/portfolio360-react-next-v4?color=0088ff" />
+</a>
+<a href="https://github.com/faradeen-ja/portfolio360-react-next-v4/pulls">
+<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/faradeen-ja/portfolio360-react-next-v4?color=0088ff" />
+</a>
+<a href="https://discord.gg/jjuier" target="blank">
+<img src="https://img.shields.io/discord/serveridhere?label=Join%20Community&logo=discord&style=round" alt="join discord community"/>
+</a>
+
+---
+
+Many thanks to Chetan Verma for his dedication building previous version, In `V4` I developed & modernized not just a template but a 360 visual, functionality & accessibility, some immersive improvements such as `internal search` indexing keywords used to quickly and efficiently retrieve portfolio data on a search query basis. add to `calendar`, `skills360`, `collabs360`, dynamic `select work` and few more designs & developments.<br> In the context of a portfolio, a 360-degree visual allows potential clients or employers to view your work in a more interactive and engaging way. This multi feature design provides a more comprehensive view of your work and can help you make a lasting impression. With Portfolio360 `V4`, you can showcase your work in a more dynamic and visually appealing way
+
+<br>❒︎❒︎
+
+  <div  align="center">
+  🔧 Built with React, Next.js, and Tailwind CSS. <br> ⇄ Version 4.0. <a href="https://mysite.com">Live</a> <strong >FJ</strong> <br>
+  Previouse Versions<a href="https://github.com/chetanverma16/react-portfolio-template"> V1-3</a> <strong> Chetan Verma</strong> 
+  <br>❒︎❒︎
+    
+   </div>
+  </div>
+
+  <br>
+
+<p align="center" >
+  <img src="https://github.com/faradeen-ja/portfolio360-react-next-v4/blob/8ea3b90f7becef6b09e9f3f46d8e73c102e380a4/V4-DEMO2.gif" alt="DEMO" style="border-radius: 20px;" />
+</p>
 
 ### Tutorials
 
-Youtube - https://www.youtube.com/watch?v=8cmJ2kR4SpM
+COMING SOON!
 
-Blog - https://blog.chetanverma.com/how-to-build-a-portfolio-website-using-nextjs-and-tailwindcss
+---
 
-### Features - 
-
-- Modern Stack (Next.js + TailwindCSS)
-- Minimal Design
-- Easy To Browse
-- Easy To Customize your details With GUI
-- Blog Crud (Create, Read, Update, Delete blog with easy to use UI).
-- Dark Mode
-
-
-### Sections
-
-- Header
-- Work
-- Services
-- About
-- Contact
-- Markdown Blog
-
-
-### How To Use
-
-- Clone this repo
-- run `yarn`
-- `yarn dev`
-
-
-### How To Deploy - 
-
-- There are many ways to Deploy this repo.
-- here we are gonna use netlify
-- Login into netlify with github
-- after login select the forked repo or the repo you want to deploy
-- after selecting netlify will automatially deploy your website.
-
-Quickes way to deploy this repo - 
-
-[![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chetanverma16/react-portfolio-template)
-
-
-### How To Contribute - 
-
-I would be very happy to review your PRs and all the awesome things that you can improve on this portfolio.
-
-
-### Tech Stack Used - 
-- Next.js
-- TailwindCSS
-
-
-### Thanks
-
-If you liked this portfolio template, don't forget to give it a ⭐.
-
-## Awesome Contributors
-[@Aryan3212](https://github.com/Aryan3212) [@achu-krishna](https://github.com/achu-krishna)
-
-## Supporting
-Many hours of hard work have gone into this project. Your support will be very appreciated!
-
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/chetanverma)
-
-
-
-
-
-
+### OLD README OR UPDATE VERSION

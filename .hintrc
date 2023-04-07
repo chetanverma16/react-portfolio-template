@@ -1,0 +1,8 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "detect-css-reflows/layout": "off"
+  }
+}
