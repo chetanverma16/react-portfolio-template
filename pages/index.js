@@ -26,13 +26,13 @@ import Zapi from "../data/images/zapi.png";
 import data from "../data/portfolio.json";
 
 const icons = { 
-  "Laravel": <FaLaravel/>,
+  "Laravel": <FaLaravel color="#fb503b"/>,
   "html": <FaHtml5/>,
   "css": <FaCss3/>,
-  "JavaScript": <FaJs/>,
-  "Node.js": <FaNodeJs/>,
-  "PHP": <FaPhp/>,
-  "React": <FaReact/>,
+  "JavaScript": <FaJs color="#F0DB4F"/>,
+  "Node.js": <FaNodeJs color="#3c873a"/>,
+  "PHP": <FaPhp color="#8993be"/>,
+  "React": <FaReact color="#61DBFB"/>,
   "typescript": <SiTypescript/>,
   "tailwind": <SiTailwindcss/>
 }
@@ -74,7 +74,7 @@ export default function Home() {
   console.log(Zapi.src)
   // use ZApi.src to get the path to the image
 
-  
+  const lines = data.aboutpara.split("\n");
   return (
     <>
       <Head>
@@ -153,8 +153,14 @@ export default function Home() {
         </div>
         <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
           <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
-            {data.aboutpara}
+          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-full">
+            {lines.map((line, index) => (
+              <span key={index}>
+                {line}
+                <br />
+              </span>
+            ))}
+
           </p>
         </div>
         <Footer />

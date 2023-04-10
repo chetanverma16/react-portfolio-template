@@ -1,91 +1,91 @@
 {
-    "name": "Joel",
-    "headerTaglineOne": "Hello 👋",
-    "headerTaglineTwo": "I'm Joel Aduma - curious",
-    "headerTaglineThree": "software developer",
-    "headerTaglineFour": " based in Nairobi, Kenya.",
-    "showBlog": false,
-    "darkMode": true,
-    "socials": [
-        {
-            "id": "1",
-            "title": "Github",
-            "link": "https://github.com/caesaragen"
-        },
-        {
-            "id": "2",
-            "title": "LinkedIn",
-            "link": "https://www.linkedin.com/in/joel-aduma/"
-        },
-        {
-            "id": "5",
-            "title": "Email",
-            "link": "mailto:caesaragen@gmail.com"
-        }
-    ],
-    "projects": [
-        {
-            "id": "1",
-            "title": "MiphTech Company Profile",
-            "description": "Web Development",
-            "imageSrc": "https://joeladuma.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmip.62c03ccb.png&w=1920&q=75",
-            "url": "https://miphtech.netlify.app/"
-        },
-        {
-            "id": "5",
-            "title": "ZAPI.ai AI API Marketplace",
-            "description": "Frontend Development",
-            "imageSrc": null,
-            "url": "https://zapi.ai/"
-        },
-        {
-            "id": "2",
-            "title": "React Admin Dashboard",
-            "description": "Web Development",
-            "imageSrc": "https://joeladuma.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdsh.8153bc03.png&w=1920&q=75",
-            "url": "https://company-dashboard.vercel.app/"
-        },
-        {
-            "id": "3",
-            "title": "Africa Mining Legislation Atlas (AMLA)",
-            "description": "Web Development",
-            "imageSrc": "https://joeladuma.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Famlaorg.13069d88.png&w=1920&q=75",
-            "url": "https://a-mla.org/en"
-        },
-        {
-            "id": "4",
-            "title": "Africa Arbitration Atlas",
-            "description": "Web Development",
-            "imageSrc": "https://joeladuma.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcomparison.96f8ef16.png&w=1920&q=75",
-            "url": "https://africanarbitrationatlas.org/atlas/"
-        }
-    ],
-    "services": [
-        {
-            "id": "1",
-            "title": "React",
-            "description": "Wide experience in frontend development with React Js and Next.js. I have spearheaded several React projects and spearheaded a team of developers to build a React admin dashboard."
-        },
-        {
-            "id": "2",
-            "title": "JavaScript",
-            "description": "I have in-depth knowledge of JavaScript (ES6)."
-        },
-        {
-            "id": "3",
-            "title": "Node.js",
-            "description": "Why stop at Frontend? I also do backend development using Node.js and Express."
-        },
-        {
-            "id": "4",
-            "title": "Laravel",
-            "description": "I have demonstrated severally my Laravel abilities for key projects such as AMLA and Africa Arbitration Atlas. As well as API development."
-        },
-        {
-            "id": "05f6299a-ebed-4bc2-b5ab-584ebd8787cc",
-            "title": "PHP",
-            "description": "More than 2 years using PHP as my go-to language for backend development."
-        }
-    ],
-    "aboutpara": "I have 2+ years building web apps with Laravel/PHP and creating custom components in React JS, React Native, Wordpress and NodeJs. I am looking for  opportunities in React Js, Laravel, React Native and HTML/CSS."
+  "name": "Joel Ragen Aduma",
+  "headerTaglineOne": "Hello 👋",
+  "headerTaglineTwo": "I'm Joel Aduma - curious",
+  "headerTaglineThree": "software developer",
+  "headerTaglineFour": " based in Nairobi, Kenya.",
+  "showBlog": false,
+  "darkMode": true,
+  "socials": [
+    {
+      "id": "1",
+      "title": "Github",
+      "link": "https://github.com/caesaragen"
+    },
+    {
+      "id": "2",
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/in/joel-aduma/"
+    },
+    {
+      "id": "5",
+      "title": "Email",
+      "link": "mailto:caesaragen@gmail.com"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "MiphTech Company Profile",
+      "description": "Web Development",
+      "imageSrc": "https://joeladuma.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmip.62c03ccb.png&w=1920&q=75",
+      "url": "https://miphtech.netlify.app/"
+    },
+    {
+      "id": "5",
+      "title": "ZAPI.ai AI API Marketplace",
+      "description": "Frontend Development",
+      "imageSrc": null,
+      "url": "https://zapi.ai/"
+    },
+    {
+      "id": "2",
+      "title": "React Admin Dashboard",
+      "description": "Web Development",
+      "imageSrc": "https://joeladuma.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdsh.8153bc03.png&w=1920&q=75",
+      "url": "https://company-dashboard.vercel.app/"
+    },
+    {
+      "id": "3",
+      "title": "Africa Mining Legislation Atlas (AMLA)",
+      "description": "Web Development",
+      "imageSrc": "https://joeladuma.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Famlaorg.13069d88.png&w=1920&q=75",
+      "url": "https://a-mla.org/en"
+    },
+    {
+      "id": "4",
+      "title": "Africa Arbitration Atlas",
+      "description": "Web Development",
+      "imageSrc": "https://joeladuma.netlify.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcomparison.96f8ef16.png&w=1920&q=75",
+      "url": "https://africanarbitrationatlas.org/atlas/"
+    }
+  ],
+  "services": [
+    {
+      "id": "1",
+      "title": "React",
+      "description": "Wide experience in frontend development with React Js and Next.js."
+    },
+    {
+      "id": "2",
+      "title": "JavaScript",
+      "description": "I have in-depth knowledge of JavaScript (ES6), both for frontend and backend development."
+    },
+    {
+      "id": "3",
+      "title": "Node.js",
+      "description": "Why stop at Frontend? I also do backend development using Node.js and Express."
+    },
+    {
+      "id": "4",
+      "title": "Laravel",
+      "description": "I have demonstrated severally my Laravel abilities for key projects such as AMLA and Africa Arbitration Atlas. As well as API development."
+    },
+    {
+      "id": "05f6299a-ebed-4bc2-b5ab-584ebd8787cc",
+      "title": "PHP",
+      "description": "More than 2 years using PHP as my go-to language for backend development."
+    }
+  ],
+  "aboutpara": "I am an accomplished Full Stack Developer with a Bachelor's degree in Applied Computer Technology and over three years of experience in the industry, I am deeply passionate about creating high-quality web products that meet the needs of modern businesses. My core competencies include proficiency in HTML5, CSS, JavaScript, TypeScript, React, React Native, Node.Js, and Laravel/PHP, and I consistently strive to stay updated with the latest technological advancements in the field.\n\n I possess extensive experience in collaborating with remote teams across the globe, including those located in Africa and Hong Kong, as a React Frontend Developer as part of multidimensional remote teams.\n\n With a strong focus on attention to detail and responsive design techniques, I take great pride in delivering exceptional results on every project I undertake.\n\n My expertise ensures that every webpage and app I work on is both functional and visually appealing, with a strong emphasis on user-friendliness and optimal performance.\n\nIf you are seeking a skilled and motivated developer to join your team, I invite you to reach out to me directly. I am always open to new opportunities and eager to contribute to the success of your organization."
 }
