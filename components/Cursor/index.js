@@ -2,10 +2,22 @@ import React, { useEffect, useState } from "react";
 import CustomCursor from "custom-cursor-react";
 import "custom-cursor-react/dist/index.css";
 import { useTheme } from "next-themes";
+import { useRouter } from 'next/router'; 
 
 const Cursor = () => {
+
+  // const theme = useTheme();
+  // const [mount, setMount] = useState();
+
   const theme = useTheme();
   const [mount, setMount] = useState();
+
+  // // Don't render the custom cursor on the /blog and /about pages
+  // if (asPath === '/blog' || asPath === '/about') {
+  //   return null;
+  // }
+    
+    
 
   const getCusomColor = () => {
     if (theme.theme === "dark") {

@@ -1,0 +1,687 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Machine Learning System Design</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body>
+	<article id="3eab6c4f-1d81-4c19-9658-8dc6b0487d01" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_ibm_type_704.jpg" style="object-position:center 19.999999999999996%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">💙</span></div><h1 class="page-title">Machine Learning System Design</h1><p class="page-description"></p></header><div class="page-body"><p id="6f5cc521-8aff-4c5b-895b-eadb6e10c8e9" class="">This is a reading note from “Machine Learning System Design - Ali Aminian &amp; Alex Xu”</p><ul id="bec4ca2e-30f1-4148-88de-b6d933680f9a" class="bulleted-list"><li style="list-style-type:disc"><a href="notion://www.notion.so/Machine-Learning-System-Design-3eab6c4f1d814c1996588dc6b0487d01#machine-learning-system-design">Machine Learning System Design</a></li></ul><ul id="19a18a14-c23d-4833-b3ee-cc4672c38d62" class="bulleted-list"><li style="list-style-type:disc"><a href="notion://www.notion.so/Machine-Learning-System-Design-3eab6c4f1d814c1996588dc6b0487d01#design-frameworks">Design Frameworks</a><ul id="334e50dc-6e47-4a97-ba45-6558f976c962" class="bulleted-list"><li style="list-style-type:circle"><a href="notion://www.notion.so/Machine-Learning-System-Design-3eab6c4f1d814c1996588dc6b0487d01#1-clarifying-questions">Clarifying Questions</a></li></ul><ul id="beeb590e-c0bd-4ffc-94be-094868c25a61" class="bulleted-list"><li style="list-style-type:circle"><a href="notion://www.notion.so/Machine-Learning-System-Design-3eab6c4f1d814c1996588dc6b0487d01#2-data-preparation">Data Preparation</a></li></ul><ul id="15f32806-4775-4244-a41f-7ddf575b634b" class="bulleted-list"><li style="list-style-type:circle"><a href="notion://www.notion.so/Machine-Learning-System-Design-3eab6c4f1d814c1996588dc6b0487d01#3-model-development">Model Development</a></li></ul><ul id="f49f1865-78db-4179-ac34-94d086810b08" class="bulleted-list"><li style="list-style-type:circle"><a href="notion://www.notion.so/Machine-Learning-System-Design-3eab6c4f1d814c1996588dc6b0487d01#4-model-deployment-and-monitor">Model Deployment and Monitor</a></li></ul></li></ul><ul id="033fec88-e482-4f1d-ba47-4917c0a80296" class="bulleted-list"><li style="list-style-type:disc"><a href="notion://www.notion.so/Machine-Learning-System-Design-3eab6c4f1d814c1996588dc6b0487d01#talking-points">Talking Points</a></li></ul><ul id="5878bb09-40a0-4d72-a542-fa56b3872f7a" class="bulleted-list"><li style="list-style-type:disc"><a href="notion://www.notion.so/Machine-Learning-System-Design-3eab6c4f1d814c1996588dc6b0487d01#machine-learning-system-design">Machine Learning System Design</a></li></ul><ul id="39fe587f-583a-4431-a8ed-041496c32335" class="bulleted-list"><li style="list-style-type:disc"><a href="notion://www.notion.so/Machine-Learning-System-Design-3eab6c4f1d814c1996588dc6b0487d01#design-frameworks">Design Frameworks</a><ul id="7dd67c30-0d46-427c-9334-259a28ea09df" class="bulleted-list"><li style="list-style-type:circle"><a href="notion://www.notion.so/Machine-Learning-System-Design-3eab6c4f1d814c1996588dc6b0487d01#1-clarifying-questions">Clarifying Questions</a></li></ul><ul id="4c5ccf8d-2560-4f36-b6a1-289864f81fbc" class="bulleted-list"><li style="list-style-type:circle"><a href="notion://www.notion.so/Machine-Learning-System-Design-3eab6c4f1d814c1996588dc6b0487d01#2-data-preparation">Data Preparation</a></li></ul><ul id="0135f146-eea9-4551-8350-178f75964a08" class="bulleted-list"><li style="list-style-type:circle"><a href="notion://www.notion.so/Machine-Learning-System-Design-3eab6c4f1d814c1996588dc6b0487d01#3-model-development">Model Development</a></li></ul><ul id="482249cb-8765-4cb6-ace2-a1b41ea06440" class="bulleted-list"><li style="list-style-type:circle"><a href="notion://www.notion.so/Machine-Learning-System-Design-3eab6c4f1d814c1996588dc6b0487d01#4-model-deployment-and-monitor">Model Deployment and Monitor</a></li></ul></li></ul><ul id="3d894292-5abf-4173-83a4-54aa8d7a4644" class="bulleted-list"><li style="list-style-type:disc"><a href="notion://www.notion.so/Machine-Learning-System-Design-3eab6c4f1d814c1996588dc6b0487d01#talking-points">Talking Points</a></li></ul><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0"><strong>Design Frameworks</strong></summary><div class="indented"><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">1. Clarifying questions</summary><div class="indented"><ol type="1" id="e71ebae7-cbb2-48bc-861a-40e55aee7f5f" class="numbered-list" start="1"><li>要从general题目中不断问出来小的问题，哪些feature面试官比较关心</li></ol><ol type="1" id="361429b8-4cd1-4997-8a76-720c0aa1b63c" class="numbered-list" start="2"><li>多少人在用，每天每个人刷多少视频，日活用户</li></ol><ol type="1" id="c56f50e9-56d4-462d-9a07-afee5ed09a2e" class="numbered-list" start="3"><li>latency，刷了一下超过五秒钟用户会失去耐心</li></ol><ol type="1" id="824476a0-acf9-485a-b68f-b4e9f25afd12" class="numbered-list" start="4"><li>scalability，….</li></ol><ol type="1" id="9a380d06-95a5-4d8c-9ba8-c622d5f47ae2" class="numbered-list" start="5"><li>input: text info</li></ol><ol type="1" id="b1045132-ee5a-4276-9c9e-87d9a8ffce62" class="numbered-list" start="6"><li>output: video</li></ol><ol type="1" id="5b4e9409-4a34-451b-b840-36fa8b83ecc3" class="numbered-list" start="7"><li>biz → ml question: metrics 每天用户看了多少视频，有多少点赞转发，花多少时间在视频上</li></ol><ol type="1" id="c7f13f47-ffec-4672-b36c-610cee4849bc" class="numbered-list" start="8"><li>如何获取feature，如何存储以方便inference使用feature</li></ol></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">2. Data preparation</summary><div class="indented"><ul id="206f0ecf-703e-49b5-972c-1be9f064bdf7" class="toggle"><li><details open=""><summary>Data Storage: sql or no sql database,database concurrency</summary><ol type="1" id="03c03196-c8f0-4509-970d-638329ebf73a" class="numbered-list" start="1"><li>structured data (categorical, numerical) → postsql, mysql</li></ol><ol type="1" id="bc784078-a4ff-4c1b-a33f-05e2a20c0bff" class="numbered-list" start="2"><li>unstructured data (text, video, image) →mongo DB</li></ol></details></li></ul><ul id="4f9c7581-8ec0-4346-997c-3065791d9b5f" class="toggle"><li><details open=""><summary>Feature engineering: feature scaling</summary><ul id="c5985383-c62d-429d-9ffe-69566d84a221" class="toggle"><li><details open=""><summary>missing value handling: </summary><ol type="1" id="7794690f-ec39-4855-90cc-181848bcfe7a" class="numbered-list" start="1"><li>imputation<ol type="a" id="2d5edcca-5b04-4977-9db3-c6667e7353fa" class="numbered-list" start="1"><li>median/mean/mode filling</li></ol><ol type="a" id="141a1a53-daf5-4b56-b697-6eac816d4703" class="numbered-list" start="2"><li>default value filling</li></ol><ol type="a" id="d21bf323-65da-478f-aee4-c8e067dcd768" class="numbered-list" start="3"><li>CON: cause some biases or noises to the model</li></ol></li></ol><ol type="1" id="766bc013-f888-4d8b-9858-35b1a768a049" class="numbered-list" start="2"><li>Deletion<ol type="a" id="c2b32eb2-cd1c-4e9f-b99e-5246deaac62b" class="numbered-list" start="1"><li>row deletion (when record miss too many value)</li></ol><ol type="a" id="5930c82e-4270-4055-8f1f-a7eda193356a" class="numbered-list" start="2"><li>col deletion (when feature miss too many value)</li></ol><ol type="a" id="366f2db5-6e67-473f-97ea-1c90534cf54a" class="numbered-list" start="3"><li>CON: reduce too many records may harm model performance</li></ol></li></ol></details></li></ul><ul id="cc3efbcd-082f-4b52-bfd7-798ea073ca25" class="toggle"><li><details open=""><summary>Feature Scaling</summary><ol type="1" id="b30364a0-d64a-44ba-acef-3b5d64e5f6a5" class="numbered-list" start="1"><li>Numerical data<ol type="a" id="94782ee0-33b6-4295-91de-c137dc2de2c6" class="numbered-list" start="1"><li>normalization (min-max): z = (x - x_min) / x_max - x_min<ol type="i" id="d5c8af0f-234c-4a7d-bd32-4df0ac2b7987" class="numbered-list" start="1"><li>does not change distribution, make feature in range [0,1]</li></ol></li></ol><ol type="a" id="f3de0148-302c-4f08-ad86-9c18028d7b93" class="numbered-list" start="2"><li>standardization (z-score): z = x-mean / sd <ol type="i" id="b7a0ced9-473f-4dfc-a51c-d7ca7c5ee9eb" class="numbered-list" start="1"><li>changing distribution to mean 0, sd 1</li></ol></li></ol><ol type="a" id="6e5a0b5e-3e61-406b-b472-c8e779873b7f" class="numbered-list" start="3"><li>log scaling: log(x), <ol type="i" id="2817f1f5-f75c-4f4e-b2d5-3185b55e6409" class="numbered-list" start="1"><li>make distribution less skewed, converge faster</li></ol></li></ol></li></ol><ol type="1" id="5d28ca82-0b4c-48f6-b8b8-e462ae5fbf4c" class="numbered-list" start="2"><li>Discretization: convert continuous to categorical feature<ol type="a" id="bf3cb07f-3665-4ac0-83da-0b915adb639f" class="numbered-list" start="1"><li>bucketing: e.g. let age 1-10 become group 1, age 11-20 become group 2…</li></ol></li></ol><ol type="1" id="c837b32e-8abc-4779-8654-8465227aee4b" class="numbered-list" start="3"><li>Categorical data: <ol type="a" id="6d5b5e90-6e0a-4978-aa6c-c6fdd6c3a98c" class="numbered-list" start="1"><li>integer encoding: e.g. 1 for good, 0 for bad<ol type="i" id="fea8677f-564c-49aa-bb75-d34fb3a2e74e" class="numbered-list" start="1"><li>CON: when relationship is not ordinal, this is not good idea</li></ol></li></ol><ol type="a" id="c9b14956-057d-4604-aef5-c412174aaf14" class="numbered-list" start="2"><li>one hot encoding: convert to unique binary feature e.g. red 001 blue 010 green 100<ol type="i" id="d077846b-08fb-46d1-bae3-2cb974e40d7f" class="numbered-list" start="1"><li>CON: when unique feature num is large</li></ol></li></ol><ol type="a" id="a6b2d5b7-d713-4cbc-858a-5b9c3294a8c6" class="numbered-list" start="3"><li>embedding: project feature to N Dimension vector<ol type="i" id="b2e776ae-6b63-4c7e-b159-c5ef1aa66f3f" class="numbered-list" start="1"><li>PRO: when unique feature num is large </li></ol></li></ol></li></ol></details></li></ul><ol type="1" id="1b3435d7-e6f5-48b8-8e96-4734cdba66b8" class="numbered-list" start="1"><li>text, image: data augmentation</li></ol></details></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">3. Model development</summary><div class="indented"><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">1. Model selection 模型场景，优缺点</summary><div class="indented"><ul id="681302c4-1571-4ca2-991e-a4c7629fcf78" class="toggle"><li><details open=""><summary>Selection model based on </summary><ul id="8730a6ae-5c7f-4457-ba29-e547b97ae888" class="bulleted-list"><li style="list-style-type:disc">data size</li></ul><ul id="1235a524-4c32-442c-94e2-4311fe9e6603" class="bulleted-list"><li style="list-style-type:disc">training speed</li></ul><ul id="a3f37572-9579-43ad-a3ac-4079e9a93d42" class="bulleted-list"><li style="list-style-type:disc">hyper parameter to choose and tuning technique</li></ul><ul id="e0b887e5-85cd-4550-9735-4658b142f2ec" class="bulleted-list"><li style="list-style-type:disc">continual learning </li></ul><ul id="eeb93301-9d4c-41d4-a007-96bccefab806" class="bulleted-list"><li style="list-style-type:disc">computation requirement</li></ul><ul id="1df3ee97-aff1-4c29-ab8e-df9fda7abf86" class="bulleted-list"><li style="list-style-type:disc">model interpretability</li></ul></details></li></ul><ul id="1bd298fa-168e-454b-a0a3-828f8074ffa2" class="toggle"><li><details open=""><summary>Typical process</summary><ul id="c81e45df-0b21-4ded-9625-d07097187ac3" class="bulleted-list"><li style="list-style-type:disc">establish simple baseline</li></ul><ul id="e134f488-c10f-4c87-82d3-1210d2422de8" class="bulleted-list"><li style="list-style-type:disc">experiment with simple model</li></ul><ul id="249ddc82-db8f-463e-9a6f-d7a855b8f8a0" class="bulleted-list"><li style="list-style-type:disc">switch to complex model</li></ul><ul id="1edf6044-c229-4a2d-9eba-e80dd525cc2b" class="bulleted-list"><li style="list-style-type:disc">use ensemble model</li></ul></details></li></ul><ol type="1" id="37fcda77-9ba8-4990-afc1-ec9e846c0851" class="numbered-list" start="1"><li>supervised<ol type="a" id="416d019f-1f40-4cf5-905c-d979913613f8" class="numbered-list" start="1"><li>classification<ol type="i" id="d05d03b2-75e8-4473-97ff-1392f7463d0d" class="numbered-list" start="1"><li>binary<ol type="1" id="10f77b59-dba5-4c90-8fc8-ff21a9d091b1" class="numbered-list" start="1"><li>support vector machine</li></ol><ol type="1" id="d7092dd2-eb7f-4fc4-925e-98a103cb7d2a" class="numbered-list" start="2"><li>logistic regression</li></ol><ol type="1" id="38923e4e-b972-4670-9072-ad935eade59e" class="numbered-list" start="3"><li>linear regression</li></ol></li></ol><ol type="i" id="3fb54cd2-797d-470c-ab80-7227f36a6a08" class="numbered-list" start="2"><li>multiclass classification<ol type="1" id="09d7b831-b8bd-4b12-9a16-9e602adbf860" class="numbered-list" start="1"><li>decision tree</li></ol><ol type="1" id="69bf8b91-81b2-4056-ae09-b01a56c845d8" class="numbered-list" start="2"><li>random forest</li></ol><ol type="1" id="a4b1c354-4b47-4924-bd87-efa43ada60ab" class="numbered-list" start="3"><li>gradient boosted dieciosn trees</li></ol><ol type="1" id="203d07bd-5bf0-47a0-bfb8-05abd82f6b00" class="numbered-list" start="4"><li>naive bayes</li></ol></li></ol></li></ol><ol type="a" id="3160320c-2f04-4c48-9095-99842ec3cf64" class="numbered-list" start="2"><li>regression<ol type="i" id="6fd656be-b80e-4bd5-b97e-dc31cb27fa79" class="numbered-list" start="1"><li>linear</li></ol><ol type="i" id="55add73c-6bc1-4203-be53-7083e1f9d56f" class="numbered-list" start="2"><li>logistic</li></ol></li></ol></li></ol><ol type="1" id="fc9dd353-3e83-4464-8865-6051e7c43e89" class="numbered-list" start="2"><li>unsupervised<ol type="a" id="136b9d10-c89e-406f-9b28-7f5bab27d40b" class="numbered-list" start="1"><li>PCA</li></ol><ol type="a" id="35f6698a-6352-4eac-99e9-fbb6993f25d5" class="numbered-list" start="2"><li>Kmeans</li></ol></li></ol><ol type="1" id="bc3d1034-daac-41fb-a154-abc7b3eacaad" class="numbered-list" start="3"><li>reinforcement<ol type="a" id="5d27ce40-1a55-4226-9cb4-24f59ad51051" class="numbered-list" start="1"><li>Q learning</li></ol><ol type="a" id="eb2740fb-1592-42c9-8bfb-6e9f0b3af2d7" class="numbered-list" start="2"><li>Sarsa</li></ol><ol type="a" id="e7a75620-c91d-40d2-abe6-a002f34bb9a7" class="numbered-list" start="3"><li>Deep Q Learning</li></ol><ol type="a" id="fe157efd-e3e9-440f-97ab-b546edcea2b8" class="numbered-list" start="4"><li>Double Q Learning</li></ol></li></ol></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">2. Model training</summary><div class="indented"><ul id="111d1620-505c-40e3-adde-75dcca51b5dc" class="toggle"><li><details open=""><summary>1. Construct Dataset</summary><ol type="1" id="e125688e-02b2-4cbd-90a1-8bfa285e2438" class="numbered-list" start="1"><li>collect data → </li></ol><ol type="1" id="24e3d894-8310-4cd4-8452-2aba2da7ecdb" class="numbered-list" start="2"><li>identify label and feature → </li></ol><ol type="1" id="ed567205-e2f6-44e7-8fd7-8c67fde23f39" class="numbered-list" start="3"><li>select sampling strategy<ol type="a" id="89c8d8ff-8360-48f5-807b-2ea8e382ff60" class="numbered-list" start="1"><li><mark class="highlight-red">snowball sampling</mark></li></ol><ol type="a" id="0055ab2b-273b-4e84-8e37-1b585024885a" class="numbered-list" start="2"><li><mark class="highlight-red">convenience sampling</mark></li></ol><ol type="a" id="1a45b70e-660e-4160-aafc-d540c7d8e2e3" class="numbered-list" start="3"><li><mark class="highlight-red">stratified sampling</mark></li></ol><ol type="a" id="0dd830e1-4b89-406f-bba8-1f1cba899840" class="numbered-list" start="4"><li><mark class="highlight-red">reservoir sampling </mark></li></ol><ol type="a" id="913deb84-aa23-463b-aed3-96915c5c001e" class="numbered-list" start="5"><li><mark class="highlight-red">importance sampling</mark></li></ol></li></ol><ol type="1" id="9b0c1897-62b8-4f7b-86f9-76f4d599b68b" class="numbered-list" start="4"><li>split data (train val test)</li></ol><ol type="1" id="e593d8c4-5605-4fb6-aa72-13277f99dc0e" class="numbered-list" start="5"><li>address class imbalance<ol type="a" id="14a20964-57bf-4310-9bc7-3b2845f03118" class="numbered-list" start="1"><li>resampling (Undersamplling &amp; Oversampling)</li></ol><ol type="a" id="aa6fd828-76a3-48ce-acab-5ac90798e580" class="numbered-list" start="2"><li>alter loss function: <ol type="i" id="b1b29cfc-cda3-43a7-95b9-dbe369785518" class="numbered-list" start="1"><li><mark class="highlight-red">class-balance loss / focal loss</mark></li></ol><ol type="i" id="65cdf3eb-6307-4eaa-9e60-3b897bd12474" class="numbered-list" start="2"><li>penalize model harder when it make mistakes on minority class</li></ol></li></ol></li></ol></details></li></ul><ul id="9fee113d-d0c7-468e-bacf-429311cc3a0e" class="toggle"><li><details open=""><summary>2. Choosing Loss Function</summary><ol type="1" id="878966aa-e672-4fa3-be9c-3f2a53711684" class="numbered-list" start="1"><li>MSE</li></ol><ol type="1" id="f256d562-1927-4db5-8d37-cb60135d47e8" class="numbered-list" start="2"><li>Cross Entropy Loss</li></ol><ol type="1" id="99ee41de-b1b3-4fd7-8b7b-91ed82ce7349" class="numbered-list" start="3"><li>MAE</li></ol><ol type="1" id="b8e1cf85-79e4-45b6-b7ab-26b3023eb4dd" class="numbered-list" start="4"><li>Huber Loss</li></ol><ol type="1" id="94fd4257-0135-4e16-9270-cf4fcc2a3073" class="numbered-list" start="5"><li>…</li></ol></details></li></ul><ul id="73c8d337-acec-45d5-974d-c659911844ca" class="toggle"><li><details open=""><summary>3. Choose Regularization</summary><ul id="4bb3e60b-531d-4906-a7ff-3a750a59c533" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red">L1</mark></li></ul><ul id="09ac0ae8-e355-44ae-91e5-ea2efac36926" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red">L2</mark></li></ul><ul id="e7bb8a13-fc0d-4467-9b81-a9522bf7ff9f" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red">Entropy Regularization</mark></li></ul><ul id="7ff01e9e-735f-4ecb-9ede-cdfdc41bd226" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red">K-fold cross validation</mark></li></ul><ul id="fa637902-fd9e-4241-9698-049b66ff2700" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red">dropout</mark></li></ul></details></li></ul><ul id="0e9e2829-9150-43c7-a40f-93be44b93e45" class="toggle"><li><details open=""><summary>4. Choose Optimization</summary><ul id="4bce576b-9f09-471f-b7f9-d57d0c9ea40e" class="bulleted-list"><li style="list-style-type:disc">SGD</li></ul><ul id="49162dde-d93c-4d11-a746-99fcf7a8db8a" class="bulleted-list"><li style="list-style-type:disc">Adam</li></ul><ul id="f7b597f0-7828-4723-9d95-b0ee4132570a" class="bulleted-list"><li style="list-style-type:disc">AdamW</li></ul><ul id="fd3201e1-4393-472a-b636-c23e16d47e1c" class="bulleted-list"><li style="list-style-type:disc">AdaGrad</li></ul><ul id="546fcf0b-71df-4621-bf01-f15fe83ca165" class="bulleted-list"><li style="list-style-type:disc">Mmomentum</li></ul><ul id="b4ef2045-e057-4e5b-a1ba-c1820950a10f" class="bulleted-list"><li style="list-style-type:disc">RMSProp</li></ul></details></li></ul><ul id="0a3d7344-c368-4699-9837-e884068f3eb6" class="toggle"><li><details open=""><summary>5. Choose Activation</summary><ul id="fb0a4adc-ed72-4bbd-b0e6-7c97d31130d6" class="bulleted-list"><li style="list-style-type:disc">ELU</li></ul><ul id="5d403115-6a32-410d-a8d0-2969e08b821d" class="bulleted-list"><li style="list-style-type:disc">ReLU</li></ul><ul id="ff43f1d4-bf7b-479b-8090-30539e698f59" class="bulleted-list"><li style="list-style-type:disc">Tanh</li></ul><ul id="4e44e215-77ae-45a2-b42a-f5c4172be426" class="bulleted-list"><li style="list-style-type:disc">Sigmoid</li></ul></details></li></ul><ul id="de27e065-2ea0-4259-afd0-d7fee7379d60" class="toggle"><li><details open=""><summary>6. Training from scratch or Fine-tuning</summary><ol type="1" id="a524cac7-1d67-4b1b-bf19-12dcc14f09ca" class="numbered-list" start="1"><li>根据场景而定</li></ol></details></li></ul><ul id="7ffe7405-842d-41ec-b01b-eb5bb2d05b53" class="toggle"><li><details open=""><summary>7.  Distributed training: divide work on different nodes to speed up training</summary><ol type="1" id="f8ecc546-bd8b-4ab0-b4d7-f09abba6d4d6" class="numbered-list" start="1"><li><mark class="highlight-red">data parallelism</mark></li></ol><ol type="1" id="2d363134-84cf-4432-b406-30e638dca781" class="numbered-list" start="2"><li><mark class="highlight-red">model parallelism</mark></li></ol></details></li></ul></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">3. Model evaluation</summary><div class="indented"><ul id="f6b4ab31-b098-49ee-9d01-16b95e725435" class="toggle"><li><details open=""><summary><strong>Offline metrics</strong></summary><table id="a5f11bc6-10de-43ad-88f7-1baf11015b06" class="simple-table"><tbody><tr id="a70eade0-fed4-42f0-8fb9-2919f1893336"><td id="fhpY" class=""><strong>Task </strong></td><td id="hnOB" class=""><strong>Offline Metrics</strong></td></tr><tr id="a85ad890-8121-4d89-90e8-d3220f19d209"><td id="fhpY" class="">Classification</td><td id="hnOB" class="">precision, recall, f1 score, accuracy, ROC-AUC, PR-AUC, confusion matrix</td></tr><tr id="f314b22f-6909-474a-b1e5-7a54b1f9e273"><td id="fhpY" class="">Regression</td><td id="hnOB" class="">MSE, MAE, RMSE</td></tr><tr id="32d380a5-9adf-4a42-8706-11bdce99718e"><td id="fhpY" class="">Image generation</td><td id="hnOB" class=""><mark class="highlight-red">FID, Inception score</mark></td></tr><tr id="a7f2dfa1-5a6a-43aa-9bc9-31a8424df6cb"><td id="fhpY" class="">NLP</td><td id="hnOB" class=""><mark class="highlight-red">BLEU, METEOUR, ROUGE, CIDEr, SPICE</mark></td></tr><tr id="cdc432ae-69d8-4260-b005-9df9cc02953a"><td id="fhpY" class="">Ranking</td><td id="hnOB" class="">Precision, Recall, <mark class="highlight-red">MRR, mAP, mDCG</mark></td></tr></tbody></table><ol type="1" id="be166822-62cc-445e-9ade-e49a118b2638" class="numbered-list" start="1"><li>if regression: MSE/MAE</li></ol><ol type="1" id="f358c731-1493-452d-8af8-882436ca869b" class="numbered-list" start="2"><li>if classification: precision, recall, f1 score</li></ol><ol type="1" id="12985009-9dbb-450a-9643-cf6d0ed08570" class="numbered-list" start="3"><li>….具体问题具体分析，video recommendation 有content based, collaborative filtering</li></ol></details></li></ul><ul id="3f708bd0-ffd0-4b21-942d-1dc3cd40365d" class="toggle"><li><details open=""><summary><strong>Online Metrics</strong></summary><table id="77618352-a0f5-4628-9944-3d906af1f3d1" class="simple-table"><tbody><tr id="6abcfb84-630a-475b-b867-2cc82d46b8d2"><td id="Yj\_" class=""><strong>Problem</strong></td><td id="eCnY" class=""><strong>Online Metrics</strong></td></tr><tr id="8fc243e5-163d-4904-8bc6-2b1f72d87310"><td id="Yj\_" class="">Ad click prediction</td><td id="eCnY" class="">Click through rate, revenue , lift, etc</td></tr><tr id="759b97b8-1578-466f-ad09-dd021590b173"><td id="Yj\_" class="">Harmful content detection</td><td id="eCnY" class="">Prevalence, valid appeals, etc</td></tr><tr id="35d930ab-01e3-4f9c-afe5-a8d7d067e2f4"><td id="Yj\_" class="">Video recommendation</td><td id="eCnY" class="">click through rate, total watch time, number of completed videos, etc</td></tr><tr id="db7d6f90-befb-4d54-b662-eb195dbc8b4b"><td id="Yj\_" class="">Friend recommendation</td><td id="eCnY" class="">Number of requests sent per day,  number of requests accept per day</td></tr></tbody></table></details></li></ul></div></details></div></details><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">4. Model deployment and monitor</summary><div class="indented"><ol type="1" id="21a933f0-db15-44d9-a69a-4ecaed3e9bb4" class="numbered-list" start="1"><li>Cloud vs on device deployment</li></ol><ol type="1" id="fe54819d-9492-4eda-bc0a-fdd6c81c57b3" class="numbered-list" start="2"><li>Model compression</li></ol><ol type="1" id="c8c8a16a-ab27-4040-8d1f-1a52079bb2cc" class="numbered-list" start="3"><li>Testing in production</li></ol><ol type="1" id="a7cf3f99-37a8-4b7f-9c36-679844b680ef" class="numbered-list" start="4"><li>Prediction Pipeline</li></ol><p id="bb00ae93-877a-4ee6-9dba-d86b07727105" class="">
+</p><ol type="1" id="4d1bc396-9ad7-416c-bd5d-f561c263865f" class="numbered-list" start="1"><li>model performance in real life environment<ol type="a" id="086e642d-4d63-41ab-82e4-3ebd2af9cc62" class="numbered-list" start="1"><li>model latency, 和之前test的时候model speed下降了怎么办</li></ol><ol type="a" id="3de1accf-f0f8-4209-8211-a599adad7b88" class="numbered-list" start="2"><li>cold start problem: 新user没有历史数据如何推送，全新upload的video没有user interaction如何把它推荐给很感兴趣的人</li></ol></li></ol></div></details></div></details><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0"><strong>Talking points:</strong></summary><div class="indented"><ul id="38881f98-ed9b-41d6-99f5-45ee4479505c" class="toggle"><li><details open=""><summary>Data availability? </summary><ul id="959c4d2d-9b53-406d-bd6d-4dd24e1aebfd" class="bulleted-list"><li style="list-style-type:disc">what are the data sources?</li></ul><ul id="f7b01071-0087-47e3-90da-e2d7f386e6a9" class="bulleted-list"><li style="list-style-type:disc">what data available</li></ul><ul id="f618f13a-b7ba-4372-a894-81d8a0cd3147" class="bulleted-list"><li style="list-style-type:disc">how do we collect data</li></ul><ul id="1f3b4a94-a555-4ada-b52a-0320ec6fd721" class="bulleted-list"><li style="list-style-type:disc">how large is the data size</li></ul><ul id="b0baa1e9-1088-44cd-9412-3611dd4bcca3" class="bulleted-list"><li style="list-style-type:disc">how often the new data come in</li></ul></details></li></ul><ul id="bdeebefd-743e-4c4b-801b-8ba4bd692045" class="toggle"><li><details open=""><summary>Data Storage?</summary><ul id="485b4185-14c2-4508-badb-663b6303e4b9" class="bulleted-list"><li style="list-style-type:disc">where is data stored?</li></ul><ul id="70889417-a00f-41b4-bf7f-33d651d78c50" class="bulleted-list"><li style="list-style-type:disc">is it on cloud or local?</li></ul><ul id="4936b676-9fa3-485d-bbb9-b78d396d95bd" class="bulleted-list"><li style="list-style-type:disc">which data format is appropriate for stroing data?</li></ul><ul id="2d9be124-d961-41d7-a479-7b5d32b83cf2" class="bulleted-list"><li style="list-style-type:disc">how do we store multimodal data?</li></ul><p id="dfd9c746-9416-421e-9554-f0705f4bc71c" class="">
+</p></details></li></ul><ul id="fce10e7d-6d84-4ade-a582-c726cba3ab8b" class="toggle"><li><details open=""><summary>Feature Engineering:</summary><ul id="9d5026d4-b688-4d64-b006-3ec8275b7aaa" class="bulleted-list"><li style="list-style-type:disc">how do we process raw data into useful form for model?</li></ul><ul id="15583511-1467-4ce9-b67d-20ba14644a90" class="bulleted-list"><li style="list-style-type:disc">how should we handle missing value?</li></ul><ul id="b19be6fe-33f0-4c6a-b0f3-91ac39435e1a" class="bulleted-list"><li style="list-style-type:disc">is feature engineering required?</li></ul><ul id="9a6921b1-8935-46cf-a86b-99352ce81766" class="bulleted-list"><li style="list-style-type:disc">do we need to normalize data?</li></ul><ul id="4ed36d6e-5980-44de-9bf7-72f6c1ddcc93" class="bulleted-list"><li style="list-style-type:disc">which feature that we should construct from raw data?</li></ul><ul id="19cca6ed-4d58-4de5-98c4-e2e059f609cc" class="bulleted-list"><li style="list-style-type:disc">how do we combine multimodal data? </li></ul></details></li></ul><ul id="2594f186-6de8-4bf9-9663-26142a2ce645" class="toggle"><li><details open=""><summary>Privacy?</summary><ul id="0f2c1fbc-a474-4991-a55e-7c8ec348012c" class="bulleted-list"><li style="list-style-type:disc">how sensitive is the data?</li></ul><ul id="c79cf7d2-a867-4d8e-8a75-b55fb6bb6c44" class="bulleted-list"><li style="list-style-type:disc">are user concern about privacy?</li></ul><ul id="78924232-cbe0-40bd-8214-288edd78c6a4" class="bulleted-list"><li style="list-style-type:disc">is anonymization of user data useful?</li></ul><ul id="0f9afc3c-b645-412f-b6d8-da8c14ba3343" class="bulleted-list"><li style="list-style-type:disc">is it possible to store user data in cloud or just user devices?</li></ul></details></li></ul><ul id="33e6c17d-1e19-449a-8114-4ec99fac9a5a" class="toggle"><li><details open=""><summary>Bias?</summary><ul id="ee845a3c-d21c-42ca-8006-28fcf1544fe3" class="bulleted-list"><li style="list-style-type:disc">are there any biases in data?</li></ul><ul id="2fffea71-df15-41df-a0a9-0d7a5e2c5e7d" class="bulleted-list"><li style="list-style-type:disc">what are they and how should we correct them?</li></ul></details></li></ul><p id="331776e5-4626-4c72-a152-6f1d0ead3e74" class="">_____________________________________</p><p id="3aecc878-9b25-4438-833e-1b29f711061e" class="">
+</p><ul id="ee8cb697-a75a-410b-89a7-93d413fd6602" class="toggle"><li><details open=""><summary>Model selection</summary><ul id="85279885-1ccd-4cd3-808f-1c00d6374d25" class="bulleted-list"><li style="list-style-type:disc">training time</li></ul><ul id="998e0f41-e329-41e8-bfeb-f1d4d23f6f50" class="bulleted-list"><li style="list-style-type:disc">training data the model expect</li></ul><ul id="2893ac22-9bbb-43b2-8523-cdf66704edee" class="bulleted-list"><li style="list-style-type:disc">computing resources of model may need?</li></ul><ul id="bcf1d843-9b44-463a-a922-cdafa3f2c63c" class="bulleted-list"><li style="list-style-type:disc">latency of the model at inference time</li></ul><ul id="55c8bad8-ca7c-456f-82e5-0e82ec30be09" class="bulleted-list"><li style="list-style-type:disc">can model deploy to user device</li></ul><ul id="cb33e609-5659-402b-96d9-d3a19c8670a3" class="bulleted-list"><li style="list-style-type:disc">model interpretability</li></ul><ul id="92e8e6fd-6141-45ce-b7c5-e2e78df19f29" class="bulleted-list"><li style="list-style-type:disc">continual training or train from scratch</li></ul><ul id="51e521ab-e9ac-4b56-8684-fd01adc52090" class="bulleted-list"><li style="list-style-type:disc">how many parameter does model have? how many memory does model need?</li></ul><ul id="dcad0a84-4171-4f6f-800e-b4517629955d" class="bulleted-list"><li style="list-style-type:disc">archi/blocks in ResNet/Transformer</li></ul><ul id="efab9a84-2975-469e-8f5a-fbafee6f7b4e" class="bulleted-list"><li style="list-style-type:disc">hyperparameters (hidden layer, neurons, acitvation function)</li></ul></details></li></ul><ul id="65a767a3-fadf-40e0-9edc-e80bd265855a" class="toggle"><li><details open=""><summary>dataset label</summary><ul id="48760377-b006-4129-a1e7-5dc03dc31665" class="bulleted-list"><li style="list-style-type:disc">how should we get label</li></ul><ul id="0cca4caa-cc72-4236-bd8c-68f18ae8a9f9" class="bulleted-list"><li style="list-style-type:disc">if data annotated, how good it is?</li></ul><ul id="a028a6f7-a0d6-4469-89db-82f753f88ad8" class="bulleted-list"><li style="list-style-type:disc">how do we receive feedback on system</li></ul></details></li></ul><ul id="84f54200-3fa9-4d9a-ac36-69088c0960eb" class="toggle"><li><details open=""><summary>model training</summary><ul id="e048170c-e81c-4f8d-b178-e322b34aebf3" class="bulleted-list"><li style="list-style-type:disc">what loss function?</li></ul><ul id="c6173648-c2c0-4e23-85ed-9f2c14554b2a" class="bulleted-list"><li style="list-style-type:disc">what regularization function?</li></ul><ul id="abc7b3fd-762f-4f66-99d4-36a5ddd62446" class="bulleted-list"><li style="list-style-type:disc">what is back prop?</li></ul><ul id="fd8dd52f-666d-4464-9608-1d401bea78e7" class="bulleted-list"><li style="list-style-type:disc">optimization strategy selection?</li></ul><ul id="13bb8cb9-1ff2-43f5-ac76-a083e5e0ba25" class="bulleted-list"><li style="list-style-type:disc">activation?</li></ul><ul id="493044d0-8993-4755-8bc8-a1fb084c4b80" class="bulleted-list"><li style="list-style-type:disc">how to handle imabalnce dataset</li></ul><ul id="7eff2688-6230-426b-9bae-20054a32da43" class="bulleted-list"><li style="list-style-type:disc">bias/variance tradeoff?</li></ul><ul id="7524b910-4ed8-482b-9bff-cf862307e23d" class="bulleted-list"><li style="list-style-type:disc">possible causes of overfitting/uderfitting? how to tackle them?</li></ul></details></li></ul><p id="a65469b8-1fce-45f0-b230-79f63b98726a" class="">_____________________________________</p><p id="a5b60b37-9101-41e3-a144-9dbd6007d279" class="">
+</p><ul id="61c9eac5-0f66-4135-b78b-7918168726e9" class="toggle"><li><details open=""><summary>Online metrics</summary><ul id="395e45b1-e720-4b17-8dbd-ea56d2a2be32" class="bulleted-list"><li style="list-style-type:disc">which metrics is the most important for measuring the effectiveness of ML system?</li></ul><ul id="c8b7b1d2-6b99-4500-bb36-fce415e788fa" class="bulleted-list"><li style="list-style-type:disc">how do metrics relate to biz?</li></ul></details></li></ul><ul id="95441e4c-d6f7-42e2-9858-82a072b7e5a0" class="toggle"><li><details open=""><summary>Offline metrics</summary><ul id="06ea52dd-b213-401d-b736-3e008587d898" class="bulleted-list"><li style="list-style-type:disc">which metric evaluate model best?</li></ul></details></li></ul><ul id="697456f7-b6a0-4b9e-ae2a-029476bcc9d6" class="toggle"><li><details open=""><summary>Fairness and bias</summary><ul id="36afacd8-d11c-4e65-8223-3f245ef7030e" class="bulleted-list"><li style="list-style-type:disc">does model have potential bias? (gender, race)</li></ul></details></li></ul><p id="86f97dcd-989b-4b08-b095-9ca7b09eb0da" class="">
+</p></div></details><ul id="d96ec206-e58f-4458-a32b-de58cdd72978" class="toggle"><li><details open=""><summary><strong>Questions</strong></summary><p id="0f3cf5fd-da72-46fe-9a1d-9d2371f0c6ef" class="">e.g. </p><p id="7ddbf2d1-c29f-4974-8128-8602a715b402" class=""> tiktok recommendation, advertisement recommendation, search engine recommendation system question often related to product of the company, see the blog post</p><p id="5a36c8b2-7fdc-4881-82bf-0ae18f7a280c" class="">
+</p></details></li></ul><ul id="e43006ff-4538-4171-bae9-69a236938b77" class="toggle"><li><details open=""><summary><strong>Books</strong></summary><p id="c5686018-568e-4912-987a-8dd8e47ac6d5" class="">designing data intensive application</p><p id="4dbd8533-8765-451a-bbc2-7d520263ae6c" class="">alex xu book x2</p><p id="da5b58dd-4f20-4962-8ef2-2e0732b9305c" class="">the elements of statistical learning</p><p id="136955ed-4010-4fd4-baa2-e331705c4780" class="">engineering blogs: ml system design</p><p id="6c192489-67ad-485d-b7ee-efaa1ac550e5" class="">
+</p><p id="a19f5be2-cce0-47f0-98c2-1f31f4d4e9a3" class="">
+</p></details></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

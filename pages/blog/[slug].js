@@ -13,6 +13,7 @@ import Cursor from "../../components/Cursor";
 import data from "../../data/portfolio.json";
 
 const BlogPost = ({ post }) => {
+  // console.log('BlogPost post.type:', post.type);
   const [showEditor, setShowEditor] = useState(false);
   const textOne = useRef();
   const textTwo = useRef();
@@ -55,7 +56,8 @@ const BlogPost = ({ post }) => {
             {post.tagline}
           </h2>
         </div>
-        <ContentSection content={post.content}></ContentSection>
+        {/* <ContentSection content={post.content}></ContentSection> */}
+        <ContentSection content={post.content} type={post.type}></ContentSection>
         <Footer />
       </div>
       {process.env.NODE_ENV === "development" && (
@@ -87,6 +89,7 @@ export async function getStaticProps({ params }) {
     "preview",
     "image",
     "content",
+    "type",
   ]);
 
   return {

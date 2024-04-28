@@ -8,6 +8,20 @@ import Header from "../../components/Header";
 import data from "../../data/portfolio.json";
 import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
 import { getAllPosts } from "../../utils/api";
+import notion from '../../utils/notionClient';
+import ReactMarkdown from 'react-markdown';
+
+function Post({ htmlContent, type }) {
+  if (type === 'html') {
+    // console.log('htmlContent:', htmlContent);
+    // console.log('type:', type);
+    return <div dangerouslySetInnerHTML={{ __html: htmlContent }} />;
+  } else if (type === 'md') {
+    // console.log('mdContent:', htmlContent);
+    // console.log('type:', type);
+    return <ReactMarkdown>{htmlContent}</ReactMarkdown>;
+  }
+}
 const Blog = ({ posts }) => {
   const showBlog = useRef(data.showBlog);
   const text = useRef();
@@ -111,6 +125,7 @@ const Blog = ({ posts }) => {
                         </Button>
                       </div>
                     )}
+                    <Post htmlContent={post.content} type={post.type} />
                   </div>
                 ))}
             </div>
@@ -130,19 +145,59 @@ const Blog = ({ posts }) => {
 
 export async function getStaticProps() {
   const posts = getAllPosts([
-    "slug",
-    "title",
-    "image",
-    "preview",
-    "author",
-    "date",
-  ]);
-
+        "slug",
+        "title",
+        "image",
+        "preview",
+        "author",
+        "date",
+      ]);
+  console.log('getStaticProps posts:', posts);
   return {
     props: {
-      posts: [...posts],
+      posts:[...posts], // pass posts to your page
     },
   };
 }
+
+// export async function getStaticProps() {
+//   const postsDirectory = path.join(process.cwd(), 'posts');
+//   const filenames = fs.readdirSync(postsDirectory);
+
+//   const posts = filenames.map(filename => {
+//     const filePath = path.join(postsDirectory, filename);
+//     const fileContent = fs.readFileSync(filePath, 'utf8');
+
+//     if (filename.endsWith('.md')) {
+//       // Extract data from Markdown file
+//       const { data } = matter(fileContent);
+//       return {
+//         slug: filename.replace('.md', ''),
+//         ...data
+//       };
+//     } else if (filename.endsWith('.html')) {
+//       // Extract data from HTML file
+//       const $ = cheerio.load(fileContent);
+//       const title = $('title').text();
+//       const image = $('img.page-cover-image').attr('src');
+//       const preview = $('p.page-description').text();
+
+//       return {
+//         slug: filename.replace('.html', ''),
+//         title,
+//         image,
+//         preview,
+//         date: new Date().toISOString(), // You might need to extract this from the HTML as well
+//       };
+//     }
+//   });
+
+//   return {
+//     props: {
+//       posts, // pass posts to your page
+//     },
+//   };
+// }
+
 
 export default Blog;
