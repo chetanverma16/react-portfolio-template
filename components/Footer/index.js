@@ -11,10 +11,10 @@ const Footer = ({}) => {
           <h1 className="text-2xl text-bold">Contact.</h1>
           <div className="mt-10">
             <h1 className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl text-bold">
-              LET&apos;S CONNECT
+              LET&apos;S
             </h1>
             <h1 className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl text-bold">
-              TOGETHER
+              CONNECT
             </h1>
             <Button type="primary">Schedule a session</Button>
             <div className="mt-10">
