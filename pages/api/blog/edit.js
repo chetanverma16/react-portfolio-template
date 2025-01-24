@@ -20,10 +20,10 @@ export default function handler(req, res) {
         (err) => console.log(err)
       );
       res.status(200).json({ status: "DONE" });
-    } else {
+    }
+  } else {
       res
         .status(200)
         .json({ name: "This route works in development mode only" });
     }
-  }
 }
