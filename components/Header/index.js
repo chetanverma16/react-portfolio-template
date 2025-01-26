@@ -180,7 +180,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
             {mounted && theme && data.darkMode && (
               <Button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                onClick={() => setTheme(theme === "light" ? "dark" : "light")}
               >
                 <img
                   className="h-6"
