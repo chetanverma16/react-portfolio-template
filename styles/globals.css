@@ -6,10 +6,11 @@
 
 * {
   font-family: "Hind";
+  color: #4A4A4A; /* Soft black text */
 }
 
 body {
-  @apply dark:bg-black dark:text-white;
+  @apply bg-[#F5F5DC] text-[#4A4A4A]; /* Light beige background */
 }
 
 .gradient-circle {
@@ -23,10 +24,11 @@ body {
   filter: blur(40px);
   background: radial-gradient(
     circle,
-    rgba(248, 107, 223, 1) 0%,
-    rgba(107, 107, 248, 0.8) 100%
+    rgb(0, 0, 0) 0%, /* Light beige */
+    rgba(210, 180, 140, 0.8) 100% /* Warm beige */
   );
 }
+
 .gradient-circle-bottom {
   position: absolute;
   pointer-events: none;
@@ -38,8 +40,8 @@ body {
   filter: blur(40px);
   background: radial-gradient(
     circle,
-    rgba(248, 107, 223, 1) 0%,
-    rgba(107, 107, 248, 0.8) 100%
+    rgba(230, 213, 184, 1) 0%, /* Light beige */
+    rgba(210, 180, 140, 0.8) 100% /* Warm beige */
   );
 }
 
@@ -51,7 +53,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(-45deg, #45caff 0%, #ff1b6b 100%);
+  background: linear-gradient(-45deg, #000000 0%, #D2B48C 100%); /* Beige gradient */
   transform: translate3d(0px, 20px, 0) scale(0.95);
   filter: blur(20px);
   opacity: var(0.7);
@@ -59,11 +61,6 @@ body {
   border-radius: inherit;
 }
 
-/* 
-* Prevents issues when the parent creates a 
-* stacking context. (For example, using the transform
-* property )
-*/
 .gradient-shadow:hover::after {
   content: "";
   z-index: -1;
