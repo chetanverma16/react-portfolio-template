@@ -21,9 +21,22 @@ import Image from "next/image";
 import Zapi from "../data/images/zapi.png";
 
 
+import DTB from "../data/images/6.jpg";
+import KJ  from "../data/images/7.png";
+
+
+
 
 // Local Data
 import data from "../data/portfolio.json";
+
+const imageMap = {
+  "6": DTB.src,
+  "7": KJ.src,
+  "5": Zapi.src,
+  // Add more mappings as needed
+};
+
 
 const icons = { 
   "Laravel": <FaLaravel color="#fb503b"/>,
@@ -34,7 +47,8 @@ const icons = {
   "PHP": <FaPhp color="#8993be"/>,
   "React": <FaReact color="#61DBFB"/>,
   "typescript": <SiTypescript/>,
-  "tailwind": <SiTailwindcss/>
+  "tailwind": <SiTailwindcss />,
+  "React Native": <FaReact color="#61DBFB"/>,
 }
 
 export default function Home() {
@@ -72,6 +86,7 @@ export default function Home() {
   }, []);
 
   console.log(Zapi.src)
+  console.log(DTB.src)
   // use ZApi.src to get the path to the image
 
   const lines = data.aboutpara.split("\n");
@@ -130,7 +145,7 @@ export default function Home() {
             {data.projects.map((project) => (
               <WorkCard
                 key={project.id}
-                img={project.imageSrc? project.imageSrc : Zapi.scr}
+                img={project.imageSrc || imageMap[project.id]}
                 name={project.title}
                 description={project.description}
                 onClick={() => window.open(project.url)}

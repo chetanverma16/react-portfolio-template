@@ -25,6 +25,20 @@
   ],
   "projects": [
     {
+      "id": "6",
+      "title": "DTB m247",
+      "description": "Mobile App Development",
+      "imageSrc": null,
+      "url": "https://play.google.com/store/apps/details?id=com.dtb.app&hl=en"
+    },
+    {
+      "id": "7",
+      "title": "KejaHunt HouseHunter",
+      "description": "Mobile App Development",
+      "imageSrc": null,
+      "url": "https://play.google.com/store/apps/"
+    },
+    {
       "id": "1",
       "title": "MiphTech Company Profile",
       "description": "Web Development",
@@ -67,6 +81,11 @@
       "description": "Wide experience in frontend development with React Js and Next.js."
     },
     {
+      "id": "21",
+      "title": "React Native",
+      "description": "Extensive experience in building high-performance mobile applications using React Native, with a focus on security, biometrics, and fintech solutions."
+    },    
+    {
       "id": "2",
       "title": "JavaScript",
       "description": "I have in-depth knowledge of JavaScript (ES6), both for frontend and backend development."
@@ -87,5 +106,7 @@
       "description": "More than 2 years using PHP as my go-to language for backend development."
     }
   ],
-  "aboutpara": "I am an accomplished Full Stack Developer with a Bachelor's degree in Applied Computer Technology and over three years of experience in the industry, I am deeply passionate about creating high-quality web products that meet the needs of modern businesses. My core competencies include proficiency in HTML5, CSS, JavaScript, TypeScript, React, React Native, Node.Js, and Laravel/PHP, and I consistently strive to stay updated with the latest technological advancements in the field.\n\n I possess extensive experience in collaborating with remote teams across the globe, including those located in Africa and Hong Kong, as a React Frontend Developer as part of multidimensional remote teams.\n\n With a strong focus on attention to detail and responsive design techniques, I take great pride in delivering exceptional results on every project I undertake.\n\n My expertise ensures that every webpage and app I work on is both functional and visually appealing, with a strong emphasis on user-friendliness and optimal performance.\n\nIf you are seeking a skilled and motivated developer to join your team, I invite you to reach out to me directly. I am always open to new opportunities and eager to contribute to the success of your organization."
+"aboutpara": "I am a Full Stack Developer with a Bachelor's degree in Applied Computer Technology and 5+ years of experience in React, React Native, TypeScript, and Node.js. Currently, I work as a senior mobile developer in Kenya, specializing in fintech applications with a strong focus on security, performance, and user experience.\n\nI have collaborated with global teams across Africa, Europe, and Hong Kong, delivering scalable web and mobile solutions. My expertise includes biometric authentication, AWS Liveness Detection, and Strong Customer Authentication (SCA).\n\n🚀 Core Skills:\n- Frontend & Mobile: React, React Native, TypeScript, Next.js\n- Backend & APIs: Node.js, Laravel/PHP, Firebase, GraphQL\n- Security & Authentication: Biometric auth, AWS Liveness, SCA\n\n🎯 Highlights:\n- Lead developer on high-security fintech projects\n- Integrated biometrics authentication in mobile banking apps\n- Building a personal React Native project with AI & blockchain\n\nAlways open to new challenges—let’s connect!"
+
+
 }
