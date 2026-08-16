@@ -1,27 +1,14 @@
-# dp-derfuss-portfolio-prototyp
+# Portfolio Template (Fork)
 
-Kurzer Test von `chetanverma16/react-portfolio-template` (Next.js Portfolio-Template mit GUI-Editor) fuer die Kundin Nadine Derfuß. Einzige eigene Aenderung: Name und Header-Tagline auf "Nadine Derfuß" gesetzt, alle uebrigen Inhalte (Projekte, About-Text, Lebenslauf) sind unveraendertes Platzhalter-/Lorem-Ipsum-Material aus dem Template. Kein produktiver Code entstanden.
+Fork von [chetanverma16/react-portfolio-template](https://github.com/chetanverma16/react-portfolio-template).
+Diente einmalig als Ausgangspunkt fuer einen Website-Entwurf, wurde nicht weiterentwickelt.
+Der Inhalt entspricht bis auf eine einzelne Zeile dem unveraenderten Original-Template.
 
 ## Stack
 
-- Next.js 12, TailwindCSS 3
-- Fork von chetanverma16/react-portfolio-template
-
-## Struktur
-
-- `data/portfolio.json` - einzige inhaltlich veraenderte Datei (Name/Tagline)
-- `pages/`, `components/` - unveraendertes Template (Header, Work, Services, About, Blog-CRUD)
-- restliche Struktur wie im Original-Template
-
-## Setup
-
-```
-yarn
-yarn dev
-```
-
-(aus package.json uebernommen, nicht selbst getestet)
+- Next.js, React, Framer Motion, Tailwind CSS (Stand des Upstream-Templates von 2024)
 
 ## Status
 
-Archiviert. Letzter Push 2024-02-19, seither kein weiterer Commit. Die tatsaechliche Website fuer Nadine Derfuß (`shirehorse-derfuss`) wurde inzwischen separat und produktiv umgesetzt (siehe Firmen-Pfad-Register), dieser Fork ist dadurch ueberholt und enthaelt ausser dem Kundennamen keine eigene Substanz.
+Archiviert. Kein eigener Code, keine Weiterentwicklung geplant. Wer das Template nutzen will,
+nimmt besser direkt das Original-Repo, das gepflegt wird.
