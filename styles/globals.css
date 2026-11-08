@@ -75,3 +75,18 @@ body {
   background: inherit;
   border-radius: inherit;
 }
+
+/* Keep the custom cursor visible in dark mode.
+
+   custom-cursor-react defaults the dot to black (fill #000) whenever no fill is
+   passed, and the Cursor component passes no fill when the active theme is
+   "system" (the default). On the template's dark background that yields a black
+   cursor on black. Pin the cursor color to the actual next-themes theme
+   attribute set on <html> so it is always legible in dark mode.
+*/
+.custom-cursor circle {
+  fill: #000;
+}
+html[data-theme="dark"] .custom-cursor circle {
+  fill: #fff;
+}
